@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  building_abbrev: MyString
+  inspection_date: 2012-04-01
+  floor: 1
+  user: 
+  location: MyString
+  damper_id: MyString
+  damper_status: 
+  damper_type: 
+  photo_url: MyString
+  description: MyString
+  job: 
+
+two:
+  building_abbrev: MyString
+  inspection_date: 2012-04-01
+  floor: 1
+  user: 
+  location: MyString
+  damper_id: MyString
+  damper_status: 
+  damper_type: 
+  photo_url: MyString
+  description: MyString
+  job: 

@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Building abbrev:</b>
+  <%= @inspection.building_abbrev %>
+</p>
+
+<p>
+  <b>Inspection date:</b>
+  <%= @inspection.inspection_date %>
+</p>
+
+<p>
+  <b>Floor:</b>
+  <%= @inspection.floor %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @inspection.user %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @inspection.location %>
+</p>
+
+<p>
+  <b>Damper:</b>
+  <%= @inspection.damper_id %>
+</p>
+
+<p>
+  <b>Damper status:</b>
+  <%= @inspection.damper_status %>
+</p>
+
+<p>
+  <b>Damper type:</b>
+  <%= @inspection.damper_type %>
+</p>
+
+<p>
+  <b>Photo url:</b>
+  <%= @inspection.photo_url %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @inspection.description %>
+</p>
+
+<p>
+  <b>Job:</b>
+  <%= @inspection.job %>
+</p>
+
+
+<%= link_to 'Edit', edit_inspection_path(@inspection) %> |
+<%= link_to 'Back', inspections_path %>

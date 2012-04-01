@@ -1,0 +1,61 @@
+<%= form_for(@inspection) do |f| %>
+  <% if @inspection.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@inspection.errors.count, "error") %> prohibited this inspection from being saved:</h2>
+
+      <ul>
+      <% @inspection.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :building_abbrev %><br />
+    <%= f.text_field :building_abbrev %>
+  </div>
+  <div class="field">
+    <%= f.label :inspection_date %><br />
+    <%= f.date_select :inspection_date %>
+  </div>
+  <div class="field">
+    <%= f.label :floor %><br />
+    <%= f.text_field :floor %>
+  </div>
+  <div class="field">
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :damper_id %><br />
+    <%= f.text_field :damper_id %>
+  </div>
+  <div class="field">
+    <%= f.label :damper_status %><br />
+    <%= f.text_field :damper_status %>
+  </div>
+  <div class="field">
+    <%= f.label :damper_type %><br />
+    <%= f.text_field :damper_type %>
+  </div>
+  <div class="field">
+    <%= f.label :photo_url %><br />
+    <%= f.text_field :photo_url %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :job %><br />
+    <%= f.text_field :job %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

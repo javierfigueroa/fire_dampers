@@ -1,0 +1,43 @@
+<h1>Listing inspections</h1>
+
+<table>
+  <tr>
+    <th>Building abbrev</th>
+    <th>Inspection date</th>
+    <th>Floor</th>
+    <th>User</th>
+    <th>Location</th>
+    <th>Damper</th>
+    <th>Damper status</th>
+    <th>Damper type</th>
+    <th>Photo url</th>
+    <th>Description</th>
+    <th>Job</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @inspections.each do |inspection| %>
+  <tr>
+    <td><%= inspection.building_abbrev %></td>
+    <td><%= inspection.inspection_date %></td>
+    <td><%= inspection.floor %></td>
+    <td><%= inspection.user %></td>
+    <td><%= inspection.location %></td>
+    <td><%= inspection.damper_id %></td>
+    <td><%= inspection.damper_status %></td>
+    <td><%= inspection.damper_type %></td>
+    <td><%= inspection.photo_url %></td>
+    <td><%= inspection.description %></td>
+    <td><%= inspection.job %></td>
+    <td><%= link_to 'Show', inspection %></td>
+    <td><%= link_to 'Edit', edit_inspection_path(inspection) %></td>
+    <td><%= link_to 'Destroy', inspection, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Inspection', new_inspection_path %>
