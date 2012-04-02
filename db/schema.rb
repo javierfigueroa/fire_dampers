@@ -40,6 +40,10 @@ ActiveRecord::Schema.define(:version => 20120401223224) do
     t.datetime "updated_at"
   end
 
+  add_index "inspections", ["damper_status_id"], :name => "index_inspections_on_damper_status_id"
+  add_index "inspections", ["damper_type_id"], :name => "index_inspections_on_damper_type_id"
+  add_index "inspections", ["job_id"], :name => "index_inspections_on_job_id"
+
   create_table "jobs", :force => true do |t|
     t.string   "name"
     t.string   "address"

@@ -15,6 +15,10 @@ class CreateInspections < ActiveRecord::Migration
 
       t.timestamps
     end
+    
+    add_index :inspections, :damper_status_id
+    add_index :inspections, :damper_type_id
+    add_index :inspections, :job_id
   end
 
   def self.down
