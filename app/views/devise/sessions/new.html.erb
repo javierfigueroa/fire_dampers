@@ -1,6 +1,6 @@
 <h2>Sign in</h2>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :class => "form-horizontal") do |f| %>
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => "well form-horizontal"}) do |f| %>
   <!-- <div><%= f.label :email %><br />
   <%= f.email_field :email %></div>
 
@@ -37,7 +37,7 @@
   </div>
   <div class="form-actions">
            <button type="submit" class="btn btn-primary">Login</button>
-           <a href="/users/password/new">Forgot your password?</a>
+           <a href="/password/new">Forgot your password?</a>
          </div>
   </fieldset>
 <% end %>

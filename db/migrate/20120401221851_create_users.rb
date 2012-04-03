@@ -3,9 +3,6 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users do |t|
       t.string :first_name
       t.string :last_name
-      t.date :registration_date
-      t.date :last_login_date
-      t.date :account_expiration_date
       t.string :license_number
       t.date :license_expiration_date
       t.string :phone
