@@ -8,7 +8,6 @@ class CreateUsers < ActiveRecord::Migration
       t.date :account_expiration_date
       t.string :license_number
       t.date :license_expiration_date
-      t.string :email
       t.string :phone
       t.references :user_type
 

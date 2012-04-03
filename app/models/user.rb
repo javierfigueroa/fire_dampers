@@ -1,8 +1,15 @@
 class User < ActiveRecord::Base
-  validations :first_name, :presence => true,
-  validations :last_name, :presence => true,
-  validations :email, :presence => true,
-  validations :account_expiration_date, :presence => true
+  # Include default devise modules. Others available are:
+  # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
+
+  # Setup accessible (or protected) attributes for your model
+  attr_accessible :email, :password, :password_confirmation, :remember_me
+  
+  # validates :first_name, :presence => true
+  # validates :last_name, :presence => true
+  # validates :account_expiration_date, :presence => true
   
   belongs_to :user_type
 end

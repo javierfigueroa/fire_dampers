@@ -1,7 +1,7 @@
 class CreateUserTypes < ActiveRecord::Migration
   def self.up
     create_table :user_types do |t|
-      t.string :type
+      t.string :privilege, :null => false, :unique => true
 
       t.timestamps
     end

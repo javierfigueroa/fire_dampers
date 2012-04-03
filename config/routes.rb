@@ -1,4 +1,6 @@
 FireDampers::Application.routes.draw do
+  devise_for :users
+
   resources :reports
 
   resources :inspections
@@ -8,6 +10,10 @@ FireDampers::Application.routes.draw do
   resources :jobs
 
   get "home/index"
+  get "home/jobs"
+  get "home/reports"
+  get "home/inspections"
+  get "home/inspectors"
 
   root :to => "home#index"
   # The priority is based upon order of creation:

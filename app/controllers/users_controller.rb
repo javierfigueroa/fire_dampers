@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_filter :authenticate_user!
   # GET /users
   # GET /users.xml
   def index
@@ -25,7 +26,8 @@ class UsersController < ApplicationController
   # GET /users/new.xml
   def new
     @user = User.new
-
+    # @user_type = current_user.user_type;
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @user }
