@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @technician.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @technician.last_name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @technician.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @technician.phone %>
+</p>
+
+<p>
+  <b>License:</b>
+  <%= @technician.license %>
+</p>
+
+<p>
+  <b>License expiration:</b>
+  <%= @technician.license_expiration %>
+</p>
+
+
+<%= link_to 'Edit', edit_technician_path(@technician) %> |
+<%= link_to 'Back', technicians_path %>

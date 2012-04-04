@@ -1,10 +1,12 @@
 FireDampers::Application.routes.draw do
+  resources :technicians
+
   # devise_for :users
   authenticated :user do
-    root :to => 'home#jobs'
+    root :to => 'jobs#index'
   end
   
-  root :to => "home#jobs"
+  root :to => "jobs#index"
   devise_for :users, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register" }
 
   resources :reports
@@ -15,11 +17,11 @@ FireDampers::Application.routes.draw do
 
   resources :jobs
 
-  get "home/index"
-  get "home/jobs"
-  get "home/reports"
-  get "home/inspections"
-  get "home/inspectors"
+  # get "home/index"
+  # get "home/jobs"
+  # get "home/reports"
+  # get "home/inspections"
+  # get "home/inspectors"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -6,19 +6,29 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
-UserType.find_or_create_by_privilege(:privilege => "admin")
-UserType.find_or_create_by_privilege(:privilege => 'regular')
-UserType.find_or_create_by_privilege(:privilege => 'tech')
-UserType.find_or_create_by_privilege(:privilege => 'client')
-
-admin = UserType.find_by_privilege("admin")
 User.create!(
-  :email => "javier@mainloop.us",
+  :email => "admin@mainloop.us",
   :password => 'mainloop2012'
 )
 
-user = User.find_by_email("javier@mainloop.us")
-user.first_name = "javier"
-user.last_name = "figueroa"
-user.user_type = admin
+User.create!(
+  :email => "regular@mainloop.us",
+  :password => 'test123'
+)
+
+User.create!(
+  :email => "tech@mainloop.us",
+  :password => 'test123'
+)
+
+user = User.find_by_email("admin@mainloop.us")
+user.user_type = "admin"
+user.save!
+
+user = User.find_by_email("regular@mainloop.us")
+user.user_type = "regular"
+user.save!
+
+user = User.find_by_email("tech@mainloop.us")
+user.user_type = "tech"
 user.save!

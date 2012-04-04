@@ -1,10 +1,10 @@
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
+<%= form_for(@technician) do |f| %>
+  <% if @technician.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <h2><%= pluralize(@technician.errors.count, "error") %> prohibited this technician from being saved:</h2>
 
       <ul>
-      <% @user.errors.full_messages.each do |msg| %>
+      <% @technician.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -27,12 +27,14 @@
     <%= f.label :phone %><br />
     <%= f.text_field :phone %>
   </div>
-  <% if current_user.user_type == "admin" %>
   <div class="field">
-    <%= f.label :user_type %><br />
-    <%= f.text_field :user_type %>
+    <%= f.label :license %><br />
+    <%= f.text_field :license %>
   </div>
-  <% end %>
+  <div class="field">
+    <%= f.label :license_expiration %><br />
+    <%= f.date_select :license_expiration %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

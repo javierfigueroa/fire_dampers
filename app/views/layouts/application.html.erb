@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
+    <title>Fire Damper Inspections</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -28,9 +28,27 @@
   </head>
 
   <body>
-
-
-    <div class="container">
+<% if signed_in? %>
+<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <div class="nav-collapse">
+          	<ul class="nav pull-right">
+            <li><p class="navbar-text pull-right">Logged in as <a href="#"><%= current_user.email %></a></p></li>
+            <li class="divider-vertical"></li>
+            <li><p class="navbar-text "><a href="/logout">Logout</a></p></li>
+           </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+<% end %>
 
 <%= yield %>
 
@@ -38,6 +56,7 @@
     </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/javascripts/jquery.dataTables.min.js"></script>
     <script src="/javascripts/bootstrap-alert.js"></script>
     <script src="/javascripts/bootstrap-modal.js"></script>
     <script src="/javascripts/bootstrap-dropdown.js"></script>
@@ -49,8 +68,8 @@
     <script src="/javascripts/bootstrap-collapse.js"></script>
     <script src="/javascripts/bootstrap-carousel.js"></script>
     <script src="/javascripts/bootstrap-typeahead.js"></script>
-
-
+	<script src="/javascripts/application.js"></script>
+	<script src="/javascripts/DT_bootstrap.js"></script>
   </body>
   
 </html>

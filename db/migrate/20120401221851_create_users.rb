@@ -3,15 +3,11 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users do |t|
       t.string :first_name
       t.string :last_name
-      t.string :license_number
-      t.date :license_expiration_date
       t.string :phone
-      t.references :user_type
+      t.string :user_type, :null => false, :default => "tech"
 
       t.timestamps
     end
-    
-    add_index :users, :user_type_id
   end
 
   def self.down
