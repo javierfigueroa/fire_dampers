@@ -1,14 +1,45 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @job.name %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @job.address %>
-</p>
+<div class="row-fluid">
+	<%= render 'navlist' %>
+	<div class="span10">
+		<div class="row">
+			<div class="span12">
+				<ul class="breadcrumb">
+					<li>
+						<a href="#">Home</a><span class="divider">/</span>
+					</li>
+					<li>
+						<a href="<%= jobs_path %>">Jobs</a><span class="divider">/</span>
+					</li>
+					<li class="active">
+						<a href="#"><%= @job.name %></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<p id="notice"><%= notice %></p>
+				<div class="page-header">
+					<h1><%= @job.name %>
+						<small><%= @job.address %></small>
+					</h1>
+				</div>
+				<div class="row">
+					<div class="span6">
+					<ul class="nav nav-pills">
+						<li>
+							<a href="<%= jobs_path %>"><i class="icon-arrow-left"></i> Back</a>	
+						</li>
+						<li>
+							<a href="<%= edit_job_path(@job) %>"><i class="icon-cog"></i> Edit Job</a>	
+						</li>
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
 
 <p>
   <b>Start date:</b>
@@ -26,13 +57,8 @@
 </p>
 
 <p>
-  <b>Contact first name:</b>
-  <%= @job.contact_first_name %>
-</p>
-
-<p>
-  <b>Contact last name:</b>
-  <%= @job.contact_last_name %>
+  <b>Contact Name:</b>
+  <%= @job.contact_first_name %> <%= @job.contact_last_name %>
 </p>
 
 <p>
@@ -41,5 +67,8 @@
 </p>
 
 
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+			</div>
+		</div>
+	</div>
+</div>
+</div> 
