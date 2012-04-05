@@ -13,13 +13,15 @@
 ActiveRecord::Schema.define(:version => 20120403162149) do
 
   create_table "damper_statuses", :force => true do |t|
-    t.string   "state"
+    t.string   "abbrev"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "dampter_types", :force => true do |t|
-    t.string   "type"
+  create_table "damper_types", :force => true do |t|
+    t.string   "abbrev"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -10,7 +10,13 @@
 					<li class="active">
 						<a href="#">Inspections</a>
 					</li>
-				</ul>
+				</ul><% if flash[:warning] or flash[:notice] %>
+	<div class="alert alert-block alert-error fade in">
+		<a class="close" data-dismiss="alert">×</a>
+		<h4 class="alert-heading"><%= flash[:warning] || flash[:notice] %></h4>
+	
+	</div>
+	<% end %> 
 			</div>
 		</div>
 		<div class="row">

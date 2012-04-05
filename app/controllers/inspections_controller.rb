@@ -24,11 +24,30 @@ class InspectionsController < ApplicationController
   # GET /inspections/new
   # GET /inspections/new.xml
   def new
-    @inspection = Inspection.new
+    @jobs = Job.all 
+    @technicians = Technician.all
+    
+    if @jobs.count == 0
+      respond_to do |format|
+        format.html { redirect_to(inspections_path, :notice => "No jobs available. You need jobs to add inspections.") }
+        format.xml  { render :xml => @inspection, :status => :unprocessable_entity, :location => inspections_path }
+        format.json  { render :json => @inspection, :status => :unprocessable_entity, :location => inspections_path }
+      end
+    elsif @technicians.count == 0
+      respond_to do |format|
+        format.html { redirect_to(inspections_path, :notice => "No technicians available. You need technicians to add inspections.") }
+        format.xml  { render :xml => @inspection, :status => :unprocessable_entity, :location => inspections_path }
+        format.json  { render :json => @inspection, :status => :unprocessable_entity, :location => inspections_path }
+      end
+    else
+      @inspection = Inspection.new
+      @damper_types = DamperType.all
+      @damper_statuses = DamperStatus.all
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @inspection }
+      respond_to do |format|
+        format.html # new.html.erb
+        format.xml  { render :xml => @inspection }
+      end
     end
   end
 

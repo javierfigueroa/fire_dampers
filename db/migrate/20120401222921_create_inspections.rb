@@ -4,7 +4,7 @@ class CreateInspections < ActiveRecord::Migration
       t.string :building_abbrev
       t.date :inspection_date
       t.integer :floor
-      t.references :user
+      t.references :technician
       t.string :location
       t.string :damper_id
       t.references :damper_status
@@ -19,6 +19,7 @@ class CreateInspections < ActiveRecord::Migration
     add_index :inspections, :damper_status_id
     add_index :inspections, :damper_type_id
     add_index :inspections, :job_id
+    add_index :inspections, :technician_id
   end
 
   def self.down

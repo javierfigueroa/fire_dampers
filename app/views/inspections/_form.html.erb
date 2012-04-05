@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :user %><br />
-    <%= f.text_field :user %>
+    <%= select ("user", "id", @technicians.map {|u| [u.first_name + " " + u.last_name ,u.id]}) %>	
   </div>
   <div class="field">
     <%= f.label :location %><br />
@@ -37,11 +37,11 @@
   </div>
   <div class="field">
     <%= f.label :damper_status %><br />
-    <%= f.text_field :damper_status %>
+    <%= select ("damper_status", "id", @damper_statuses.map {|u| [u.abbrev,u.id]}) %>	
   </div>
   <div class="field">
     <%= f.label :damper_type %><br />
-    <%= f.text_field :damper_type %>
+    <%= select ("damper_type", "id", @damper_types.map {|u| [u.abbrev,u.id]}) %>	
   </div>
   <div class="field">
     <%= f.label :photo_url %><br />
@@ -52,8 +52,8 @@
     <%= f.text_field :description %>
   </div>
   <div class="field">
-    <%= f.label :job %><br />
-    <%= f.text_field :job %>
+  	<%= f.label :job %><br />
+    <%= select ("job", "id", @jobs.map {|u| [u.name,u.id]}) %>
   </div>
   <div class="actions">
     <%= f.submit %>

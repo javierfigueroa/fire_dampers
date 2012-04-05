@@ -1,7 +1,8 @@
 class CreateDamperStatuses < ActiveRecord::Migration
   def self.up
     create_table :damper_statuses do |t|
-      t.string :state
+      t.string :abbrev
+      t.string :description
 
       t.timestamps
     end
