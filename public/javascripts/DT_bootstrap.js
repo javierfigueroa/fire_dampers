@@ -101,6 +101,9 @@ $(document).ready(function() {
 		"sPaginationType": "bootstrap",
 		"oLanguage": {
 			"sLengthMenu": "_MENU_ records per page"
-		}
+		},
+		"aoColumnDefs": [ 
+      { "bSortable": false, "sWidth": "50px", "aTargets": [ 0 ] }
+    ]
 	} );
 } );

@@ -5,7 +5,7 @@
 				Navigation
 			</li>
 			<li>
-				<a href="/jobs"><i class="icon-white icon-home"></i> Jobs</a>
+				<a href="/jobs"><i class="icon-black icon-home"></i> Jobs</a>
 			</li>
 			<li>
 				<a href="/inspections"><i class="icon-list-alt"></i> Inspections</a>
@@ -23,10 +23,10 @@
 			<div class="span12">
 				<ul class="breadcrumb">
 					<li>
-						<a href="#">Technicians</a><span class="divider">/</span>
+						<a href="#">Home</a><span class="divider">/</span>
 					</li>
 					<li class="active">
-						<a href="#">Technicians</a><span class="divider">/</span>
+						<a href="#">Technicians</a>
 					</li>
 				</ul>
 			</div>
@@ -40,11 +40,8 @@
 					<div class="span6">
 						<ul class="nav nav-pills">
 							<li>
-								<%= link_to 'New Technician', new_technician_path %>
-							</li>
-							<li>
-								<a href="#">Delete</a>
-							</li>
+							<a href="<%= new_technician_path %>"><i class="icon-file"></i> New Technician</a>	
+						</li>
 						</ul>
 					</div>
 				</div>
@@ -59,25 +56,29 @@
 								<tr role="row">
 									<!-- <th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 161px;" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Rendering engine</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 236px;" aria-label="Browser: activate to sort column ascending">Browser</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 221px;" aria-label="Platform(s): activate to sort column ascending">Platform(s)</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 136px;" aria-label="Engine version: activate to sort column ascending">Engine version</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 100px;" aria-label="CSS grade: activate to sort column ascending">CSS grade</th>
 									-->
+									<th>Actions</th>
 									<th>First name</th>
 									<th>Last name</th>
 									<th>Email</th>
 									<th>Phone</th>
 									<th>License</th>
 									<th>License expiration</th>
-									<th></th>
 								</tr>
 							</thead>
 							<tbody role="alert" aria-live="polite" aria-relevant="all">
 								<% @technicians.each do |technician| %>
-								<tr>
+								<tr>									
+									<td><a href="<%= url_for(technician) %>"><i class="icon-eye-open"></i></a>
+										<a href="<%= edit_technician_path(technician) %>"><i class="icon-cog"></i></a>
+										<a href="<%= url_for(technician) %>" rel="nofollow" data-method="delete" 
+											data-confirm="Are you sure?"><i class="icon-trash"></i></a></td>
+											
 									<td><%= technician.first_name %></td>
 									<td><%= technician.last_name %></td>
 									<td><%= technician.email %></td>
 									<td><%= technician.phone %></td>
 									<td><%= technician.license %></td>
 									<td><%= technician.license_expiration %></td>
-									<td><%= link_to 'Show', technician %><%= link_to 'Edit', edit_technician_path(technician) %><%= link_to 'Destroy', technician, :confirm => 'Are you sure?', :method => :delete %></td>
 								</tr>
 								<% end %>
 							</tbody>
