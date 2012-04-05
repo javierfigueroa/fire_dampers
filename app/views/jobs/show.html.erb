@@ -14,13 +14,16 @@
 						<a href="#"><%= @job.name %></a>
 					</li>
 				</ul>
+				<% if notice %>
+				<div class="alert alert-block alert-success fade in">
+					<a class="close" data-dismiss="alert">×</a>
+					<h4 class="alert-heading"><%= notice %></h4>
+				</div>
+				<% end %>
 			</div>
 		</div>
 		<div class="row">
 			<div class="span12">
-				<p id="notice">
-					<%= notice %>
-				</p>
 				<div class="page-header">
 					<h1><%= @job.name %> <small><%= @job.address %></small></h1>
 				</div>

@@ -24,40 +24,66 @@
 # O/D = Over Door L.L. = Lower Level
 
 
-DamperType.create!(:abbrev => "APW", :description => "Access Panel Wall")
-DamperType.create!(:abbrev => "ATF", :description => "Access thru Flex")
-DamperType.create!(:abbrev => "ATR", :description => "Access thru Floor")
-DamperType.create!(:abbrev => "DID", :description => "Damper in Diffuser")
-DamperType.create!(:abbrev => "DTF", :description => "Down thru Floor")
-DamperType.create!(:abbrev => "ECD", :description => "Electric Combination Damper EFD = Electric Fire Damper")
-DamperType.create!(:abbrev => "ESD", :description => "Electric Smoke Damper")
-DamperType.create!(:abbrev => "FD", :description => "Fire Damper")
-DamperType.create!(:abbrev => "VINE", :description => "Visually Identified Not Exercised DNR = Disabled - Not Required")
-DamperType.create!(:abbrev => "FD / ETL", :description => "Fire Damper Electric Thermo Link FNR = Failed Needs Repairs")
-DamperType.create!(:abbrev => "FRFD", :description => "Fire Rated Flanged Door")
-DamperType.create!(:abbrev => "PCD", :description => "Pneumatic Combination Damper PSD = Pneumatic Smoke Damper")
-DamperType.create!(:abbrev => "R/D", :description => "Rolling Door")
-DamperType.create!(:abbrev => "SLR", :description => "See Repair List")
-DamperType.create!(:abbrev => "O/D", :description => "Over Door L.L. = Lower Level")
+DamperType.find_or_create_by_abbrev(:abbrev => "APW", :description => "Access Panel Wall")
+DamperType.find_or_create_by_abbrev(:abbrev => "ATF", :description => "Access thru Flex")
+DamperType.find_or_create_by_abbrev(:abbrev => "ATR", :description => "Access thru Floor")
+DamperType.find_or_create_by_abbrev(:abbrev => "DID", :description => "Damper in Diffuser")
+DamperType.find_or_create_by_abbrev(:abbrev => "DTF", :description => "Down thru Floor")
+DamperType.find_or_create_by_abbrev(:abbrev => "ECD", :description => "Electric Combination Damper EFD = Electric Fire Damper")
+DamperType.find_or_create_by_abbrev(:abbrev => "ESD", :description => "Electric Smoke Damper")
+DamperType.find_or_create_by_abbrev(:abbrev => "FD", :description => "Fire Damper")
+DamperType.find_or_create_by_abbrev(:abbrev => "VINE", :description => "Visually Identified Not Exercised DNR = Disabled - Not Required")
+DamperType.find_or_create_by_abbrev(:abbrev => "FD / ETL", :description => "Fire Damper Electric Thermo Link FNR = Failed Needs Repairs")
+DamperType.find_or_create_by_abbrev(:abbrev => "FRFD", :description => "Fire Rated Flanged Door")
+DamperType.find_or_create_by_abbrev(:abbrev => "PCD", :description => "Pneumatic Combination Damper PSD = Pneumatic Smoke Damper")
+DamperType.find_or_create_by_abbrev(:abbrev => "R/D", :description => "Rolling Door")
+DamperType.find_or_create_by_abbrev(:abbrev => "SLR", :description => "See Repair List")
+DamperType.find_or_create_by_abbrev(:abbrev => "O/D", :description => "Over Door L.L. = Lower Level")
 
 # Damper Statuses
 # OK pass
 # FAIL fail
-DamperStatus.create!(:abbrev => "OK", :description => "Passed")
-DamperStatus.create!(:abbrev => "FAIL", :description => "Failed")
+DamperStatus.find_or_create_by_abbrev(:abbrev => "OK", :description => "Passed")
+DamperStatus.find_or_create_by_abbrev(:abbrev => "FAIL", :description => "Failed")
+
+# Test Jobs
+25.times do |i|
+  Job.find_or_create_by_name(
+  :name => "Test Job " + i.to_s,
+  :address => "Test Address 12345 nw 123 st " + i.to_s, 
+  :start_date => Time.now, 
+  :finish_date => i.days.from_now, 
+  :inspected_by => "Test Report Inspector " + i.to_s, 
+  :contact_first_name => "Test First Name " + i.to_s,
+  :contact_phone => "478273487293847",
+  :active => i % 2 == 0 ? true : false
+  )
+end
+
+# Test Inspectors
+25.times do |i|
+  Technician.find_or_create_by_email(
+  :first_name => "Test Technician First Name " + i.to_s,
+  :last_name => "Test Technician Last Name " + i.to_s,
+  :email => "tech" + i.to_s + "@dampers.com", 
+  :phone => "478273487293847",
+  :license => 10000000+rand(10000000),
+  :license_expiration => 1.year.from_now 
+  )
+end
 
 # Create Test Users
-User.create!(
+User.find_or_create_by_email(
   :email => "admin@mainloop.us",
   :password => 'mainloop2012'
 )
 
-User.create!(
+User.find_or_create_by_email(
   :email => "regular@mainloop.us",
   :password => 'test123'
 )
 
-User.create!(
+User.find_or_create_by_email(
   :email => "tech@mainloop.us",
   :password => 'test123'
 )

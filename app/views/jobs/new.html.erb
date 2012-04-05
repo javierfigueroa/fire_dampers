@@ -1,5 +1,57 @@
-<h1>New job</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', jobs_path %>
+<div class="row-fluid">
+	<%= render 'navlist' %>
+	<div class="span10">
+		<div class="row">
+			<div class="span12">
+				<ul class="breadcrumb">
+					<li>
+						<a href="#">Home</a><span class="divider">/</span>
+					</li>
+					<li>
+						<a href="<%= jobs_path %>">Jobs</a><span class="divider">/</span>
+					</li>
+					<li class="active">
+						<a href="#"><%= controller.action_name.capitalize %></a>
+					</li>
+				</ul>
+				<% if @job.errors.any? %>
+				<div class="alert alert-block alert-error fade in">
+					<a class="close" data-dismiss="alert">×</a>
+					<h4 class="alert-heading"><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h4>
+					<ul>
+						<% @job.errors.full_messages.each do |msg| %>
+						<li>
+							<%= msg %>
+						</li>
+						<% end %>
+					</ul>
+				</div>
+				<% end %>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<p id="notice">
+					<%= notice %>
+				</p>
+				<div class="page-header">
+					<h1><%= controller.action_name.capitalize %> Job <small><%= controller.action_name.capitalize %> information about a job</small></h1>
+				</div>
+				<div class="row">
+					<div class="span6">
+						<ul class="nav nav-pills">
+							<li>
+								<a href="<%= jobs_path %>"><i class="icon-arrow-left"></i> Back</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+			<%= render 'form' %>
+			</div>
+		</div>
+	</div>
+</div>

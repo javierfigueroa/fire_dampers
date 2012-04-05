@@ -24,7 +24,7 @@ class InspectionsController < ApplicationController
   # GET /inspections/new
   # GET /inspections/new.xml
   def new
-    @jobs = Job.all 
+    @jobs = Job.where(:active => true) 
     @technicians = Technician.all
     
     if @jobs.count == 0

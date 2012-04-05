@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(:version => 20120403162149) do
     t.string   "building_abbrev"
     t.date     "inspection_date"
     t.integer  "floor"
-    t.integer  "user_id"
+    t.integer  "technician_id"
     t.string   "location"
     t.string   "damper_id"
     t.integer  "damper_status_id"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20120403162149) do
   add_index "inspections", ["damper_status_id"], :name => "index_inspections_on_damper_status_id"
   add_index "inspections", ["damper_type_id"], :name => "index_inspections_on_damper_type_id"
   add_index "inspections", ["job_id"], :name => "index_inspections_on_job_id"
+  add_index "inspections", ["technician_id"], :name => "index_inspections_on_technician_id"
 
   create_table "jobs", :force => true do |t|
     t.string   "name"
@@ -55,6 +56,7 @@ ActiveRecord::Schema.define(:version => 20120403162149) do
     t.string   "contact_first_name"
     t.string   "contact_last_name"
     t.integer  "contact_phone"
+    t.boolean  "active",             :default => true, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
