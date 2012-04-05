@@ -1,61 +1,49 @@
-<%= form_for(@inspection) do |f| %>
-  <% if @inspection.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@inspection.errors.count, "error") %> prohibited this inspection from being saved:</h2>
-
-      <ul>
-      <% @inspection.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :building_abbrev %><br />
+<%= form_for @inspection, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :building_abbrev , :class => 'control-label' %><div class="controls">
     <%= f.text_field :building_abbrev %>
-  </div>
-  <div class="field">
-    <%= f.label :inspection_date %><br />
+  </div></div>
+  <div class="control-group">
+    <%= f.label :inspection_date , :class => 'control-label' %><div class="controls">
     <%= f.date_select :inspection_date %>
-  </div>
-  <div class="field">
-    <%= f.label :floor %><br />
+  </div></div>
+  <div class="control-group">
+    <%= f.label :floor , :class => 'control-label' %><div class="controls">
     <%= f.text_field :floor %>
-  </div>
-  <div class="field">
-    <%= f.label :user %><br />
-    <%= select ("user", "id", @technicians.map {|u| [u.first_name + " " + u.last_name ,u.id]}) %>	
-  </div>
-  <div class="field">
-    <%= f.label :location %><br />
+  </div></div>
+  <div class="control-group">
+    <%= f.label :technician , :class => 'control-label' %><div class="controls">
+    <%=	select("inspection", "technician_id", Technician.all.collect {|p| [p.first_name + " " + p.last_name , p.id] }) %>
+  </div></div>
+  <div class="control-group">
+    <%= f.label :location , :class => 'control-label' %><div class="controls">
     <%= f.text_field :location %>
-  </div>
-  <div class="field">
-    <%= f.label :damper_id %><br />
+  </div></div>
+  <div class="control-group">
+    <%= f.label :damper_id , :class => 'control-label' %><div class="controls">
     <%= f.text_field :damper_id %>
-  </div>
-  <div class="field">
-    <%= f.label :damper_status %><br />
-    <%= select ("damper_status", "id", @damper_statuses.map {|u| [u.abbrev,u.id]}) %>	
-  </div>
-  <div class="field">
-    <%= f.label :damper_type %><br />
-    <%= select ("damper_type", "id", @damper_types.map {|u| [u.abbrev,u.id]}) %>	
-  </div>
-  <div class="field">
-    <%= f.label :photo_url %><br />
+  </div></div>
+  <div class="control-group">
+    <%= f.label :damper_status , :class => 'control-label' %><div class="controls">
+    <%=	select("inspection", "damper_status_id", DamperStatus.all.collect {|p| [ p.abbrev, p.id ] }) %>
+  </div></div>
+  <div class="control-group">
+    <%= f.label :damper_type , :class => 'control-label' %><div class="controls">
+    <%=	select("inspection", "damper_type_id", DamperType.all.collect {|p| [ p.abbrev, p.id ] }) %>
+  </div></div>
+  <div class="control-group">
+    <%= f.label :photo_url , :class => 'control-label' %><div class="controls">
     <%= f.text_field :photo_url %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
+  </div></div>
+  <div class="control-group">
+    <%= f.label :description , :class => 'control-label' %><div class="controls">
     <%= f.text_field :description %>
-  </div>
-  <div class="field">
-  	<%= f.label :job %><br />
-    <%= select ("job", "id", @jobs.map {|u| [u.name,u.id]}) %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  </div></div>
+  <div class="control-group">
+  	<%= f.label :job , :class => 'control-label' %><div class="controls">
+    <%=	select("inspection", "job_id", Job.where(:active => true).all.collect {|p| [ p.name, p.id ] }) %>
+  </div></div>
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
   </div>
 <% end %>

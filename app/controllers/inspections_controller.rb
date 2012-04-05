@@ -60,12 +60,12 @@ class InspectionsController < ApplicationController
   # POST /inspections.xml
   def create
     @inspection = Inspection.new(params[:inspection])
-
+    
     respond_to do |format|
       if @inspection.save
         format.html { redirect_to(@inspection, :notice => 'Inspection was successfully created.') }
         format.xml  { render :xml => @inspection, :status => :created, :location => @inspection }
-      else
+      else        
         format.html { render :action => "new" }
         format.xml  { render :xml => @inspection.errors, :status => :unprocessable_entity }
       end
@@ -76,7 +76,6 @@ class InspectionsController < ApplicationController
   # PUT /inspections/1.xml
   def update
     @inspection = Inspection.find(params[:id])
-
     respond_to do |format|
       if @inspection.update_attributes(params[:inspection])
         format.html { redirect_to(@inspection, :notice => 'Inspection was successfully updated.') }

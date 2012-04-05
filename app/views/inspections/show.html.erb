@@ -1,6 +1,48 @@
-<p id="notice"><%= notice %></p>
-
-<p>
+<div class="row-fluid">
+	<%= render 'navlist' %>
+	<div class="span10">
+		<div class="row">
+			<div class="span12">
+				<ul class="breadcrumb">
+					<li>
+						<a href="#">Home</a><span class="divider">/</span>
+					</li>
+					<li>
+						<a href="<%= inspections_path %>"><%= controller_name.capitalize %></a><span class="divider">/</span>
+					</li>
+					<li class="active">
+						<a href="#"><%= @inspection.damper_id %></a>
+					</li>
+				</ul>
+				<% if notice %>
+				<div class="alert alert-block alert-success fade in">
+					<a class="close" data-dismiss="alert">×</a>
+					<h4 class="alert-heading"><%= notice %></h4>
+				</div>
+				<% end %>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<div class="page-header">
+					<h1><%= @inspection.damper_id %> <small><%= @inspection.location %></small></h1>
+				</div>
+				<div class="row">
+					<div class="span6">
+						<ul class="nav nav-pills">
+							<li>
+								<a href="<%= inspections_path %>"><i class="icon-arrow-left"></i> Back</a>
+							</li>
+							<li>
+								<a href="<%= edit_inspection_path(@inspection) %>"><i class="icon-cog"></i> Edit Inspection</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
   <b>Building abbrev:</b>
   <%= @inspection.building_abbrev %>
 </p>
@@ -16,8 +58,8 @@
 </p>
 
 <p>
-  <b>User:</b>
-  <%= @inspection.user %>
+  <b>Technician</b>
+  <%= @inspection.technician.first_name %> <%= @inspection.technician.last_name %>
 </p>
 
 <p>
@@ -32,12 +74,12 @@
 
 <p>
   <b>Damper status:</b>
-  <%= @inspection.damper_status %>
+  <%= @inspection.damper_status.abbrev %> - <%= @inspection.damper_status.description %>
 </p>
 
 <p>
   <b>Damper type:</b>
-  <%= @inspection.damper_type %>
+  <%= @inspection.damper_type.abbrev %> - <%= @inspection.damper_type.description %>
 </p>
 
 <p>
@@ -52,75 +94,9 @@
 
 <p>
   <b>Job:</b>
-  <%= @inspection.job %>
+  <%= @inspection.job.name %>
 </p>
 
-
-<%= link_to 'Edit', edit_inspection_path(@inspection) %> |
-<%= link_to 'Back', inspections_path %>
-
-<div class="row-fluid">
-	<%= render 'navlist' %>
-	<div class="span10">
-		<div class="row">
-			<div class="span12">
-				<ul class="breadcrumb">
-					<li>
-						<a href="#">Home</a><span class="divider">/</span>
-					</li>
-					<li>
-						<a href="<%= jobs_path %>">Jobs</a><span class="divider">/</span>
-					</li>
-					<li class="active">
-						<a href="#"><%= @job.name %></a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="row">
-			<div class="span12">
-				<p id="notice">
-					<%= notice %>
-				</p>
-				<div class="page-header">
-					<h1><%= @job.name %> <small><%= @job.address %></small></h1>
-				</div>
-				<div class="row">
-					<div class="span6">
-						<ul class="nav nav-pills">
-							<li>
-								<a href="<%= jobs_path %>"><i class="icon-arrow-left"></i> Back</a>
-							</li>
-							<li>
-								<a href="<%= edit_job_path(@job) %>"><i class="icon-cog"></i> Edit Job</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="span12">
-				<p>
-					<b>Start date:</b>
-					<%= @job.start_date %>
-				</p>
-				<p>
-					<b>Finish date:</b>
-					<%= @job.finish_date %>
-				</p>
-				<p>
-					<b>Inspected by:</b>
-					<%= @job.inspected_by %>
-				</p>
-				<p>
-					<b>Contact Name:</b>
-					<%= @job.contact_first_name %> <%= @job.contact_last_name %>
-				</p>
-				<p>
-					<b>Contact phone:</b>
-					<%= @job.contact_phone %>
-				</p>
 			</div>
 		</div>
 	</div>

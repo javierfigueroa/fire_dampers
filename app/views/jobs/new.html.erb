@@ -8,7 +8,7 @@
 						<a href="#">Home</a><span class="divider">/</span>
 					</li>
 					<li>
-						<a href="<%= jobs_path %>">Jobs</a><span class="divider">/</span>
+						<a href="<%= jobs_path %>"><%= controller_name.capitalize %></a><span class="divider">/</span>
 					</li>
 					<li class="active">
 						<a href="#"><%= controller.action_name.capitalize %></a>
@@ -31,9 +31,6 @@
 		</div>
 		<div class="row">
 			<div class="span12">
-				<p id="notice">
-					<%= notice %>
-				</p>
 				<div class="page-header">
 					<h1><%= controller.action_name.capitalize %> Job <small><%= controller.action_name.capitalize %> information about a job</small></h1>
 				</div>

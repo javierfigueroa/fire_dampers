@@ -2,7 +2,7 @@ class Inspection < ActiveRecord::Base
   validates :building_abbrev, :presence => true
   validates :inspection_date, :presence => true
   validates :floor, :presence => true
-  validates :user, :presence => true
+  validates :technician, :presence => true
   validates :location, :presence => true
   validates :damper_id, :presence => true
   validates :damper_status, :presence => true
