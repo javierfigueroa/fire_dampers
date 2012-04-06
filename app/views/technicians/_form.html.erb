@@ -1,41 +1,32 @@
-<%= form_for(@technician) do |f| %>
-  <% if @technician.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@technician.errors.count, "error") %> prohibited this technician from being saved:</h2>
-
-      <ul>
-      <% @technician.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :first_name %><br />
+<%= form_for @technician, :html => { :class => 'form-horizontal' } do |f| %>
+<fieldset>
+	<legend><%= controller.action_name.capitalize %> Technician <small><%= controller.action_name.capitalize %> information about a technician</small></legend>
+  <div class="control-group">
+    <%= f.label :first_name , :class => 'control-label' %><div class="controls">
     <%= f.text_field :first_name %>
-  </div>
-  <div class="field">
-    <%= f.label :last_name %><br />
+  </div></div>
+  <div class="control-group">
+    <%= f.label :last_name , :class => 'control-label' %><div class="controls">
     <%= f.text_field :last_name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
+  </div></div>
+  <div class="control-group">
+    <%= f.label :email , :class => 'control-label' %><div class="controls">
     <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br />
+  </div></div>
+  <div class="control-group">
+    <%= f.label :phone , :class => 'control-label' %><div class="controls">
     <%= f.text_field :phone %>
-  </div>
-  <div class="field">
-    <%= f.label :license %><br />
+  </div></div>
+  <div class="control-group">
+    <%= f.label :license , :class => 'control-label' %><div class="controls">
     <%= f.text_field :license %>
-  </div>
-  <div class="field">
-    <%= f.label :license_expiration %><br />
+  </div></div>
+  <div class="control-group">
+    <%= f.label :license_expiration , :class => 'control-label' %><div class="controls">
     <%= f.date_select :license_expiration %>
+  </div></div>
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  </fieldset>
 <% end %>

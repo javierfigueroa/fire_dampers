@@ -1,35 +1,74 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>First name:</b>
-  <%= @technician.first_name %>
-</p>
-
-<p>
-  <b>Last name:</b>
-  <%= @technician.last_name %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @technician.email %>
-</p>
-
-<p>
-  <b>Phone:</b>
-  <%= @technician.phone %>
-</p>
-
-<p>
-  <b>License:</b>
-  <%= @technician.license %>
-</p>
-
-<p>
-  <b>License expiration:</b>
-  <%= @technician.license_expiration %>
-</p>
-
-
-<%= link_to 'Edit', edit_technician_path(@technician) %> |
-<%= link_to 'Back', technicians_path %>
+<div class="row-fluid">
+	<%= render 'navlist' %>
+	<div class="span10">
+		<div class="row">
+			<div class="span12">
+				<ul class="breadcrumb">
+					<li>
+						<a href="#">Home</a><span class="divider">/</span>
+					</li>
+					<li>
+						<a href="<%= technicians_path %>"><%= controller_name.capitalize %></a><span class="divider">/</span>
+					</li>
+					<li class="active">
+						<a href="#"><%= @technician.email %></a>
+					</li>
+				</ul>
+				<% if notice %>
+				<div class="alert alert-block alert-success fade in">
+					<a class="close" data-dismiss="alert">×</a>
+					<h4 class="alert-heading"><%= notice %></h4>
+				</div>
+				<% end %>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<div class="row">
+					<div class="span6">
+						<ul class="nav nav-pills">
+							<li>
+								<a href="<%= technicians_path %>"><i class="icon-arrow-left"></i> Back</a>
+							</li>
+							<li>
+								<a href="<%= edit_technician_path(@technician) %>"><i class="icon-cog"></i> Edit Technician</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<legend>
+					<%= @technician.first_name %> - <%= @technician.last_name %> <small><%= @technician.email %></small>
+				</legend>
+				<p>
+					<b>First name:</b>
+					<%= @technician.first_name %>
+				</p>
+				<p>
+					<b>Last name:</b>
+					<%= @technician.last_name %>
+				</p>
+				<p>
+					<b>Email:</b>
+					<%= @technician.email %>
+				</p>
+				<p>
+					<b>Phone:</b>
+					<%= @technician.phone %>
+				</p>
+				<p>
+					<b>License:</b>
+					<%= @technician.license %>
+				</p>
+				<p>
+					<b>License expiration:</b>
+					<%= @technician.license_expiration %>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+</div> 

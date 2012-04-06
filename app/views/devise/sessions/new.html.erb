@@ -1,43 +1,20 @@
+<div class="container">
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => "form-horizontal"}) do |f| %>
-  <!-- <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+  <fieldset>
+  	<legend>Sign in</legend>
+  <div class="control-group"><%= f.label :email , :class => 'control-label' %><div class="controls">
+  <%= f.email_field :email %></div></div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+  <div class="control-group"><%= f.label :password , :class => 'control-label' %><div class="controls">
+  <%= f.password_field :password %></div></div>
 
   <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+    <div class="control-group"> <%= f.label :remember_me , :class => 'control-label' %><div class="controls"><%= f.check_box :remember_me %></div></div>
   <% end -%>
 
-  <div><%= f.submit "Sign in" %></div> -->
-  
-   <fieldset>
-   <div class="control-group">
-  	<label class="control-label" for="user_email">Email</label>
-   		<div class="controls">
-  			<input id="user_email" type="text" class="input-large" placeholder="Username" name="user[email]" size="30" type="email" />
-   		</div>
-  	</div>
-  <div class="control-group">
-  	<label class="control-label" for="user_password">Password</label>
-  		<div class="controls">
-  			<input id="user_password" type="password" class="input-large" name="user[password]" size="30" type="password" />
-   		</div>
-  </div>
-  
-  
-  <div class="control-group">
-  	<label class="control-label" for="user_remember_me">Remember me</label>
-  	<div class="controls">
-  		<input name="user[remember_me]" type="hidden" value="0" />
-  		<input id="user_remember_me" name="user[remember_me]" type="checkbox" value="1" />
-  	</div>
-  </div>
-  <div class="form-actions">
-           <button type="submit" class="btn btn-primary">Login</button>
-           <a href="/password/new">Forgot your password?</a>
-         </div>
+  <div class="form-actions"><%= f.submit "Sign in", :class => 'btn btn-primary' %>
+           <a href="/password/new">Forgot your password?</a></div>
   </fieldset>
-<% end %>
+<% end %></div>
 <!-- 
 <%= render "links" %> -->

@@ -1,5 +1,6 @@
 <%= form_for @job, :html => { :class => 'form-horizontal' } do |f| %>
 <fieldset>
+	<legend><%= controller.action_name.capitalize %> Job <small><%= controller.action_name.capitalize %> information about a job</small></legend>
 	<div class="control-group">
 		<%= f.label :name, :class => 'control-label' %>
 		<div class="controls">
