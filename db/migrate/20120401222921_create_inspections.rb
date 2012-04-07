@@ -12,6 +12,7 @@ class CreateInspections < ActiveRecord::Migration
       t.string :photo_url
       t.string :description
       t.references :job
+      t.references :user
 
       t.timestamps
     end
@@ -20,6 +21,7 @@ class CreateInspections < ActiveRecord::Migration
     add_index :inspections, :damper_type_id
     add_index :inspections, :job_id
     add_index :inspections, :technician_id
+    add_index :inspections, :user_id
   end
 
   def self.down

@@ -1,4 +1,5 @@
 class TechniciansController < ApplicationController
+  before_filter :authenticate_user!
   # GET /technicians
   # GET /technicians.json
   def index

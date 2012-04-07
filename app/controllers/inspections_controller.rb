@@ -1,4 +1,5 @@
 class InspectionsController < ApplicationController
+  before_filter :authenticate_user!
   # GET /inspections
   # GET /inspections.xml
   def index

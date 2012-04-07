@@ -10,9 +10,12 @@ class CreateJobs < ActiveRecord::Migration
       t.string :contact_last_name
       t.integer :contact_phone
       t.boolean :active, :null => false, :default => true
+      t.references :user   
 
       t.timestamps
     end
+    
+    add_index :jobs, :user_id
   end
 
   def self.down

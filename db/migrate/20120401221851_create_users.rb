@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :first_name
       t.string :last_name
       t.string :phone
-      t.string :user_type, :null => false, :default => "tech"
+      t.string :role, :null => false, :default => 'technician'
 
       t.timestamps
     end

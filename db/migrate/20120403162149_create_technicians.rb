@@ -7,8 +7,11 @@ class CreateTechnicians < ActiveRecord::Migration
       t.string :phone
       t.string :license
       t.date :license_expiration
+      t.references :user
 
       t.timestamps
     end
+    
+    add_index :technicians, :user_id
   end
 end

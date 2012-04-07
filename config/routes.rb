@@ -1,13 +1,17 @@
 FireDampers::Application.routes.draw do
-  resources :technicians
-
-  # devise_for :users
+  devise_for :admins
+  authenticated :admin do
+    root :to => 'users#index'
+  end
+  
   authenticated :user do
     root :to => 'jobs#index'
   end
   
   root :to => "jobs#index"
   devise_for :users, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register" }
+
+  resources :technicians
 
   resources :reports
 

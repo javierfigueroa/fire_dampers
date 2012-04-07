@@ -6,6 +6,51 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
+# Create Test Users
+# Admin.find_or_create_by_email(
+  # :email => "test@test.com",
+  # :password => 'mainloop2012'
+# )
+
+admin = User.find_or_create_by_email(
+  :email => "admin@mainloop.us",
+  :password => 'mainloop2012',
+  :role => "admin"
+)
+
+regular = User.find_or_create_by_email(
+  :email => "regular@mainloop.us",
+  :password => 'test123',
+  :role => "regular"
+)
+
+regular2 = User.find_or_create_by_email(
+  :email => "regular2@mainloop.us",
+  :password => 'test123',
+  :role => "regular"
+)
+
+tech = User.find_or_create_by_email(
+  :email => "tech@mainloop.us",
+  :password => 'test123'
+)
+
+admin = User.find_by_email("admin@mainloop.us")
+admin.role = "admin"
+admin.save!
+
+regular = User.find_by_email("regular@mainloop.us")
+regular.role = "regular"
+regular.save!
+
+regular2 = User.find_by_email("regular2@mainloop.us")
+regular2.role = "regular"
+regular2.save!
+
+# tech = User.find_by_email("tech@mainloop.us")
+# tech.role = "tech"
+# tech.save!
+
 # Damper Types
 # APW = Access Panel Wall
 # ATF = Access thru Flex
@@ -22,7 +67,6 @@
 # R/D = Rolling Door
 # SLR = See Repair List
 # O/D = Over Door L.L. = Lower Level
-
 
 DamperType.find_or_create_by_abbrev(:abbrev => "APW", :description => "Access Panel Wall")
 DamperType.find_or_create_by_abbrev(:abbrev => "ATF", :description => "Access thru Flex")
@@ -56,7 +100,8 @@ DamperStatus.find_or_create_by_abbrev(:abbrev => "FAIL", :description => "Failed
   :inspected_by => "Test Report Inspector " + i.to_s, 
   :contact_first_name => "Test First Name " + i.to_s,
   :contact_phone => "478273487293847",
-  :active => i % 2 == 0 ? true : false
+  :active => i % 2 == 0 ? true : false,
+  :user_id => i % 2 == 0 ? regular.id : regular2.id
   )
 end
 
@@ -68,34 +113,8 @@ end
   :email => "tech" + i.to_s + "@dampers.com", 
   :phone => "478273487293847",
   :license => 10000000+rand(10000000),
-  :license_expiration => 1.year.from_now 
+  :license_expiration => 1.year.from_now,
+  :user_id => i % 2 == 0 ? regular.id : regular2.id
   )
 end
 
-# Create Test Users
-User.find_or_create_by_email(
-  :email => "admin@mainloop.us",
-  :password => 'mainloop2012'
-)
-
-User.find_or_create_by_email(
-  :email => "regular@mainloop.us",
-  :password => 'test123'
-)
-
-User.find_or_create_by_email(
-  :email => "tech@mainloop.us",
-  :password => 'test123'
-)
-
-user = User.find_by_email("admin@mainloop.us")
-user.user_type = "admin"
-user.save!
-
-user = User.find_by_email("regular@mainloop.us")
-user.user_type = "regular"
-user.save!
-
-user = User.find_by_email("tech@mainloop.us")
-user.user_type = "tech"
-user.save!

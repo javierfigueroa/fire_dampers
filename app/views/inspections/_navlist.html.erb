@@ -15,5 +15,10 @@
 			<li>
 				<a href="/technicians"><i class="icon-user"></i> Technicians</a>
 			</li>
+			<% if admin_signed_in? %>
+			<li>
+				<a href="/users"><i class="icon-user"></i> Users</a>
+			</li>
+			<% end %>
 		</ul>
 	</div>
