@@ -3,11 +3,12 @@ class InspectionsController < ApplicationController
   # GET /inspections
   # GET /inspections.xml
   def index
-    @inspections = Inspection.all
+    @inspections = Inspection.where(:user_id => current_user.id)
 
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @inspections }
+      format.json { render :json => @inspections }
     end
   end
 
@@ -19,6 +20,7 @@ class InspectionsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @inspection }
+      format.json  { render :json => @inspection }
     end
   end
 
@@ -66,9 +68,11 @@ class InspectionsController < ApplicationController
       if @inspection.save
         format.html { redirect_to(@inspection, :notice => 'Inspection was successfully created.') }
         format.xml  { render :xml => @inspection, :status => :created, :location => @inspection }
+        format.json  { render :json => @inspection, :status => :created, :location => @inspection }
       else        
         format.html { render :action => "new" }
         format.xml  { render :xml => @inspection.errors, :status => :unprocessable_entity }
+        format.json  { render :json => @inspection.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -81,9 +85,11 @@ class InspectionsController < ApplicationController
       if @inspection.update_attributes(params[:inspection])
         format.html { redirect_to(@inspection, :notice => 'Inspection was successfully updated.') }
         format.xml  { head :ok }
+        format.json  { head :ok }
       else
         format.html { render :action => "edit" }
         format.xml  { render :xml => @inspection.errors, :status => :unprocessable_entity }
+        format.json  { render :json => @inspection.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -97,6 +103,7 @@ class InspectionsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(inspections_url) }
       format.xml  { head :ok }
+      format.json  { head :ok }
     end
   end
 end

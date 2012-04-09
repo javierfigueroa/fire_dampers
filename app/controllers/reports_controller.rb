@@ -3,7 +3,7 @@ class ReportsController < ApplicationController
   # GET /reports
   # GET /reports.xml
   def index
-    @reports = Report.all
+    @reports = Report.where(:user_id => current_user.id)
 
     respond_to do |format|
       format.html # index.html.erb

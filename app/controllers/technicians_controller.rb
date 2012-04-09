@@ -3,11 +3,12 @@ class TechniciansController < ApplicationController
   # GET /technicians
   # GET /technicians.json
   def index
-    @technicians = Technician.all
+    @technicians = Technician.where(:user_id => current_user.id)
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @technicians }
+      format.xml { render :xml => @technicians }
     end
   end
 
