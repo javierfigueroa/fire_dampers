@@ -8,14 +8,13 @@ gem 'rails', '3.2.0'
 gem 'devise', '2.0'
 gem 'cancan'
 
-group :production, :test do
+# group :production, :test do
   gem "pg"
-end
+# end
 
-group :development do
-  # gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
-  gem 'sqlite3'
-end
+# group :development do
+  # gem 'sqlite3'
+# end
 
 # Use unicorn as the web server
 # gem 'unicorn'
