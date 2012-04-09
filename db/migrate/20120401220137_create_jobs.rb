@@ -8,7 +8,7 @@ class CreateJobs < ActiveRecord::Migration
       t.string :inspected_by
       t.string :contact_first_name
       t.string :contact_last_name
-      t.integer :contact_phone
+      t.string :contact_phone
       t.boolean :active, :null => false, :default => true
       t.references :user   
 
