@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  before_filter :authenticate_admin!
   # GET /users
   # GET /users.xml
   def index
@@ -59,6 +58,7 @@ class UsersController < ApplicationController
   # PUT /users/1.xml
   def update
     @user = User.find(params[:id])
+    @user.active = params[:user][:active] == "true" ? true : false;
 
     respond_to do |format|
       if @user.update_attributes(params[:user])

@@ -15,5 +15,10 @@
 			<li class="active">
 				<a href="/technicians"><i class="icon-user"></i> Technicians</a>
 			</li>
+			<% if current_user.role? :admin %>
+			<li>
+				<a href="/users"><i class="icon-user"></i> Users</a>
+			</li>
+			<% end %>
 		</ul>
 	</div>

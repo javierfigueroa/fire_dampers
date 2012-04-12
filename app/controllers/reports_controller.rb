@@ -3,7 +3,7 @@ class ReportsController < ApplicationController
   # GET /reports
   # GET /reports.xml
   def index
-    @reports = Report.where(:user_id => current_user.id)
+    @reports = current_user.role == "admin" ? Report.all : Report.where(:user_id => current_user.id)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -42,6 +42,7 @@ class ReportsController < ApplicationController
   # POST /reports.xml
   def create
     @report = Report.new(params[:report])
+    @report.user_id = current_user.id;
 
     respond_to do |format|
       if @report.save

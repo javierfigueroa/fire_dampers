@@ -4,7 +4,7 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.xml
   def index
-    @jobs = Job.where(:user_id => current_user.id)
+    @jobs = current_user.role == "admin" ? Job.all : Job.where(:user_id => current_user.id)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -46,6 +46,7 @@ class JobsController < ApplicationController
   # POST /jobs.xml
   def create
     @job = Job.new(params[:job])
+    @job.user_id = current_user.id;
 
     respond_to do |format|
       if @job.save

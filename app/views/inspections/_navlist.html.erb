@@ -15,7 +15,7 @@
 			<li>
 				<a href="/technicians"><i class="icon-user"></i> Technicians</a>
 			</li>
-			<% if admin_signed_in? %>
+			<% if current_user.role? :admin %>
 			<li>
 				<a href="/users"><i class="icon-user"></i> Users</a>
 			</li>

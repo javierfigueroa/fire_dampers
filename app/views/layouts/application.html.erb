@@ -38,12 +38,8 @@
           <div class="nav-collapse">
           	<ul class="nav pull-right">
             <li><p class="navbar-text pull-right">Logged in as 
-            	<% if admin_signed_in? %>
-            	
-            	<a href="#"><%= current_admin.email %></a>
-            	<% else %>
             	<a href="#"><%= current_user.email %></a>
-            	<% end %></p></li>
+            	</p></li>
             <li class="divider-vertical"></li>
             <li><p class="navbar-text "><a href="/logout">Logout</a></p></li>
            </ul>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120406003446) do
+ActiveRecord::Schema.define(:version => 20120412025954) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -78,7 +78,7 @@ ActiveRecord::Schema.define(:version => 20120406003446) do
     t.string   "inspected_by"
     t.string   "contact_first_name"
     t.string   "contact_last_name"
-    t.integer  "contact_phone"
+    t.string   "contact_phone"
     t.boolean  "active",             :default => true, :null => false
     t.integer  "user_id"
     t.datetime "created_at",                           :null => false
@@ -130,6 +130,7 @@ ActiveRecord::Schema.define(:version => 20120406003446) do
     t.string   "last_sign_in_ip"
     t.string   "password_salt"
     t.string   "authentication_token"
+    t.boolean  "active",                 :default => true,         :null => false
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true

@@ -3,7 +3,7 @@ class InspectionsController < ApplicationController
   # GET /inspections
   # GET /inspections.xml
   def index
-    @inspections = Inspection.where(:user_id => current_user.id)
+    @inspections = current_user.role == "admin" ? Inspection.all : Inspection.where(:user_id => current_user.id)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -63,6 +63,7 @@ class InspectionsController < ApplicationController
   # POST /inspections.xml
   def create
     @inspection = Inspection.new(params[:inspection])
+    @inspection.user_id = current_user.id;
     
     respond_to do |format|
       if @inspection.save

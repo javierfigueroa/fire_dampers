@@ -1,6 +1,51 @@
-<h1>Editing user</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<div class="row-fluid">
+	<%= render 'navlist' %>
+	<div class="span10">
+		<div class="row">
+			<div class="span12">
+				<ul class="breadcrumb">
+					<li>
+						<a href="#">Home</a><span class="divider">/</span>
+					</li>
+					<li>
+						<a href="<%= users_path %>"><%= controller_name.capitalize %></a><span class="divider">/</span>
+					</li>
+					<li class="active">
+						<a href="#"><%= controller.action_name.capitalize %></a>
+					</li>
+				</ul>
+				<% if @user.errors.any? %>
+				<div class="alert alert-block alert-error fade in">
+					<a class="close" data-dismiss="alert">×</a>
+					<h4 class="alert-heading"><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h4>
+					<ul>
+						<% @user.errors.full_messages.each do |msg| %>
+						<li>
+							<%= msg %>
+						</li>
+						<% end %>
+					</ul>
+				</div>
+				<% end %>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<div class="row">
+					<div class="span6">
+						<ul class="nav nav-pills">
+							<li>
+								<a href="<%= users_path %>"><i class="icon-arrow-left"></i> Back</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+			<%= render 'form' %>
+			</div>
+		</div>
+	</div>
+</div>

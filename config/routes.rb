@@ -1,9 +1,4 @@
 FireDampers::Application.routes.draw do
-  devise_for :admins
-  authenticated :admin do
-    root :to => 'users#index'
-  end
-  
   authenticated :user do
     root :to => 'jobs#index'
   end

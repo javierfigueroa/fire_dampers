@@ -3,7 +3,7 @@ class TechniciansController < ApplicationController
   # GET /technicians
   # GET /technicians.json
   def index
-    @technicians = Technician.where(:user_id => current_user.id)
+    @technicians = current_user.role == "admin" ? Technician.all : Technician.where(:user_id => current_user.id)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -43,6 +43,7 @@ class TechniciansController < ApplicationController
   # POST /technicians.json
   def create
     @technician = Technician.new(params[:technician])
+    @technician.user_id = current_user.id;
     
     if @technician.email == nil || @technician.license == nil
       respond_to do |format|
