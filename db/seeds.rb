@@ -118,3 +118,33 @@ end
   )
 end
 
+# t.string :building_abbrev
+      # t.date :inspection_date
+      # t.integer :floor
+      # t.references :technician
+      # t.string :location
+      # t.string :damper_id
+      # t.references :damper_status
+      # t.references :damper_type
+      # t.string :photo_url
+      # t.string :description
+      # t.references :job
+      # t.references :user
+# Test Inspections
+200.times do |i|
+  Inspection.find_or_create_by_damper_id(
+  :inspection_date => rand(15).day.from_now,
+  :building_abbrev => "Building Abbrev " + i.to_s,
+  :floor => i,
+  :location => "Location " + i.to_s,
+  :technician_id => 1+rand(24), 
+  :damper_id => (i+rand(24)).to_s,
+  :damper_status_id => 1+rand(1),
+  :damper_type_id => 1+rand(14),
+  :photo_url => "http://url"+i.to_s,
+  :description => "Description "+i.to_s,
+  :job_id => 1+rand(24),
+  :user_id => 1+rand(24)  
+  )
+end
+

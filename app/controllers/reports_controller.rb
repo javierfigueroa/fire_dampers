@@ -14,11 +14,21 @@ class ReportsController < ApplicationController
   # GET /reports/1
   # GET /reports/1.xml
   def show
-    @report = Report.find(params[:id])
+    # @report = Report.find(params[:id])
+    @job = Job.find(params[:id])
+    
+    format = request.format
+    if format == "application/pdf"
+      
+    end
 
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @report }
+      format.pdf do
+        render :pdf => "file_name",
+               :template => 'reports/show.pdf.erb'
+      end
     end
   end
 
@@ -43,6 +53,11 @@ class ReportsController < ApplicationController
   def create
     @report = Report.new(params[:report])
     @report.user_id = current_user.id;
+    
+    format = request.format
+    if format == "application/pdf"
+      
+    end
 
     respond_to do |format|
       if @report.save

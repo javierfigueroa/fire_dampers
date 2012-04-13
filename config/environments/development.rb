@@ -27,7 +27,12 @@ FireDampers::Application.configure do
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   
   config.after_initialize do
-    WICKED_PDF[:exe_path] = "/usr/local/bin/wkhtmltopdf"
+    WickedPdf.config = {
+  #:wkhtmltopdf => '/usr/local/bin/wkhtmltopdf',
+  #:layout => "pdf.html",
+  :exe_path => "/usr/local/bin/wkhtmltopdf"
+}
+    # WickedPdf[:exe_path] = "/usr/local/bin/wkhtmltopdf"
   end
 end
 

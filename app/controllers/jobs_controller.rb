@@ -10,11 +10,6 @@ class JobsController < ApplicationController
       format.html # index.html.erb
       format.xml  { render :xml => @jobs }
       format.json { render :json => @jobs }
-      format.pdf do
-        render :pdf => "file_name",
-               :template => 'jobs/show.pdf.erb',
-               :locals   => { :jobs => @jobs }
-      end
     end
   end
 
