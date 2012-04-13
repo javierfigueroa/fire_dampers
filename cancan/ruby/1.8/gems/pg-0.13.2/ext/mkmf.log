@@ -57,7 +57,7 @@ conftest.c: In function ‘t’:
 conftest.c:3: error: ‘PQconnectionUsedPassword’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
 conftest.c:3: error: for each function it appears in.)
-lipo: can't figure out the architecture type of: /var/tmp//ccWLyJOa.out
+lipo: can't figure out the architecture type of: /var/tmp//ccOJbMxY.out
 checked program was:
 /* begin */
 1: /*top*/
@@ -86,7 +86,7 @@ conftest.c: In function ‘t’:
 conftest.c:3: error: ‘PQisthreadsafe’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
 conftest.c:3: error: for each function it appears in.)
-lipo: can't figure out the architecture type of: /var/tmp//ccuU5bAG.out
+lipo: can't figure out the architecture type of: /var/tmp//ccjcJt7t.out
 checked program was:
 /* begin */
 1: /*top*/
@@ -115,7 +115,7 @@ conftest.c: In function ‘t’:
 conftest.c:3: error: ‘PQprepare’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
 conftest.c:3: error: for each function it appears in.)
-lipo: can't figure out the architecture type of: /var/tmp//cciKGZNf.out
+lipo: can't figure out the architecture type of: /var/tmp//cc63UVDu.out
 checked program was:
 /* begin */
 1: /*top*/
@@ -144,7 +144,7 @@ conftest.c: In function ‘t’:
 conftest.c:3: error: ‘PQexecParams’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
 conftest.c:3: error: for each function it appears in.)
-lipo: can't figure out the architecture type of: /var/tmp//ccsqoq90.out
+lipo: can't figure out the architecture type of: /var/tmp//cc9H6igh.out
 checked program was:
 /* begin */
 1: /*top*/
@@ -173,7 +173,7 @@ conftest.c: In function ‘t’:
 conftest.c:3: error: ‘PQescapeString’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
 conftest.c:3: error: for each function it appears in.)
-lipo: can't figure out the architecture type of: /var/tmp//ccPcPnrB.out
+lipo: can't figure out the architecture type of: /var/tmp//cc7ZnExw.out
 checked program was:
 /* begin */
 1: /*top*/
@@ -202,7 +202,7 @@ conftest.c: In function ‘t’:
 conftest.c:3: error: ‘PQescapeStringConn’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
 conftest.c:3: error: for each function it appears in.)
-lipo: can't figure out the architecture type of: /var/tmp//ccbxcNic.out
+lipo: can't figure out the architecture type of: /var/tmp//cciA2r1b.out
 checked program was:
 /* begin */
 1: /*top*/
@@ -231,7 +231,7 @@ conftest.c: In function ‘t’:
 conftest.c:3: error: ‘PQgetCancel’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
 conftest.c:3: error: for each function it appears in.)
-lipo: can't figure out the architecture type of: /var/tmp//cc5JVhhH.out
+lipo: can't figure out the architecture type of: /var/tmp//cconaPNs.out
 checked program was:
 /* begin */
 1: /*top*/
@@ -260,7 +260,7 @@ conftest.c: In function ‘t’:
 conftest.c:3: error: ‘lo_create’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
 conftest.c:3: error: for each function it appears in.)
-lipo: can't figure out the architecture type of: /var/tmp//ccpJqy22.out
+lipo: can't figure out the architecture type of: /var/tmp//ccHUdxNf.out
 checked program was:
 /* begin */
 1: /*top*/
@@ -289,7 +289,7 @@ conftest.c: In function ‘t’:
 conftest.c:3: error: ‘pg_encoding_to_char’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
 conftest.c:3: error: for each function it appears in.)
-lipo: can't figure out the architecture type of: /var/tmp//ccTD52rC.out
+lipo: can't figure out the architecture type of: /var/tmp//ccZA5TIm.out
 checked program was:
 /* begin */
 1: /*top*/
@@ -318,7 +318,7 @@ conftest.c: In function ‘t’:
 conftest.c:3: error: ‘pg_char_to_encoding’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
 conftest.c:3: error: for each function it appears in.)
-lipo: can't figure out the architecture type of: /var/tmp//ccvqAWv6.out
+lipo: can't figure out the architecture type of: /var/tmp//cccfPzys.out
 checked program was:
 /* begin */
 1: /*top*/
@@ -347,7 +347,7 @@ conftest.c: In function ‘t’:
 conftest.c:3: error: ‘PQsetClientEncoding’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
 conftest.c:3: error: for each function it appears in.)
-lipo: can't figure out the architecture type of: /var/tmp//cck6Igw5.out
+lipo: can't figure out the architecture type of: /var/tmp//ccMsAqKo.out
 checked program was:
 /* begin */
 1: /*top*/
@@ -376,7 +376,7 @@ conftest.c: In function ‘t’:
 conftest.c:3: error: ‘rb_encdb_alias’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
 conftest.c:3: error: for each function it appears in.)
-lipo: can't figure out the architecture type of: /var/tmp//ccqj1NJg.out
+lipo: can't figure out the architecture type of: /var/tmp//ccsSxs4r.out
 checked program was:
 /* begin */
 1: /*top*/
@@ -387,15 +387,15 @@ checked program was:
 "gcc -o conftest -I. -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin11.0 -I.  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/usr/include -arch i386 -arch x86_64 -g -Os -pipe -fno-common -DENABLE_DTRACE  -fno-common  -pipe -fno-common   conftest.c  -L. -L/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib -L. -arch i386 -arch x86_64  -L/usr/lib    -lpq  -lruby -lpq  -lpthread -ldl  "
 Undefined symbols for architecture i386:
   "_rb_encdb_alias", referenced from:
-      _t in ccII25W6.o
+      _t in ccwLLPCW.o
 ld: symbol(s) not found for architecture i386
 collect2: ld returned 1 exit status
 Undefined symbols for architecture x86_64:
   "_rb_encdb_alias", referenced from:
-      _t in cciJG5Nn.o
+      _t in ccBpmmGB.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
-lipo: can't open input file: /var/tmp//ccgxhEZC.out (No such file or directory)
+lipo: can't open input file: /var/tmp//ccaDYYiE.out (No such file or directory)
 checked program was:
 /* begin */
 1: /*top*/
@@ -416,7 +416,7 @@ conftest.c: In function ‘t’:
 conftest.c:3: error: ‘rb_enc_alias’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
 conftest.c:3: error: for each function it appears in.)
-lipo: can't figure out the architecture type of: /var/tmp//cc6dC1Ub.out
+lipo: can't figure out the architecture type of: /var/tmp//ccWfDgfR.out
 checked program was:
 /* begin */
 1: /*top*/
@@ -427,15 +427,15 @@ checked program was:
 "gcc -o conftest -I. -I/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin11.0 -I.  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/usr/include -arch i386 -arch x86_64 -g -Os -pipe -fno-common -DENABLE_DTRACE  -fno-common  -pipe -fno-common   conftest.c  -L. -L/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib -L. -arch i386 -arch x86_64  -L/usr/lib    -lpq  -lruby -lpq  -lpthread -ldl  "
 Undefined symbols for architecture i386:
   "_rb_enc_alias", referenced from:
-      _t in cc9gUXNm.o
+      _t in ccbRuEPc.o
 ld: symbol(s) not found for architecture i386
 collect2: ld returned 1 exit status
 Undefined symbols for architecture x86_64:
   "_rb_enc_alias", referenced from:
-      _t in ccYhwhKF.o
+      _t in cc9jErpE.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
-lipo: can't open input file: /var/tmp//ccVPz1Iw.out (No such file or directory)
+lipo: can't open input file: /var/tmp//ccuByr6F.out (No such file or directory)
 checked program was:
 /* begin */
 1: /*top*/

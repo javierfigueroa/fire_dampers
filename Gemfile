@@ -7,6 +7,7 @@ gem 'rails', '3.2.2'
 
 gem 'devise'
 gem 'cancan'
+gem 'wicked_pdf'
 
 group :production, :test do
   gem "pg"
