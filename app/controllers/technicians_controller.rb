@@ -3,8 +3,8 @@ class TechniciansController < ApplicationController
   # GET /technicians
   # GET /technicians.json
   def index
-    @technicians = current_user.role == "admin" ? Technician.all : Technician.where(:user_id => current_user.id)
-
+    @technicians = Technician.accessible_by(current_ability, :read)
+     
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @technicians }
@@ -90,7 +90,10 @@ class TechniciansController < ApplicationController
   # DELETE /technicians/1.json
   def destroy
     @technician = Technician.find(params[:id])
+    user = User.find(@technician.user_id)
+    
     @technician.destroy
+    user.destroy    
 
     respond_to do |format|
       format.html { redirect_to technicians_url }

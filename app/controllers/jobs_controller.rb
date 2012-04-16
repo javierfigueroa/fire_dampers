@@ -4,7 +4,7 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.xml
   def index
-    @jobs = current_user.role == "admin" ? Job.all : Job.where(:user_id => current_user.id)
+    @jobs = Job.accessible_by(current_ability, :read) 
 
     respond_to do |format|
       format.html # index.html.erb

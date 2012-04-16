@@ -35,6 +35,16 @@ tech = User.find_or_create_by_email(
   :password => 'test123'
 )
 
+Technician.find_or_create_by_email(
+  :first_name => "Test Technician First Name",
+  :last_name => "Test Technician Last Name",
+  :email => "tech@mainloop.us", 
+  :phone => "478273487293847",
+  :license => 10000000+rand(10000000),
+  :license_expiration => 1.year.from_now,
+  :user_id => regular.id 
+)
+
 admin = User.find_by_email("admin@mainloop.us")
 admin.role = "admin"
 admin.save!

@@ -3,8 +3,8 @@ class ReportsController < ApplicationController
   # GET /reports
   # GET /reports.xml
   def index
-    @reports = current_user.role == "admin" ? Report.all : Report.where(:user_id => current_user.id)
-
+    @reports = Report.accessible_by(current_ability, :read)
+     
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @reports }

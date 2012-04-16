@@ -3,8 +3,8 @@ class InspectionsController < ApplicationController
   # GET /inspections
   # GET /inspections.xml
   def index
-    @inspections = current_user.role == "admin" ? Inspection.all : Inspection.where(:user_id => current_user.id)
-
+    @inspections = Inspection.accessible_by(current_ability, :read)
+     
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @inspections }
