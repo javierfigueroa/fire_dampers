@@ -15,20 +15,19 @@ class ReportsController < ApplicationController
   # GET /reports/1.xml
   def show
     # @report = Report.find(params[:id])
-    @job = Job.find(params[:id])
+    @job = Job.find(params[:id])    
+    @inspections = Inspection.accessible_by(current_ability, :read)
     
-    format = request.format
-    if format == "application/pdf"
-      
-    end
+    # format = request.format
+    # if format == "application/pdf"
+#       
+    # end
 
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @report }
-      format.pdf do
-        render :pdf => "file_name",
-               :template => 'reports/show.pdf.erb'
-      end
+      format.pdf { 
+      render(:pdf => "breakfast", :layout => false, :show_as_html => params[:debug].present? ) }
     end
   end
 
