@@ -33,9 +33,11 @@
 							<li>
 								<a href="<%= jobs_path %>"><i class="icon-arrow-left"></i> Back</a>
 							</li>
+							<% if can? :update, Job %>
 							<li>
 								<a href="<%= edit_job_path(@job) %>"><i class="icon-cog"></i> Edit Job</a>
 							</li>
+							<% end %>
 						</ul>
 					</div>
 				</div>
