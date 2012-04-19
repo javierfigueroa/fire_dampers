@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   has_many :technician
   has_many :inspection
   has_many :report
+  belongs_to :company
   ROLES = %w[technician client regular admin]
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable

@@ -1,4 +1,8 @@
 FireDampers::Application.routes.draw do
+  resources :companies
+
+  get "company/index"
+
   authenticated :user do
     root :to => 'jobs#index'
   end

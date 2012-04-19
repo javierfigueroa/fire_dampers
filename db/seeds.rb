@@ -11,6 +11,24 @@
   # :email => "test@test.com",
   # :password => 'mainloop2012'
 # )
+ # t.string :name
+      # t.string :logo
+      # t.text :address
+      # t.string :city
+      # t.string :state
+      # t.string :zipcode
+      # t.string :phone
+      # t.string :fax
+
+company = Company.find_or_create_by_name(
+    :name => "Sheet Metal Experts, Inc.",
+    :address => "8986 N.W. 105th Way",
+    :city => "Medley",
+    :state => "Florida", 
+    :zipcode => "33178",
+    :phone => "(305) 805-2019",
+    :fax => "(305) 805-2038"            
+)
 
 admin = User.find_or_create_by_email(
   :email => "admin@mainloop.us",
@@ -21,7 +39,8 @@ admin = User.find_or_create_by_email(
 regular = User.find_or_create_by_email(
   :email => "regular@mainloop.us",
   :password => 'test123',
-  :role => "regular"
+  :role => "regular",
+  :company_id => company.id
 )
 
 regular2 = User.find_or_create_by_email(
@@ -51,6 +70,7 @@ admin.save!
 
 regular = User.find_by_email("regular@mainloop.us")
 regular.role = "regular"
+regular.company_id = company.id
 regular.save!
 
 regular2 = User.find_by_email("regular2@mainloop.us")

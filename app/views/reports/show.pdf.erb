@@ -31,6 +31,29 @@
 				top: 60%;          /***  height / 2   ***/
 				left: 50%;
 			}
+			table {
+				width: 90%;
+				border-top: 1px solid #e5eff8;
+				border-right: 1px solid #e5eff8;
+				margin: 1em auto;
+				border-collapse: collapse;
+			}
+			td {
+				color: #678197;
+				border-bottom: 1px solid #e5eff8;
+				border-left: 1px solid #e5eff8;
+				padding: .3em 1em;
+				text-align: center;
+			}
+			tr.odd td {
+				background: #f7fbff
+			}
+			tr.odd .column1 {
+				background: #f4f9fe;
+			}
+			.column1 {
+				background: #f9fcfe;
+			}
 		</style>
 
 		<%= wicked_pdf_stylesheet_link_tag('bootstrap.min') %>
@@ -68,22 +91,22 @@
 				<div class="page-header">
 					<%= wicked_pdf_image_tag('logo250x100px.png') %><!-- <img src="<%= wicked_pdf_image_tag('logo(250x100px).png') %>" width="250" height="100" alt="logo">  -->
 					<p>
-						Sheet Metal Experts, Inc.
+						<%= @company.name %>
 						<br />
-						8986 N.W. 105th Way
+						<%= @company.address %>
 						<br />
-						Medley, Florida 33178
+						<%= @company.city %>, <%= @company.state %> <%= @company.zipcode %>
 						<br />
-						Tel: (305) 805-2019
+						Tel: <%= @company.phone %>
 						<br />
-						Fax: (305) 805-2038
+						Fax: <%= @company.fax %>
 						<br />
 					</p>
 				</div>
 				<h3>Fire and Fire/Smoke Damper Inspection Summary</h3>
 				<br>
 				<p>
-					COMPANY NAME inspected all fire and fire smoke dampers in accordance with NFPA 80, NFPA 90A, NFPA 92A, NFPA 101, and NFPA 105 beginning August 7, 2010 and was completed September 9, 2010. The technicians involved in this project were Todd Ballerman who supervised the project and David Murphy. Both technicians have current HVAC Life Safety Certification.
+					<%= @company.name %> inspected all fire and fire smoke dampers in accordance with NFPA 80, NFPA 90A, NFPA 92A, NFPA 101, and NFPA 105 beginning August 7, 2010 and was completed September 9, 2010. The technicians involved in this project were Todd Ballerman who supervised the project and David Murphy. Both technicians have current HVAC Life Safety Certification.
 				</p>
 				<p>
 					The report and digital pictures provided as part of this report reflect that all dampers were inspected per all applicable requirements for healthcare facilities. Information contained in this report reflects the operation and condition of the dampers at the time of this report and in no way does Sheet Metal Experts, Inc. guaranty or warranty the continued operation of the dampers that are included in this report after the time of inspection.
@@ -133,16 +156,18 @@
 					<h3>Inspected by <%= @job.inspected_by %></h3>
 				</div>
 				<div>
-					<table width="900" border="2" cellspacing="2" cellpadding="3">
+					<table width="900" cellspacing="2" cellpadding="3">
 						<thead>
-							<th><strong>FLOOR</strong></th>
-							<th><strong>FIRE</strong></th>
-							<th><strong>SMOKE</strong></th>
-							<th><strong>PASS</strong></th>
-							<th><strong>FAIL</strong></th>
-							<th><strong>NON ACCESSIBLE</strong></th>
-							<th><strong>REQUIRING REPAIR</strong></th>
-							<th><strong>TOTAL DAMPERS</strong></th>
+							<tr class="odd">
+								<th><strong>FLOOR</strong></th>
+								<th><strong>FIRE</strong></th>
+								<th><strong>SMOKE</strong></th>
+								<th><strong>PASS</strong></th>
+								<th><strong>FAIL</strong></th>
+								<th><strong>NON ACCESSIBLE</strong></th>
+								<th><strong>REQUIRING REPAIR</strong></th>
+								<th><strong>TOTAL DAMPERS</strong></th>
+							</tr>
 						</thead>
 						<tbody>
 
@@ -171,7 +196,7 @@
 				</div>
 				<div>
 					<h2>Percent of Total</h2>
-					<table width="900" border="2" cellspacing="2" cellpadding="3">
+					<table width="900" cellspacing="2" cellpadding="3">
 						<thead>
 							<th><strong>FLOOR</strong></th>
 							<th><strong>FIRE</strong></th>
@@ -196,7 +221,7 @@
 						</tbody>
 					</table>
 				</div>
-			</div>			
+			</div>
 			<div class="page">
 				<div id="outer">
 					<div id="inner">
@@ -214,7 +239,7 @@
 					<h3>Inspected by <%= @job.inspected_by %></h3>
 				</div>
 				<div>
-					<table width="900" border="2" cellspacing="2" cellpadding="3">
+					<table cellspacing="2" cellpadding="3">
 						<thead>
 							<th><strong>FLOOR</strong></th>
 							<th><strong>DAMPER NUMBER</strong></th>
@@ -226,22 +251,21 @@
 						</thead>
 						<tbody>
 							<% @inspections.each do |inspection| %>
-								<tr>
-									<td><%= inspection.floor %></td>
-									<td><%= inspection.damper_id %></td>
-									<td><%= inspection.damper_type.abbrev %></td>
-									<td><%= inspection.location %></td>
-									<td><%= inspection.damper_status.abbrev %></td>
-									<td><%= inspection.damper_status.abbrev %></td>
-									<td><%= inspection.description %></td>
-									
-												
-								</tr>
-								<% end %>
+							<tr>
+								<td><%= inspection.floor %></td>
+								<td><%= inspection.damper_id %></td>
+								<td><%= inspection.damper_type.abbrev %></td>
+								<td><%= inspection.location %></td>
+								<td><%= inspection.damper_status.abbrev %></td>
+								<td><%= inspection.damper_status.abbrev %></td>
+								<td><%= inspection.description %></td>
+
+							</tr>
+							<% end %>
 						</tbody>
 					</table>
 				</div>
-			</div>			
+			</div>
 			<div class="page">
 				<div id="outer">
 					<div id="inner">
@@ -256,39 +280,37 @@
 					<div class="page-header offset1">
 						<%= wicked_pdf_image_tag('logo250x100px.png') %><!-- <img src="<%= wicked_pdf_image_tag('logo(250x100px).png') %>" width="250" height="100" alt="logo">  -->
 
-						<h1><%= @job.name %><small> Fire and Smoke Damper Inspection Summary</small></h1>
+						<h1><%= @job.name %><small> Fire and Smoke Damper Detail Data</small></h1>
 						<br>
 						<h3>Inspected <%= @job.start_date %> thru <%= @job.finish_date %></h3>
 						<h3>Inspected by <%= @job.inspected_by %></h3>
 					</div>
 					<div class="span10 offset1">
 						<table class="table">
-							<thead>
-								<tr>
-									<th>Test Job 0</th>
-									<th>Test Address 12345 nw 123 st 0</th>
-								</tr>
-							</thead>
 							<tbody>
 								<tr>
-									<td>Start date:</td>
-									<td>2012-04-09</td>
+									<td><strong>Building:</strong></td>
+									<td><%= inspection.building_abbrev %></td>
+									<td><strong>Date:</strong></td>
+									<td><%= inspection.inspection_date %></td>
 								</tr>
 								<tr>
-									<td>Finish date:</td>
-									<td>2012-04-09</td>
+									<td><strong>Floor:</strong></td>
+									<td><%= inspection.floor %></td>
+									<td><strong>Inspector:</strong></td>
+									<td><%= inspection.technician.first_name %> <%= inspection.technician.last_name %></td>
 								</tr>
 								<tr>
-									<td>Inspected by:</td>
-									<td>Test Report Inspector 0</td>
+									<td><strong>Location:</strong></td>
+									<td><%= inspection.location %></td>
+									<td><strong>Damper Status:</strong></td>
+									<td><%= inspection.damper_status.abbrev %></td>
 								</tr>
 								<tr>
-									<td>Contact Name:</td>
-									<td>Test First Name 0</td>
-								</tr>
-								<tr>
-									<td>Contact Phone:</td>
-									<td>478273487293847</td>
+									<td><strong>Damper Id:</strong></td>
+									<td><%= inspection.damper_id %></td>
+									<td><strong>Damper Type:</strong></td>
+									<td><%= inspection.damper_type.abbrev %></td>
 								</tr>
 							</tbody>
 						</table>
@@ -305,13 +327,13 @@
 					</div>
 					<div class="span12 well">
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at cursus nibh. Aenean interdum ligula felis. In sem mauris, pulvinar in aliquam ac, porttitor eu massa. Donec pharetra, ipsum eget vehicula pharetra, velit enim bibendum massa, vel volutpat ante quam aliquet mauris.
+							<%= inspection.description %>
 						</p>
 					</div>
 				</div>
 			</div>
-			
-								<% end %>
+
+			<% end %>
 		</div>
 		</div>
 	</body>

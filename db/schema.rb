@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120412025954) do
+ActiveRecord::Schema.define(:version => 20120419002529) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -32,6 +32,19 @@ ActiveRecord::Schema.define(:version => 20120412025954) do
   add_index "admins", ["authentication_token"], :name => "index_admins_on_authentication_token", :unique => true
   add_index "admins", ["email"], :name => "index_admins_on_email", :unique => true
   add_index "admins", ["reset_password_token"], :name => "index_admins_on_reset_password_token", :unique => true
+
+  create_table "companies", :force => true do |t|
+    t.string   "name"
+    t.string   "logo"
+    t.text     "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zipcode"
+    t.string   "phone"
+    t.string   "fax"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "damper_statuses", :force => true do |t|
     t.string   "abbrev"
@@ -131,9 +144,11 @@ ActiveRecord::Schema.define(:version => 20120412025954) do
     t.string   "password_salt"
     t.string   "authentication_token"
     t.boolean  "active",                 :default => true,         :null => false
+    t.integer  "company_id",             :default => 0,            :null => false
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true
+  add_index "users", ["company_id"], :name => "index_users_on_company_id"
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 

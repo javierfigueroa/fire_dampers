@@ -8,10 +8,10 @@
 						<a href="#">Home</a><span class="divider">/</span>
 					</li>
 					<li>
-						<a href="<%= reports_path %>"><%= controller_name.capitalize %></a><span class="divider">/</span>
+						<a href="<%= companies_path %>"><%= controller_name.capitalize %></a><span class="divider">/</span>
 					</li>
 					<li class="active">
-						<a href="#"><%= @report.job.name %></a>
+						<a href="#"><%= @company.name %></a>
 					</li>
 				</ul>
 				<% if notice %>
@@ -28,7 +28,10 @@
 					<div class="span6">
 						<ul class="nav nav-pills">
 							<li>
-								<a href="<%= reports_path %>"><i class="icon-arrow-left"></i> Back</a>
+								<a href="<%= companies_path %>"><i class="icon-arrow-left"></i> Back</a>
+							</li>
+							<li>
+								<a href="<%= edit_company_path(@company) %>"><i class="icon-cog"></i> Edit Company</a>
 							</li>
 						</ul>
 					</div>
@@ -38,12 +41,43 @@
 		<div class="row">
 			<div class="span12">
 				<legend>
-					<%= @report.job.name %> 
+					<%= @company.name %>
 				</legend>
-				<p>
-					<b>Report:</b>
-					<a href="<%= url_for(@report) %>.pdf"><%= @report.job.name %> (Download)</a>
-				</p>
+				
+<p>
+  <b>Logo:</b>
+  <%= @company.logo %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @company.address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @company.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @company.state %>
+</p>
+
+<p>
+  <b>Zipcode:</b>
+  <%= @company.zipcode %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @company.phone %>
+</p>
+
+<p>
+  <b>Fax:</b>
+  <%= @company.fax %>
+</p>
 			</div>
 		</div>
 	</div>

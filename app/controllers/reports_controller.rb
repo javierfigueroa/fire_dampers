@@ -14,9 +14,11 @@ class ReportsController < ApplicationController
   # GET /reports/1
   # GET /reports/1.xml
   def show
-    # @report = Report.find(params[:id])
-    @job = Job.find(params[:id])    
-    @inspections = Inspection.accessible_by(current_ability, :read)
+    @report = Report.find(params[:id])
+    @job = Job.find(@report.job)    
+    @inspections = Inspection.where(:job_id => @job.id)
+    user = User.find(@report.user_id)
+    @company = Company.find(user.company)
     
     # format = request.format
     # if format == "application/pdf"
@@ -35,6 +37,13 @@ class ReportsController < ApplicationController
   # GET /reports/new.xml
   def new
     @report = Report.new
+    @jobs = Job.accessible_by(current_ability, :read) 
+    @company = nil
+    if current_user.role? :admin
+      @company = Company.find(1);
+    else
+      @company = Company.find(current_user.company)
+    end
 
     respond_to do |format|
       format.html # new.html.erb
@@ -51,7 +60,9 @@ class ReportsController < ApplicationController
   # POST /reports.xml
   def create
     @report = Report.new(params[:report])
-    @report.user_id = current_user.id;
+    if (!params[:report][:user_id])
+      @report.user_id = current_user.id;
+    end
     
     format = request.format
     if format == "application/pdf"

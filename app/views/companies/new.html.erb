@@ -8,16 +8,23 @@
 						<a href="#">Home</a><span class="divider">/</span>
 					</li>
 					<li>
-						<a href="<%= reports_path %>"><%= controller_name.capitalize %></a><span class="divider">/</span>
+						<a href="<%= companies_path %>"><%= controller_name.capitalize %></a><span class="divider">/</span>
 					</li>
 					<li class="active">
-						<a href="#"><%= @report.job.name %></a>
+						<a href="#"><%= controller.action_name.capitalize %></a>
 					</li>
 				</ul>
-				<% if notice %>
-				<div class="alert alert-block alert-success fade in">
+				<% if @company.errors.any? %>
+				<div class="alert alert-block alert-error fade in">
 					<a class="close" data-dismiss="alert">×</a>
-					<h4 class="alert-heading"><%= notice %></h4>
+					<h4 class="alert-heading"><%= pluralize(@company.errors.count, "error") %> prohibited this company from being saved:</h4>
+					<ul>
+						<% @company.errors.full_messages.each do |msg| %>
+						<li>
+							<%= msg %>
+						</li>
+						<% end %>
+					</ul>
 				</div>
 				<% end %>
 			</div>
@@ -28,7 +35,7 @@
 					<div class="span6">
 						<ul class="nav nav-pills">
 							<li>
-								<a href="<%= reports_path %>"><i class="icon-arrow-left"></i> Back</a>
+								<a href="<%= companies_path %>"><i class="icon-arrow-left"></i> Back</a>
 							</li>
 						</ul>
 					</div>
@@ -37,15 +44,8 @@
 		</div>
 		<div class="row">
 			<div class="span12">
-				<legend>
-					<%= @report.job.name %> 
-				</legend>
-				<p>
-					<b>Report:</b>
-					<a href="<%= url_for(@report) %>.pdf"><%= @report.job.name %> (Download)</a>
-				</p>
+			<%= render 'form' %>
 			</div>
 		</div>
 	</div>
 </div>
-</div> 
