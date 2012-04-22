@@ -27,7 +27,7 @@
   </div></div>
   <div class="control-group">
     <%= f.label :role , :class => 'control-label' %><div class="controls">
-    <%= f.text_field :role %>
+    <%= select(:user, :role, User::ROLES.collect {|d| [d, d]}) %>
   </div></div>
   <div class="control-group">
     <%= f.label :active , :class => 'control-label' %><div class="controls">
