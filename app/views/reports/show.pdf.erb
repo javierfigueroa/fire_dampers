@@ -64,7 +64,7 @@
 		<div class="container">
 			<div class="page">
 				<div class="page-header">
-					<%= wicked_pdf_image_tag('logo250x100px.png') %><!-- <img src="<%= wicked_pdf_image_tag('logo(250x100px).png') %>" width="250" height="100" alt="logo">  -->
+				<img src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
 
 				</div>
 				<div class="row">
@@ -89,7 +89,7 @@
 			</div>
 			<div class="page">
 				<div class="page-header">
-					<%= wicked_pdf_image_tag('logo250x100px.png') %><!-- <img src="<%= wicked_pdf_image_tag('logo(250x100px).png') %>" width="250" height="100" alt="logo">  -->
+					<img src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
 					<p>
 						<%= @company.name %>
 						<br />
@@ -148,7 +148,7 @@
 			</div>
 			<div class="page">
 				<div class="page-header offset1">
-					<%= wicked_pdf_image_tag('logo250x100px.png') %><!-- <img src="<%= wicked_pdf_image_tag('logo(250x100px).png') %>" width="250" height="100" alt="logo">  -->
+					<img src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
 
 					<h1><%= @job.name %></h1>
 					<small> Fire and Smoke Damper Inspection Summary</small>
@@ -188,7 +188,7 @@
 			</div>
 			<div class="page">
 				<div class="page-header offset1">
-					<%= wicked_pdf_image_tag('logo250x100px.png') %><!-- <img src="<%= wicked_pdf_image_tag('logo(250x100px).png') %>" width="250" height="100" alt="logo">  -->
+					<img src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
 
 					<h1><%= @job.name %></h1>
 					<small> Fire and Smoke Damper Statistical Summary</small>
@@ -233,7 +233,7 @@
 			</div>
 			<div class="page">
 				<div class="page-header offset1">
-					<%= wicked_pdf_image_tag('logo250x100px.png') %><!-- <img src="<%= wicked_pdf_image_tag('logo(250x100px).png') %>" width="250" height="100" alt="logo">  -->
+					<img  src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
 
 					<h1><%= @job.name %></h1>
 					<small> Fire and Smoke Damper Detail Summary</small>
@@ -279,9 +279,8 @@
 			<% @inspections.each do |inspection| %>
 			<div class="page">
 				<div class="container">
-					<hr>
 					<div class="page-header offset1">
-						<%= wicked_pdf_image_tag('logo250x100px.png') %><!-- <img src="<%= wicked_pdf_image_tag('logo(250x100px).png') %>" width="250" height="100" alt="logo">  -->
+						<img src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
 
 						<h1><%= @job.name %></h1>
 						<small> Fire and Smoke Damper Detail Data</small>

@@ -44,12 +44,16 @@ regular = User.find_or_create_by_email(
 )
 
 regular2 = User.find_or_create_by_email(
+  :first_name => "Test Client First Name",
+  :last_name => "Test Client Last Name",
   :email => "regular2@mainloop.us",
   :password => 'test123',
   :role => "regular"
 )
 
 tech = User.find_or_create_by_email(
+  :first_name => "Test Technician First Name 0",
+  :last_name => "Test Technician Last Name 0",
   :email => "tech@mainloop.us",
   :password => 'test123'
 )

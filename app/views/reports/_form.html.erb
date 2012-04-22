@@ -9,7 +9,7 @@
    <% if current_user.role? :admin %>
   <div class="control-group">
     <%= f.label :user , :class => 'control-label' %><div class="controls">
-    <%=	select("report", "user_id", User.all.collect {|p| [p.email , p.id] }) %>
+    <%=	select("report", "user_id", User.where(:role => 'regular').collect {|p| [p.email , p.id] }) %>
   </div></div>
   <% end %>
 	<div class="form-actions">

@@ -37,17 +37,25 @@ class ReportsController < ApplicationController
   # GET /reports/new.xml
   def new
     @report = Report.new
-    @jobs = Job.accessible_by(current_ability, :read) 
-    @company = nil
-    if current_user.role? :admin
-      @company = Company.find(1);
+    @jobs = Job.accessible_by(current_ability, :read)
+    if @jobs.count == 0
+      respond_to do |format|
+        format.html { redirect_to(reports_path, :notice => "No jobs available. You need jobs to create reports.") }
+        format.xml  { render :xml => @inspection, :status => :unprocessable_entity, :location => reports_path }
+        format.json  { render :json => @inspection, :status => :unprocessable_entity, :location => reports_path }
+      end
     else
-      @company = Company.find(current_user.company)
-    end
+      @company = nil
+      if current_user.role? :admin
+        @company = Company.find(1);
+      else
+        @company = Company.find(current_user.company)
+      end
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @report }
+      respond_to do |format|
+        format.html # new.html.erb
+        format.xml  { render :xml => @report }
+      end
     end
   end
 

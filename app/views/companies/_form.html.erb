@@ -5,10 +5,6 @@
     <%= f.text_field :name %>
   </div></div>
   <div class="control-group">
-    <%= f.label :logo , :class => 'control-label' %><div class="controls">
-    <%= f.text_field :logo %>
-  </div></div>
-  <div class="control-group">
     <%= f.label :address , :class => 'control-label' %><div class="controls">
     <%= f.text_area :address,  :size => "5x5" %>
   </div></div>
@@ -32,6 +28,12 @@
     <%= f.label :fax , :class => 'control-label' %><div class="controls">
     <%= f.text_field :fax %>
   </div></div>
+  <div class="control-group">
+		<%= f.label :logo_image , :class => 'control-label' %>
+		<div class="controls">
+			<%= f.file_field :logo_image %>
+		</div>
+	</div>
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
   </div>

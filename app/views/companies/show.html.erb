@@ -45,8 +45,7 @@
 				</legend>
 				
 <p>
-  <b>Logo:</b>
-  <%= @company.logo %>
+  <img src="<%= @company.logo_image %>" />
 </p>
 
 <p>
@@ -78,6 +77,11 @@
   <b>Fax:</b>
   <%= @company.fax %>
 </p>
+				
+				<p>
+					<b>Logo image</b>
+					<a href="<%= @company.logo_image %>"><%= @company.logo_image %></a>
+				</p>
 			</div>
 		</div>
 	</div>

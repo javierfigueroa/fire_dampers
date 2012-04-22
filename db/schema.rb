@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120419002529) do
+ActiveRecord::Schema.define(:version => 20120421231313) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -35,15 +35,18 @@ ActiveRecord::Schema.define(:version => 20120419002529) do
 
   create_table "companies", :force => true do |t|
     t.string   "name"
-    t.string   "logo"
     t.text     "address"
     t.string   "city"
     t.string   "state"
     t.string   "zipcode"
     t.string   "phone"
     t.string   "fax"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+    t.integer  "logo_image_file_size"
+    t.string   "logo_image_content_type"
+    t.string   "logo_image_file_name"
+    t.datetime "logo_image_updated_at"
   end
 
   create_table "damper_statuses", :force => true do |t|
@@ -118,8 +121,12 @@ ActiveRecord::Schema.define(:version => 20120419002529) do
     t.string   "license"
     t.date     "license_expiration"
     t.integer  "user_id"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+    t.integer  "license_image_file_size"
+    t.string   "license_image_content_type"
+    t.string   "license_image_file_name"
+    t.datetime "license_image_updated_at"
   end
 
   add_index "technicians", ["user_id"], :name => "index_technicians_on_user_id"

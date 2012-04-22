@@ -1,4 +1,4 @@
-class Inspection < ActiveRecord::Base
+class Inspection < ActiveRecord::Base 
   validates :building_abbrev, :presence => true
   validates :inspection_date, :presence => true
   validates :floor, :presence => true

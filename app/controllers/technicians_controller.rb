@@ -42,7 +42,7 @@ class TechniciansController < ApplicationController
   # POST /technicians
   # POST /technicians.json
   def create
-    @technician = Technician.new(params[:technician])
+    @technician = Technician.create(params[:technician])
     @technician.user_id = current_user.id;
     
     if @technician.email == nil || @technician.license == nil

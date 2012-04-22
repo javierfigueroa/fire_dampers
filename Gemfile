@@ -8,6 +8,9 @@ gem 'rails', '3.2.2'
 gem 'devise'
 gem 'cancan'
 gem 'wicked_pdf'
+gem 'aws-sdk'
+gem "paperclip", "~> 2.7"
+gem 'aws-s3'
 
 group :production, :test do
   gem "pg"
