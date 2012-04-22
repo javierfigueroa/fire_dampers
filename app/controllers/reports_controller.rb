@@ -20,6 +20,23 @@ class ReportsController < ApplicationController
     user = User.find(@report.user_id)
     @company = Company.find(user.company)
     
+    #fire dampers summary
+    @floor_summaries = Array.new
+    inspection_floors = Inspection.select('floor').all(:group => 'floor',  :conditions => ["job_id = ?", @job.id])
+    inspection_floors.each do |inspection_floor|
+      floor = inspection_floor.floor
+      summary = Hash.new
+      summary["floor"] = floor
+      summary["fire"] = Inspection.count(:all, :conditions => ["floor = ? and damper_type_id = ?", floor, DamperType.where(:abbrev => "FD")])
+      summary["smoke"] = Inspection.count(:all, :conditions => ["floor = ? and damper_type_id = ?",floor,  DamperType.where(:abbrev => "PCD")])
+      summary["pass"] = Inspection.count(:all, :conditions => ["floor = ? and damper_status_id = ?",floor,  DamperStatus.where(:abbrev => "OK")])
+      summary["fail"] = Inspection.count(:all, :conditions => ["floor = ? and damper_status_id = ?", floor, DamperStatus.where(:abbrev => "FAIL")])
+      summary["vine"] = Inspection.count(:all, :conditions => ["floor = ? and damper_type_id = ?", floor, DamperType.where(:abbrev => "VINE")])
+      summary["repair"] = Inspection.count(:all, :conditions => ["floor = ? and damper_type_id = ?", floor, DamperType.where(:abbrev => "FNR")])
+      summary["total"] = Inspection.count(:all, :conditions => ["floor = ?", floor])
+      @floor_summaries.push(summary)
+    end
+    
     # format = request.format
     # if format == "application/pdf"
 #       
@@ -29,7 +46,10 @@ class ReportsController < ApplicationController
       format.html # show.html.erb
       format.xml  { render :xml => @report }
       format.pdf { 
-      render(:pdf => "breakfast", :layout => false, :show_as_html => params[:debug].present? ) }
+      render( :pdf => "breakfast", 
+              :layout => false, 
+              :show_as_html => params[:debug].present?,
+              :margin => { :left => 20, :right => 20 } ) }
     end
   end
 

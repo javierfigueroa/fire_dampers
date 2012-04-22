@@ -11,7 +11,7 @@
   </div></div>
   <div class="control-group">
     <%= f.label :floor , :class => 'control-label' %><div class="controls">
-    <%= f.text_field :floor %>
+    <%= number_field_tag 'inspection[floor]', @inspection.floor, :in => 0...100 %>
   </div></div>
   <div class="control-group">
     <%= f.label :technician , :class => 'control-label' %><div class="controls">

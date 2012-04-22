@@ -24,36 +24,75 @@
 			}
 
 			#inner {
-				width: 800px;
 				height: 200px;
-				margin-left: -150px;  /***  width / 2   ***/
 				position: relative;
 				top: 60%;          /***  height / 2   ***/
-				left: 50%;
 			}
-			table {
-				width: 90%;
-				border-top: 1px solid #e5eff8;
-				border-right: 1px solid #e5eff8;
-				margin: 1em auto;
-				border-collapse: collapse;
-			}
-			td {
-				color: #678197;
-				border-bottom: 1px solid #e5eff8;
-				border-left: 1px solid #e5eff8;
-				padding: .3em 1em;
-				text-align: center;
-			}
-			tr.odd td {
-				background: #f7fbff
-			}
-			tr.odd .column1 {
-				background: #f4f9fe;
-			}
-			.column1 {
-				background: #f9fcfe;
-			}
+		.center {
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+		}
+		
+		.vcenter {
+			min-height: 10em;
+    		display: table-cell;
+    		vertical-align: middle;
+		}
+		
+		.page {
+			width: 900px;
+		}
+		
+		.cover-page h1 {
+			font-size: 45px;
+			margin-top: 40px;
+		}
+		
+		.cover-page h2 {
+			font-size: 35px;
+		}
+		.cover-page strong {
+			font-size: 25px;
+		}
+
+		.page h1.center, 
+		.page h2.center,
+		.page p.center {
+			text-align:center;
+			width: 600px;
+			padding: 20px;
+		}
+		
+.hor-minimalist-b
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	background: #fff;
+	margin: 0px;
+	width: 100%;
+	border-collapse: collapse;
+	text-align: left;
+}
+.hor-minimalist-b th
+{
+	font-size: 14px;
+	font-weight: normal;
+	color: #039;
+	padding: 10px 8px;
+	border-bottom: 2px solid #6678b1;
+}
+.hor-minimalist-b td
+{
+	border-bottom: 1px solid #ccc;
+	color: #669;
+	padding: 6px 8px;
+}
+.hor-minimalist-b tbody tr:hover td
+{
+	color: #009;
+}
+
 		</style>
 
 		<%= wicked_pdf_stylesheet_link_tag('bootstrap.min') %>
@@ -62,32 +101,32 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="page">
+			<div class="page cover-page center">
 				<div class="page-header">
-				<img src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
+				<img class="center" src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
 
 				</div>
 				<div class="row">
-					<div class="span4 offset1">
-						<h1><%= @job.name %></h1>
+					<div class="span4 ">
+						<h1 class="center"><%= @job.name %></h1>
 						<p>
-							<h2>Fire and Smoke Damper Inspection Report</h2>
+							<h2 class="center">Fire and Smoke Damper Inspection Report</h2>
 						</p>
-						<p>
+						<p class="center">
 							<strong><%= @job.address %></strong>
 						</p>
 					</div>
 					<div class="span6">
-						<p>
-							<a href="#" > <img src="http://placehold.it/360x268" width="450" height="350" alt=""> </a>
+						<p class="center">
+							<img class="center" src="http://placehold.it/360x268" width="550" height="450" alt="">
 						</p>
-						<p>
+						<p class="center" >
 							<strong><%= @job.finish_date.to_s(:long) %></strong>
 						</p>
 					</div>
 				</div>
 			</div>
-			<div class="page">
+		 	<div class="page">
 				<div class="page-header">
 					<img src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
 					<p>
@@ -139,25 +178,27 @@
 				</p>
 
 			</div>
-			<div class="page">
+			
+			
+			<div class="page ">
 				<div id="outer">
 					<div id="inner">
-						<h1>Fire Damper Inspection Summary Data</h1>
-					</div>
-				</div>
+						<h1 class="center">Fire Damper Inspection Summary Data</h1>
+				</div> 	
+				</div> 
 			</div>
 			<div class="page">
 				<div class="page-header offset1">
 					<img src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
 
 					<h1><%= @job.name %></h1>
-					<small> Fire and Smoke Damper Inspection Summary</small>
+					<h2> Fire and Smoke Damper Inspection Summary Data</h2>
 					<br>
 					<h3>Inspected <%= @job.start_date %> thru <%= @job.finish_date %></h3>
 					<h3>Inspected by <%= @job.inspected_by %></h3>
 				</div>
 				<div>
-					<table width="900" cellspacing="2" cellpadding="3">
+					<table class="hor-minimalist-b" width="900" cellspacing="2" cellpadding="3">
 						<thead>
 							<tr class="odd">
 								<th><strong>FLOOR</strong></th>
@@ -171,34 +212,35 @@
 							</tr>
 						</thead>
 						<tbody>
-
+							<% @floor_summaries.each do |summary| %>
 							<tr>
-								<td>&nbsp;</td>
-								<td>&nbsp;</td>
-								<td>&nbsp;</td>
-								<td>&nbsp;</td>
-								<td>&nbsp;</td>
-								<td>&nbsp;</td>
-								<td>&nbsp;</td>
-								<td>&nbsp;</td>
+								<td><%= summary["floor"] %></td>
+								<td><%= summary["fire"] %></td>
+								<td><%= summary["smoke"] %></td>
+								<td><%= summary["pass"] %></td>
+								<td><%= summary["fail"] %></td>
+								<td><%= summary["vine"] %></td>
+								<td><%= summary["repair"] %></td>
+								<td><%= summary["total"] %></td>
 							</tr>
+							<% end %>
 						</tbody>
 					</table>
 				</div>
-			</div>
+			</div>	
 			<div class="page">
 				<div class="page-header offset1">
 					<img src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
 
 					<h1><%= @job.name %></h1>
-					<small> Fire and Smoke Damper Statistical Summary</small>
+					<h2> Fire and Smoke Damper Statistical Summary Data</h2>
 					<br>
 					<h3>Inspected <%= @job.start_date %> thru <%= @job.finish_date %></h3>
 					<h3>Inspected by <%= @job.inspected_by %></h3>
 				</div>
 				<div>
 					<h2>Percent of Total</h2>
-					<table width="900" cellspacing="2" cellpadding="3">
+					<table class="hor-minimalist-b" width="900" cellspacing="2" cellpadding="3">
 						<thead>
 							<th><strong>FLOOR</strong></th>
 							<th><strong>FIRE</strong></th>
@@ -224,10 +266,11 @@
 					</table>
 				</div>
 			</div>
+			
 			<div class="page">
 				<div id="outer">
 					<div id="inner">
-						<h1>Fire Damper Inspection Detail Summary</h1>
+						<h1 class="center">Fire Damper Inspection Detail Summary</h1>
 					</div>
 				</div>
 			</div>
@@ -236,13 +279,13 @@
 					<img  src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
 
 					<h1><%= @job.name %></h1>
-					<small> Fire and Smoke Damper Detail Summary</small>
+					<h2> Fire and Smoke Damper Detail Summary</h2>
 					<br>
 					<h3>Inspected <%= @job.start_date %> thru <%= @job.finish_date %></h3>
 					<h3>Inspected by <%= @job.inspected_by %></h3>
 				</div>
 				<div>
-					<table cellspacing="2" cellpadding="3">
+					<table class="hor-minimalist-b" cellspacing="2" cellpadding="3">
 						<thead>
 							<th><strong>FLOOR</strong></th>
 							<th><strong>DAMPER NUMBER</strong></th>
@@ -269,6 +312,7 @@
 					</table>
 				</div>
 			</div>
+			<!--
 			<div class="page">
 				<div id="outer">
 					<div id="inner">
@@ -335,9 +379,7 @@
 					</div>
 				</div>
 			</div>
-
-			<% end %>
-		</div>
-		</div>
+			<% end %> -->
+		</div> 
 	</body>
 </html>

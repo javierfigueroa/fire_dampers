@@ -31,31 +31,39 @@ company = Company.find_or_create_by_name(
 )
 
 admin = User.find_or_create_by_email(
+  :first_name => "Admin First Name",
+  :last_name => "Admin Last Name",
   :email => "admin@mainloop.us",
   :password => 'mainloop2012',
-  :role => "admin"
+  :role => "admin",
+  :active => true
 )
 
 regular = User.find_or_create_by_email(
+  :first_name => "Test Client First Name 1",
+  :last_name => "Test Client Last Name 1",
   :email => "regular@mainloop.us",
   :password => 'test123',
   :role => "regular",
-  :company_id => company.id
+  :company_id => company.id,
+  :active => true
 )
 
 regular2 = User.find_or_create_by_email(
-  :first_name => "Test Client First Name",
-  :last_name => "Test Client Last Name",
+  :first_name => "Test Client First Name 2",
+  :last_name => "Test Client Last Name 2",
   :email => "regular2@mainloop.us",
   :password => 'test123',
-  :role => "regular"
+  :role => "regular",
+  :active => true
 )
 
 tech = User.find_or_create_by_email(
   :first_name => "Test Technician First Name 0",
   :last_name => "Test Technician Last Name 0",
   :email => "tech@mainloop.us",
-  :password => 'test123'
+  :password => 'test123',
+  :active => true
 )
 
 Technician.find_or_create_by_email(
@@ -68,18 +76,18 @@ Technician.find_or_create_by_email(
   :user_id => regular.id 
 )
 
-admin = User.find_by_email("admin@mainloop.us")
-admin.role = "admin"
-admin.save!
-
-regular = User.find_by_email("regular@mainloop.us")
-regular.role = "regular"
-regular.company_id = company.id
-regular.save!
-
-regular2 = User.find_by_email("regular2@mainloop.us")
-regular2.role = "regular"
-regular2.save!
+# admin = User.find_by_email("admin@mainloop.us")
+# admin.role = "admin"
+# admin.save!
+# 
+# regular = User.find_by_email("regular@mainloop.us")
+# regular.role = "regular"
+# regular.company_id = company.id
+# regular.save!
+# 
+# regular2 = User.find_by_email("regular2@mainloop.us")
+# regular2.role = "regular"
+# regular2.save!
 
 # tech = User.find_by_email("tech@mainloop.us")
 # tech.role = "tech"
