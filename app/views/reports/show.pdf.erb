@@ -92,7 +92,17 @@
 {
 	color: #009;
 }
-
+.hor-minimalist-b tfoot tr
+{
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+.hor-minimalist-b tfoot tr td
+{
+	color: blue;
+}
 		</style>
 
 		<%= wicked_pdf_stylesheet_link_tag('bootstrap.min') %>
@@ -225,6 +235,18 @@
 							</tr>
 							<% end %>
 						</tbody>
+						<tfoot>
+							<tr>
+								<td>Totals</td>								
+								<td><%= @floor_totals["fire"] %></td>
+								<td><%= @floor_totals["smoke"] %></td>
+								<td><%= @floor_totals["pass"] %></td>
+								<td><%= @floor_totals["fail"] %></td>
+								<td><%= @floor_totals["vine"] %></td>
+								<td><%= @floor_totals["repair"] %></td>
+								<td><%= @floor_totals["total"] %></td>
+							</tr>
+						</tfoot>
 					</table>
 				</div>
 			</div>	
@@ -252,17 +274,31 @@
 							<th><strong>TOTAL DAMPERS</strong></th>
 						</thead>
 						<tbody>
+							<% @floor_percentages.each do |percentage| %>
 							<tr>
-								<td>&nbsp;</td>
-								<td>&nbsp;</td>
-								<td>&nbsp;</td>
-								<td>&nbsp;</td>
-								<td>&nbsp;</td>
-								<td>&nbsp;</td>
-								<td>&nbsp;</td>
-								<td>&nbsp;</td>
+								<td><%= percentage["floor"] %></td>
+								<td><%= sprintf("%.1f%",percentage["fire"]) %></td>
+								<td><%= sprintf("%.1f%",percentage["smoke"]) %></td>
+								<td><%= sprintf("%.1f%",percentage["pass"]) %></td>
+								<td><%= sprintf("%.1f%",percentage["fail"]) %></td>
+								<td><%= sprintf("%.1f%",percentage["vine"]) %></td>
+								<td><%= sprintf("%.1f%",percentage["repair"]) %></td>
+								<td><%= sprintf("%.1f%",percentage["total"]) %></td>
 							</tr>
+							<% end %>
 						</tbody>
+						<tfoot>
+							<tr>
+								<td>Overall</td>								
+								<td><%= sprintf("%.1f%",@floor_percentage_totals["fire"]) %></td>
+								<td><%= sprintf("%.1f%",@floor_percentage_totals["smoke"]) %></td>
+								<td><%= sprintf("%.1f%",@floor_percentage_totals["pass"]) %></td>
+								<td><%= sprintf("%.1f%",@floor_percentage_totals["fail"]) %></td>
+								<td><%= sprintf("%.1f%",@floor_percentage_totals["vine"]) %></td>
+								<td><%= sprintf("%.1f%",@floor_percentage_totals["repair"]) %></td>
+								<td><%= sprintf("%.1f%",@floor_percentage_totals["total"]) %></td>
+							</tr>
+						</tfoot>
 					</table>
 				</div>
 			</div>
@@ -311,12 +347,11 @@
 						</tbody>
 					</table>
 				</div>
-			</div>
-			<!--
+			</div>			
 			<div class="page">
 				<div id="outer">
 					<div id="inner">
-						<h1>Fire Damper Inspection Detail Data</h1>
+						<h1 class="center">Fire Damper Inspection Detail Data</h1>
 					</div>
 				</div>
 			</div>
@@ -327,7 +362,7 @@
 						<img src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
 
 						<h1><%= @job.name %></h1>
-						<small> Fire and Smoke Damper Detail Data</small>
+						<h2> Fire and Smoke Damper Detail Data</h2>
 						<br>
 						<h3>Inspected <%= @job.start_date %> thru <%= @job.finish_date %></h3>
 						<h3>Inspected by <%= @job.inspected_by %></h3>
@@ -379,7 +414,7 @@
 					</div>
 				</div>
 			</div>
-			<% end %> -->
+			<% end %> 
 		</div> 
 	</body>
 </html>
