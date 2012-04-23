@@ -127,9 +127,11 @@
 						</p>
 					</div>
 					<div class="span6">
+						<% if @report.cover_image != nil %>
 						<p class="center">
-							<img class="center" src="http://placehold.it/360x268" width="550" height="450" alt="">
+							<img class="center" src="<%= @report.cover_image %>" width="550" height="450" alt="">
 						</p>
+						<% end %>
 						<p class="center" >
 							<strong><%= @job.finish_date.to_s(:long) %></strong>
 						</p>

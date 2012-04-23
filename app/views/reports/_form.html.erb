@@ -6,6 +6,12 @@
  <%= f.label :job , :class => 'control-label' %><div class="controls">
     <%=	select("report", "job_id", @jobs.all.collect {|p| [p.name , p.id] }) %>
    </div></div>
+   <div class="control-group">
+		<%= f.label :cover_image , :class => 'control-label' %>
+		<div class="controls">
+			<%= f.file_field :cover_image %>
+		</div>
+	</div>
    <% if current_user.role? :admin %>
   <div class="control-group">
     <%= f.label :user , :class => 'control-label' %><div class="controls">
