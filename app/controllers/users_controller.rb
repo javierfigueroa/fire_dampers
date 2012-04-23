@@ -61,7 +61,10 @@ class UsersController < ApplicationController
     @user.active = params[:user][:active] == "true" ? true : false;
 
     respond_to do |format|
-      if @user.update_attributes(params[:user])
+      if (current_user.role == "admin" && params[:user][:password] == "" && @user.update_without_password(params[:user]))        
+        format.html { redirect_to(@user, :notice => 'User was successfully updated.') }
+        format.xml  { head :ok }
+      elsif @user.update_attributes(params[:user])
         format.html { redirect_to(@user, :notice => 'User was successfully updated.') }
         format.xml  { head :ok }
       else
@@ -75,6 +78,12 @@ class UsersController < ApplicationController
   # DELETE /users/1.xml
   def destroy
     @user = User.find(params[:id])
+    if (@user.role? :technician)
+      tech = Technician.where(:email => @user.email).first
+      if tech
+        tech.destroy        
+      end
+    end
     @user.destroy
 
     respond_to do |format|

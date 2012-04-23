@@ -43,7 +43,9 @@ class TechniciansController < ApplicationController
   # POST /technicians.json
   def create
     @technician = Technician.create(params[:technician])
-    @technician.user_id = current_user.id;
+    if !(current_user.role? :admin)
+      @technician.user_id = current_user.id;
+    end
     
     if @technician.email == nil || @technician.license == nil
       respond_to do |format|

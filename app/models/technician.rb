@@ -7,7 +7,8 @@ class Technician < ActiveRecord::Base
                   :email,
                   :license,
                   :license_expiration,
-                  :phone 
+                  :phone,
+                  :user_id
   has_attached_file :license_image,
     :storage => :s3,
     :s3_credentials => Rails.root.join('config', 's3_certifications.yml').to_s,  
