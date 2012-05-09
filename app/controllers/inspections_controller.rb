@@ -12,6 +12,16 @@ class InspectionsController < ApplicationController
     end
   end
 
+  def inspectionsByJob
+    @inspections = Inspection.where(:job_id => params[:job_id])
+     
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @inspections }
+      format.json { render :json => @inspections }
+    end
+  end
+
   # GET /inspections/1
   # GET /inspections/1.xml
   def show

@@ -1,14 +1,26 @@
 FireDampers::Application.routes.draw do
-  resources :companies
+  
 
-  get "company/index"
 
   authenticated :user do
     root :to => 'jobs#index'
   end
   
   root :to => "jobs#index"
-  devise_for :users, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register" }
+  devise_for  :users, 
+              :path => '', 
+              :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register" },
+              :controllers => { :sessions => "sessions" }
+
+  devise_scope :user do
+    namespace :api do
+      resources :sessions, :only => [:create, :destroy]
+    end
+  end
+
+  match 'inspections/job/:job_id' => 'inspections#inspectionsByJob'
+  
+  resources :companies
 
   resources :technicians
 

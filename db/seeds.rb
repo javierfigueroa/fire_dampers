@@ -99,16 +99,20 @@ Technician.find_or_create_by_email(
 # ATR = Access thru Floor
 # DID = Damper in Diffuser
 # DTF = Down thru Floor
-# ECD = Electric Combination Damper EFD = Electric Fire Damper
+# ECD = Electric Combination Damper 
 # ESD = Electric Smoke Damper
 # FD = Fire Damper
-# VINE = Visually Identified Not Exercised DNR = Disabled - Not Required
-# FD / ETL = Fire Damper Electric Thermo Link FNR = Failed Needs Repairs
+# VINE = Visually Identified Not Exercised 
+# FD / ETL = Fire Damper Electric Thermo Link 
 # FRFD = Fire Rated Flanged Door
-# PCD = Pneumatic Combination Damper PSD = Pneumatic Smoke Damper
+# PCD = Pneumatic Combination Damper
 # R/D = Rolling Door
 # SLR = See Repair List
 # O/D = Over Door L.L. = Lower Level
+# EFD = Electric Fire Damper
+# DNR = Disabled - Not Required
+# FNR = Failed Needs Repairs
+# PSD = Pneumatic Smoke Damper
 
 DamperType.find_or_create_by_abbrev(:abbrev => "APW", :description => "Access Panel Wall")
 DamperType.find_or_create_by_abbrev(:abbrev => "ATF", :description => "Access thru Flex")
@@ -125,6 +129,11 @@ DamperType.find_or_create_by_abbrev(:abbrev => "PCD", :description => "Pneumatic
 DamperType.find_or_create_by_abbrev(:abbrev => "R/D", :description => "Rolling Door")
 DamperType.find_or_create_by_abbrev(:abbrev => "SLR", :description => "See Repair List")
 DamperType.find_or_create_by_abbrev(:abbrev => "O/D", :description => "Over Door L.L. = Lower Level")
+
+DamperType.find_or_create_by_abbrev(:abbrev => "EFD", :description => "Electric Fire Damper")
+DamperType.find_or_create_by_abbrev(:abbrev => "DNR", :description => "Disabled - Not Required")
+DamperType.find_or_create_by_abbrev(:abbrev => "FNR", :description => "Failed Needs Repairs")
+DamperType.find_or_create_by_abbrev(:abbrev => "PSD", :description => "Pneumatic Smoke Damper")
 
 # Damper Statuses
 # OK pass
