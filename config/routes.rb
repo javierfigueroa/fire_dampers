@@ -20,6 +20,8 @@ FireDampers::Application.routes.draw do
 
   match 'inspections/job/:job_id' => 'inspections#inspectionsByJob'
   
+  match 'technicians/current' => 'technicians#technicianByUser'
+  
   resources :companies
 
   resources :technicians

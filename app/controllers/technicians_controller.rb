@@ -11,6 +11,18 @@ class TechniciansController < ApplicationController
       format.xml { render :xml => @technicians }
     end
   end
+  
+  
+  def technicianByUser
+    @technician = Technician.where(:email => current_user.email).first
+     
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @technician }
+      format.json { render :json => @technician }
+
+    end
+  end
 
   # GET /technicians/1
   # GET /technicians/1.json

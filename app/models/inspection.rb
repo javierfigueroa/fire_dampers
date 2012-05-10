@@ -19,11 +19,15 @@ class Inspection < ActiveRecord::Base
                   :damper_image_file_size,                  
                   :building_abbrev,
                   :inspection_date,
-                  :technician,
                   :location,
                   :damper_id,
                   :damper_status,
-                  :job
+                  :job_id,
+                  :technician_id, 
+                  :damper_status_id, 
+                  :floor, 
+                  :damper_type_id, 
+                  :description
   has_attached_file :damper_image,
     :storage => :s3,
     :s3_credentials => Rails.root.join('config', 's3_inspections.yml').to_s,  
