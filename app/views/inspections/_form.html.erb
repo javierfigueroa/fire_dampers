@@ -11,7 +11,7 @@
   </div></div>
   <div class="control-group">
     <%= f.label :floor , :class => 'control-label' %><div class="controls">
-    <%= number_field_tag 'inspection[floor]', @inspection.floor, :in => 0...100 %>
+    <%= number_field_tag 'inspection[floor]', @inspection.floor, :in => 0...1000 %>
   </div></div>
   <div class="control-group">
     <%= f.label :technician , :class => 'control-label' %><div class="controls">
@@ -34,9 +34,11 @@
     <%=	select("inspection", "damper_type_id", DamperType.all.collect {|p| [ p.abbrev, p.id ] }) %>
   </div></div>
   <div class="control-group">
-    <%= f.label :photo_url , :class => 'control-label' %><div class="controls">
-    <%= f.text_field :photo_url %>
-  </div></div>
+		<%= f.label :damper_image , :class => 'control-label' %>
+		<div class="controls">
+			<%= f.file_field :damper_image %>
+		</div>
+	</div>
   <div class="control-group">
     <%= f.label :description , :class => 'control-label' %><div class="controls">
     <%= f.text_field :description %>

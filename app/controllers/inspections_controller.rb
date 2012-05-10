@@ -1,5 +1,7 @@
 class InspectionsController < ApplicationController
   before_filter :authenticate_user!
+  skip_before_filter :verify_authenticity_token, :only => [:update, :create, :destroy]
+  
   # GET /inspections
   # GET /inspections.xml
   def index
@@ -18,7 +20,7 @@ class InspectionsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @inspections }
-      format.json { render :json => @inspections }
+      format.json { render :json => @inspections.to_json(:methods => [:damper_image_url]) }
     end
   end
 
@@ -96,7 +98,7 @@ class InspectionsController < ApplicationController
       if @inspection.update_attributes(params[:inspection])
         format.html { redirect_to(@inspection, :notice => 'Inspection was successfully updated.') }
         format.xml  { head :ok }
-        format.json  { head :ok }
+        format.json  {  render :json => @inspection, :status => :created }
       else
         format.html { render :action => "edit" }
         format.xml  { render :xml => @inspection.errors, :status => :unprocessable_entity }

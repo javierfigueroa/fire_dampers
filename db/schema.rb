@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120423003723) do
+ActiveRecord::Schema.define(:version => 20120510165622) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -72,12 +72,15 @@ ActiveRecord::Schema.define(:version => 20120423003723) do
     t.string   "damper_id"
     t.integer  "damper_status_id"
     t.integer  "damper_type_id"
-    t.string   "photo_url"
     t.string   "description"
     t.integer  "job_id"
     t.integer  "user_id"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.integer  "damper_image_file_size"
+    t.string   "damper_image_content_type"
+    t.string   "damper_image_file_name"
+    t.datetime "damper_image_updated_at"
   end
 
   add_index "inspections", ["damper_status_id"], :name => "index_inspections_on_damper_status_id"
