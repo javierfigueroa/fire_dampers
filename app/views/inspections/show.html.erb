@@ -76,16 +76,16 @@
 					<%= @inspection.damper_type.abbrev %> - <%= @inspection.damper_type.description %>
 				</p>
 				<p>
-					<b>Photo url:</b>
-					<%= @inspection.damper_image %>
-				</p>
-				<p>
 					<b>Description:</b>
 					<%= @inspection.description %>
 				</p>
 				<p>
 					<b>Job:</b>
 					<%= @inspection.job.name %>
+				</p>
+				
+				<p>
+					<img src="<%= @inspection.damper_image %>" />
 				</p>
 			</div>
 		</div>

@@ -113,8 +113,10 @@
 		<div class="container">
 			<div class="page cover-page center">
 				<div class="page-header">
+					
+				<% if @company.logo_image != nil %>
 				<img class="center" src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
-
+				<% end %>
 				</div>
 				<div class="row">
 					<div class="span4 ">
@@ -140,7 +142,9 @@
 			</div>
 		 	<div class="page">
 				<div class="page-header">
+					<% if @company.logo_image != nil %>
 					<img src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
+					<% end %>
 					<p>
 						<%= @company.name %>
 						<br />
@@ -201,8 +205,10 @@
 			</div>
 			<div class="page">
 				<div class="page-header offset1">
+					
+					<% if @company.logo_image != nil %>
 					<img src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
-
+					<% end %>
 					<h1><%= @job.name %></h1>
 					<h2> Fire and Smoke Damper Inspection Summary Data</h2>
 					<br>
@@ -254,8 +260,10 @@
 			</div>	
 			<div class="page">
 				<div class="page-header offset1">
+					
+				<% if @company.logo_image != nil %>
 					<img src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
-
+				<% end %>
 					<h1><%= @job.name %></h1>
 					<h2> Fire and Smoke Damper Statistical Summary Data</h2>
 					<br>
@@ -314,8 +322,11 @@
 			</div>
 			<div class="page">
 				<div class="page-header offset1">
+					
+				<% if @company.logo_image != nil %>
 					<img  src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
-
+				<% end %>
+				
 					<h1><%= @job.name %></h1>
 					<h2> Fire and Smoke Damper Detail Summary</h2>
 					<br>
@@ -361,8 +372,10 @@
 			<div class="page">
 				<div class="container">
 					<div class="page-header offset1">
+						
+				<% if @company.logo_image != nil %>
 						<img src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
-
+				<% end %>
 						<h1><%= @job.name %></h1>
 						<h2> Fire and Smoke Damper Detail Data</h2>
 						<br>
@@ -399,13 +412,16 @@
 							</tbody>
 						</table>
 					</div>
+					
+				<% if inspection.damper_image != nil %>
 					<div class="span12 ">
 						<h4> Damper Photo</h4>
 					</div>
 					<div class="span12">
-						<a href="#" class="thumbnail"> <img src="http://placehold.it/360x268" alt=""> </a>
+						<a href="#" class="thumbnail"> <img src="<%= inspection.damper_image %>" alt=""> </a>
 
 					</div>
+					<% end %>
 					<div class="span12 ">
 						<h4> Description</h4>
 					</div>

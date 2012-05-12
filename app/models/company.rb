@@ -11,6 +11,7 @@ class Company < ActiveRecord::Base
                   :fax
   has_attached_file :logo_image,
     :storage => :s3,
+    :default_url => "http://placehold.it/350x150.jpg&text=Missing%20Company%20Logo",
     :s3_credentials => Rails.root.join('config', 's3_companies.yml').to_s,  
     :path => '/:id/:filename'
 end

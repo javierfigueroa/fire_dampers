@@ -30,6 +30,7 @@ class Inspection < ActiveRecord::Base
                   :description
   has_attached_file :damper_image,
     :storage => :s3,
+    :default_url => "http://placehold.it/300x300.jpg&text=No%20Image",
     :s3_credentials => Rails.root.join('config', 's3_inspections.yml').to_s,  
     :path => '/:id/:filename'
     
