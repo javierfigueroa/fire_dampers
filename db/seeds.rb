@@ -20,6 +20,7 @@
       # t.string :phone
       # t.string :fax
 
+
 company = Company.find_or_create_by_name(
     :name => "Sheet Metal Experts, Inc.",
     :address => "8986 N.W. 105th Way",
@@ -30,6 +31,8 @@ company = Company.find_or_create_by_name(
     :fax => "(305) 805-2038"            
 )
 
+User.destroy_all
+
 admin = User.find_or_create_by_email(
   :first_name => "Admin First Name",
   :last_name => "Admin Last Name",
@@ -38,43 +41,43 @@ admin = User.find_or_create_by_email(
   :role => "admin",
   :active => true
 )
-
-regular = User.find_or_create_by_email(
-  :first_name => "Test Client First Name 1",
-  :last_name => "Test Client Last Name 1",
-  :email => "regular@mainloop.us",
-  :password => 'test123',
-  :role => "regular",
-  :company_id => company.id,
-  :active => true
-)
-
-regular2 = User.find_or_create_by_email(
-  :first_name => "Test Client First Name 2",
-  :last_name => "Test Client Last Name 2",
-  :email => "regular2@mainloop.us",
-  :password => 'test123',
-  :role => "regular",
-  :active => true
-)
-
-tech = User.find_or_create_by_email(
-  :first_name => "Test Technician First Name 0",
-  :last_name => "Test Technician Last Name 0",
-  :email => "tech@mainloop.us",
-  :password => 'test123',
-  :active => true
-)
-
-Technician.find_or_create_by_email(
-  :first_name => "Test Technician First Name",
-  :last_name => "Test Technician Last Name",
-  :email => "tech@mainloop.us", 
-  :phone => "478273487293847",
-  :license => 10000000+rand(10000000),
-  :license_expiration => 1.year.from_now,
-  :user_id => regular.id 
-)
+# 
+# regular = User.find_or_create_by_email(
+  # :first_name => "Test Client First Name 1",
+  # :last_name => "Test Client Last Name 1",
+  # :email => "regular@mainloop.us",
+  # :password => 'test123',
+  # :role => "regular",
+  # :company_id => company.id,
+  # :active => true
+# )
+# 
+# regular2 = User.find_or_create_by_email(
+  # :first_name => "Test Client First Name 2",
+  # :last_name => "Test Client Last Name 2",
+  # :email => "regular2@mainloop.us",
+  # :password => 'test123',
+  # :role => "regular",
+  # :active => true
+# )
+# 
+# tech = User.find_or_create_by_email(
+  # :first_name => "Test Technician First Name 0",
+  # :last_name => "Test Technician Last Name 0",
+  # :email => "tech@mainloop.us",
+  # :password => 'test123',
+  # :active => true
+# )
+# 
+# Technician.find_or_create_by_email(
+  # :first_name => "Test Technician First Name",
+  # :last_name => "Test Technician Last Name",
+  # :email => "tech@mainloop.us", 
+  # :phone => "478273487293847",
+  # :license => 10000000+rand(10000000),
+  # :license_expiration => 1.year.from_now,
+  # :user_id => regular.id 
+# )
 
 # admin = User.find_by_email("admin@mainloop.us")
 # admin.role = "admin"
@@ -141,61 +144,52 @@ DamperType.find_or_create_by_abbrev(:abbrev => "PSD", :description => "Pneumatic
 DamperStatus.find_or_create_by_abbrev(:abbrev => "OK", :description => "Passed")
 DamperStatus.find_or_create_by_abbrev(:abbrev => "FAIL", :description => "Failed")
 
+Job.destroy_all
 # Test Jobs
-25.times do |i|
-  Job.find_or_create_by_name(
-  :name => "Test Job " + i.to_s,
-  :address => "Test Address 12345 nw 123 st " + i.to_s, 
-  :start_date => Time.now, 
-  :finish_date => i.days.from_now, 
-  :inspected_by => "Test Report Inspector " + i.to_s, 
-  :contact_first_name => "Test First Name " + i.to_s,
-  :contact_phone => "478273487293847",
-  :active => i % 2 == 0 ? true : false,
-  :user_id => i % 2 == 0 ? regular.id : regular2.id
-  )
-end
+# 25.times do |i|
+  # Job.find_or_create_by_name(
+  # :name => "Test Job " + i.to_s,
+  # :address => "Test Address 12345 nw 123 st " + i.to_s, 
+  # :start_date => Time.now, 
+  # :finish_date => i.days.from_now, 
+  # :inspected_by => "Test Report Inspector " + i.to_s, 
+  # :contact_first_name => "Test First Name " + i.to_s,
+  # :contact_phone => "478273487293847",
+  # :active => i % 2 == 0 ? true : false,
+  # :user_id => i % 2 == 0 ? regular.id : regular2.id
+  # )
+# end
+# 
 
-# Test Inspectors
-25.times do |i|
-  Technician.find_or_create_by_email(
-  :first_name => "Test Technician First Name " + i.to_s,
-  :last_name => "Test Technician Last Name " + i.to_s,
-  :email => "tech" + i.to_s + "@dampers.com", 
-  :phone => "478273487293847",
-  :license => 10000000+rand(10000000),
-  :license_expiration => 1.year.from_now,
-  :user_id => i % 2 == 0 ? regular.id : regular2.id
-  )
-end
+Technician.destroy_all
+# # Test Inspectors
+# 25.times do |i|
+  # Technician.find_or_create_by_email(
+  # :first_name => "Test Technician First Name " + i.to_s,
+  # :last_name => "Test Technician Last Name " + i.to_s,
+  # :email => "tech" + i.to_s + "@dampers.com", 
+  # :phone => "478273487293847",
+  # :license => 10000000+rand(10000000),
+  # :license_expiration => 1.year.from_now,
+  # :user_id => i % 2 == 0 ? regular.id : regular2.id
+  # )
+# end
 
-# t.string :building_abbrev
-      # t.date :inspection_date
-      # t.integer :floor
-      # t.references :technician
-      # t.string :location
-      # t.string :damper_id
-      # t.references :damper_status
-      # t.references :damper_type
-      # t.string :photo_url
-      # t.string :description
-      # t.references :job
-      # t.references :user
-# Test Inspections
-200.times do |i|
-  Inspection.find_or_create_by_damper_id(
-  :inspection_date => rand(15).day.from_now,
-  :building_abbrev => "Building Abbrev " + i.to_s,
-  :floor => i,
-  :location => "Location " + i.to_s,
-  :technician_id => 1+rand(24), 
-  :damper_id => (i+rand(24)).to_s,
-  :damper_status_id => 1+rand(1),
-  :damper_type_id => 1+rand(14),
-  :photo_url => "http://url"+i.to_s,
-  :description => "Description "+i.to_s,
-  :job_id => 1+rand(24),
-  :user_id => 1+rand(24)  
-  )
-end
+Inspection.destroy_all
+# 200.times do |i|
+  # Inspection.find_or_create_by_damper_id(
+  # :inspection_date => rand(15).day.from_now,
+  # :building_abbrev => "Building Abbrev " + i.to_s,
+  # :floor => i,
+  # :location => "Location " + i.to_s,
+  # :technician_id => 1+rand(24), 
+  # :damper_id => (i+rand(24)).to_s,
+  # :damper_status_id => 1+rand(1),
+  # :damper_type_id => 1+rand(14),
+  # :photo_url => "http://url"+i.to_s,
+  # :description => "Description "+i.to_s,
+  # :job_id => 1+rand(24),
+  # :user_id => 1+rand(24)  
+  # )
+# end
 
