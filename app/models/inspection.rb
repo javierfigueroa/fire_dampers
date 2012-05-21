@@ -13,6 +13,7 @@ class Inspection < ActiveRecord::Base
   belongs_to :damper_status
   belongs_to :damper_type
   belongs_to :job
+  belongs_to :company
   
   attr_accessible :damper_image, 
                   :damper_image_content_type, 

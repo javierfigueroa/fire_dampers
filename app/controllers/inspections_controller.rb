@@ -5,6 +5,7 @@ class InspectionsController < ApplicationController
   # GET /inspections
   # GET /inspections.xml
   def index
+    
     @inspections = Inspection.accessible_by(current_ability, :read)
      
     respond_to do |format|
@@ -76,6 +77,7 @@ class InspectionsController < ApplicationController
   def create
     @inspection = Inspection.new(params[:inspection])
     @inspection.user_id = current_user.id;
+    @inspection.company_id = current_user.company_id;
     
     respond_to do |format|
       if @inspection.save

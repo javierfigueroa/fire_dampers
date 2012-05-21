@@ -31,12 +31,14 @@ class Ability
       can :manage, :all
     elsif user.role? :regular
       can :manage, [Job, Inspection, Report, Technician], :user_id => user.id
+      can :manage, Inspection, :company_id => user.company_id
     elsif user.role? :technician
       tech = Technician.where(:email => user.email).first
       client = User.find(tech.user_id)
       
       can :read, Job, :user_id => client.id
       can :manage, Inspection, :user_id => client.id
+      can :manage, Inspection, :user_id => user.id
       cannot :read, Report
       cannot :read, User
       cannot :read, Technician

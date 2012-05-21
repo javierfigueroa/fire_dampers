@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120510165622) do
+ActiveRecord::Schema.define(:version => 20120521044614) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -75,14 +75,16 @@ ActiveRecord::Schema.define(:version => 20120510165622) do
     t.string   "description"
     t.integer  "job_id"
     t.integer  "user_id"
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
+    t.datetime "created_at",                               :null => false
+    t.datetime "updated_at",                               :null => false
     t.integer  "damper_image_file_size"
     t.string   "damper_image_content_type"
     t.string   "damper_image_file_name"
     t.datetime "damper_image_updated_at"
+    t.integer  "company_id",                :default => 0, :null => false
   end
 
+  add_index "inspections", ["company_id"], :name => "index_inspections_on_company_id"
   add_index "inspections", ["damper_status_id"], :name => "index_inspections_on_damper_status_id"
   add_index "inspections", ["damper_type_id"], :name => "index_inspections_on_damper_type_id"
   add_index "inspections", ["job_id"], :name => "index_inspections_on_job_id"

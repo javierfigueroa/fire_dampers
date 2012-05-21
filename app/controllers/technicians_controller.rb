@@ -71,7 +71,8 @@ class TechniciansController < ApplicationController
       user.email = @technician.email
       user.password = @technician.license
       user.phone = @technician.phone
-
+      user.company_id = current_user.company_id
+      
       respond_to do |format|
         if @technician.save && user.save
           format.html { redirect_to @technician, :notice => 'Technician was successfully created.' }
@@ -104,7 +105,7 @@ class TechniciansController < ApplicationController
   # DELETE /technicians/1.json
   def destroy
     @technician = Technician.find(params[:id])
-    user = User.find(@technician.user_id)
+    user = User.where(@technician.email).first
     
     @technician.destroy
     user.destroy    
