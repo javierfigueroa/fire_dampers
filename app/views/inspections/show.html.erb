@@ -41,7 +41,7 @@
 		<div class="row">
 			<div class="span12">
 				<legend>
-					<%= @inspection.damper_id %> <small><%= @inspection.location %></small>
+					<%= @inspection.damper_id %> <small><%= @inspection.tag %></small>
 				</legend>
 				<p>
 					<b>Building abbrev:</b>
@@ -54,6 +54,10 @@
 				<p>
 					<b>Floor:</b>
 					<%= @inspection.floor %>
+				</p>
+				<p>
+					<b>Unit:</b>
+					<%= @inspection.unit %>
 				</p>
 				<p>
 					<b>Technician</b>
@@ -76,16 +80,29 @@
 					<%= @inspection.damper_type.abbrev %> - <%= @inspection.damper_type.description %>
 				</p>
 				<p>
+					<b>Damper Airstream</b>
+					<%= @inspection.damper_airstream.abbrev %>
+				</p>
+				<p>
 					<b>Description:</b>
 					<%= @inspection.description %>
+				</p>
+				<p>
+					<b>Height and Length: </b>
+					<%= @inspection.height %> x <%= @inspection.length %>
 				</p>
 				<p>
 					<b>Job:</b>
 					<%= @inspection.job.name %>
 				</p>
+				<p>
+					<b>Notes:</b>
+					<%= @inspection.notes %>
+				</p>
 				
 				<p>
 					<img src="<%= @inspection.damper_image %>" width="300px" height="300px" />
+					<img src="<%= @inspection.damper_image_second %>" width="300px" height="300px" />
 				</p>
 			</div>
 		</div>

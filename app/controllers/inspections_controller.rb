@@ -78,6 +78,7 @@ class InspectionsController < ApplicationController
     @inspection = Inspection.new(params[:inspection])
     @inspection.user_id = current_user.id;
     @inspection.company_id = current_user.company_id;
+    @inspection.tag = @inspection.floor.to_s << "-" << @inspection.damper_type.abbrev << "-" << @inspection.damper_airstream.abbrev << "-" << @inspection.unit.to_s << "-" << @inspection.damper_id
     
     respond_to do |format|
       if @inspection.save
@@ -95,9 +96,12 @@ class InspectionsController < ApplicationController
   # PUT /inspections/1
   # PUT /inspections/1.xml
   def update
-    @inspection = Inspection.find(params[:id])
+    @inspection = Inspection.find(params[:id])    
     respond_to do |format|
       if @inspection.update_attributes(params[:inspection])
+        @inspection.tag = @inspection.floor.to_s << "-" << @inspection.damper_type.abbrev << "-" << @inspection.damper_airstream.abbrev << "-" << @inspection.unit.to_s << "-" << @inspection.damper_id
+        @inspection.save
+        
         format.html { redirect_to(@inspection, :notice => 'Inspection was successfully updated.') }
         format.xml  { head :ok }
         format.json  {  render :json => @inspection, :status => :created }

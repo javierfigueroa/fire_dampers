@@ -12,12 +12,16 @@ class Inspection < ActiveRecord::Base
   belongs_to :technician
   belongs_to :damper_status
   belongs_to :damper_type
+  belongs_to :damper_airstream
   belongs_to :job
   belongs_to :company
   
   attr_accessible :damper_image, 
                   :damper_image_content_type, 
-                  :damper_image_file_size,                  
+                  :damper_image_file_size,    
+                  :damper_image_second, 
+                  :damper_image_second_content_type, 
+                  :damper_image_second_file_size,               
                   :building_abbrev,
                   :inspection_date,
                   :location,
@@ -28,8 +32,21 @@ class Inspection < ActiveRecord::Base
                   :damper_status_id, 
                   :floor, 
                   :damper_type_id, 
-                  :description
+                  :description,
+                  :damper_airstream_id,
+                  :length,
+                  :height,
+                  :notes,
+                  :tag,
+                  :unit
+                  
   has_attached_file :damper_image,
+    :storage => :s3,
+    :default_url => "http://placehold.it/300x300.jpg&text=No%20Image",
+    :s3_credentials => Rails.root.join('config', 's3_inspections.yml').to_s,  
+    :path => '/:id/:filename'
+  
+  has_attached_file :damper_image_second,
     :storage => :s3,
     :default_url => "http://placehold.it/300x300.jpg&text=No%20Image",
     :s3_credentials => Rails.root.join('config', 's3_inspections.yml').to_s,  

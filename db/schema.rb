@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120521044614) do
+ActiveRecord::Schema.define(:version => 20120522024403) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -49,6 +49,13 @@ ActiveRecord::Schema.define(:version => 20120521044614) do
     t.datetime "logo_image_updated_at"
   end
 
+  create_table "damper_airstreams", :force => true do |t|
+    t.string   "abbrev"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "damper_statuses", :force => true do |t|
     t.string   "abbrev"
     t.string   "description"
@@ -75,16 +82,27 @@ ActiveRecord::Schema.define(:version => 20120521044614) do
     t.string   "description"
     t.integer  "job_id"
     t.integer  "user_id"
-    t.datetime "created_at",                               :null => false
-    t.datetime "updated_at",                               :null => false
+    t.datetime "created_at",                                      :null => false
+    t.datetime "updated_at",                                      :null => false
     t.integer  "damper_image_file_size"
     t.string   "damper_image_content_type"
     t.string   "damper_image_file_name"
     t.datetime "damper_image_updated_at"
-    t.integer  "company_id",                :default => 0, :null => false
+    t.integer  "company_id",                       :default => 0, :null => false
+    t.string   "damper_image_second_content_type"
+    t.datetime "damper_image_second_updated_at"
+    t.integer  "damper_image_second_file_size"
+    t.string   "damper_image_second_file_name"
+    t.integer  "damper_airstream_id"
+    t.string   "length"
+    t.string   "height"
+    t.string   "notes"
+    t.string   "tag"
+    t.integer  "unit"
   end
 
   add_index "inspections", ["company_id"], :name => "index_inspections_on_company_id"
+  add_index "inspections", ["damper_airstream_id"], :name => "index_inspections_on_damper_airstream_id"
   add_index "inspections", ["damper_status_id"], :name => "index_inspections_on_damper_status_id"
   add_index "inspections", ["damper_type_id"], :name => "index_inspections_on_damper_type_id"
   add_index "inspections", ["job_id"], :name => "index_inspections_on_job_id"

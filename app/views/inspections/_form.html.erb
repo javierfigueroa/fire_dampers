@@ -14,6 +14,10 @@
     <%= number_field_tag 'inspection[floor]', @inspection.floor, :in => 0...1000 %>
   </div></div>
   <div class="control-group">
+    <%= f.label :unit , :class => 'control-label' %><div class="controls">
+    <%= number_field_tag 'inspection[unit]', @inspection.unit, :in => 0...1000 %>
+  </div></div>
+  <div class="control-group">
     <%= f.label :technician , :class => 'control-label' %><div class="controls">
     <%=	select("inspection", "technician_id", Technician.all.collect {|p| [p.first_name + " " + p.last_name , p.id] }) %>
   </div></div>
@@ -34,14 +38,36 @@
     <%=	select("inspection", "damper_type_id", DamperType.all.collect {|p| [ p.abbrev, p.id ] }) %>
   </div></div>
   <div class="control-group">
-		<%= f.label :damper_image , :class => 'control-label' %>
+    <%= f.label :damper_airstream , :class => 'control-label' %><div class="controls">
+    <%=	select("inspection", "damper_airstream_id", DamperAirstream.all.collect {|p| [ p.abbrev, p.id ] }) %>
+  </div></div>
+  <div class="control-group">
+    <%= f.label :length , :class => 'control-label' %><div class="controls">
+    <%= f.text_field :length %>
+  </div></div>
+  <div class="control-group">
+    <%= f.label :height , :class => 'control-label' %><div class="controls">
+    <%= f.text_field :height %>
+  </div></div>
+  <div class="control-group">
+		<%= f.label "Damper Image Open" , :class => 'control-label' %>
 		<div class="controls">
 			<%= f.file_field :damper_image %>
+		</div>
+	</div>
+	<div class="control-group">
+		<%= f.label "Damper Image Closed" , :class => 'control-label' %>
+		<div class="controls">
+			<%= f.file_field :damper_image_second %>
 		</div>
 	</div>
   <div class="control-group">
     <%= f.label :description , :class => 'control-label' %><div class="controls">
     <%= f.text_field :description %>
+  </div></div>
+  <div class="control-group">
+    <%= f.label :notes , :class => 'control-label' %><div class="controls">
+    <%= f.text_field :notes %>
   </div></div>
   <div class="control-group">
   	<%= f.label :job , :class => 'control-label' %><div class="controls">
