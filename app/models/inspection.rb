@@ -8,6 +8,10 @@ class Inspection < ActiveRecord::Base
   validates :damper_status, :presence => true
   validates :damper_type, :presence => true
   validates :job, :presence => true
+  validates :damper_airstream_id, :presence => true
+  validates :length, :presence => true
+  validates :height, :presence => true
+  validates :unit, :presence => true
   
   belongs_to :technician
   belongs_to :damper_status
@@ -44,15 +48,19 @@ class Inspection < ActiveRecord::Base
     :storage => :s3,
     :default_url => "http://placehold.it/300x300.jpg&text=No%20Image",
     :s3_credentials => Rails.root.join('config', 's3_inspections.yml').to_s,  
-    :path => '/:id/:filename'
+    :path => '/:id/open'
   
   has_attached_file :damper_image_second,
     :storage => :s3,
     :default_url => "http://placehold.it/300x300.jpg&text=No%20Image",
     :s3_credentials => Rails.root.join('config', 's3_inspections.yml').to_s,  
-    :path => '/:id/:filename'
+    :path => '/:id/closed'
     
-    def damper_image_url
+    def damper_image_url_open
         damper_image.url(:medium)
+    end
+    
+    def damper_image_url_closed
+        damper_image_second.url(:medium)
     end
 end

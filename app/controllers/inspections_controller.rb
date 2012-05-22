@@ -21,7 +21,7 @@ class InspectionsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @inspections }
-      format.json { render :json => @inspections.to_json(:methods => [:damper_image_url]) }
+      format.json { render :json => @inspections.to_json(:methods => [:damper_image_url_open, :damper_image_url_closed]) }
     end
   end
 
