@@ -39,6 +39,7 @@ class Ability
       can :read, Job, :user_id => client.id
       can :manage, Inspection, :user_id => client.id
       can :manage, Inspection, :user_id => user.id
+      can :manage, Inspection, :company_id => user.company_id
       cannot :read, Report
       cannot :read, User
       cannot :read, Technician
