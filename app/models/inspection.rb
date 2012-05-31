@@ -42,6 +42,7 @@ class Inspection < ActiveRecord::Base
                   :height,
                   :notes,
                   :tag,
+                  :company_id,
                   :unit
                   
   has_attached_file :damper_image,
