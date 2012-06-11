@@ -1,4 +1,5 @@
 class Inspection < ActiveRecord::Base 
+  validates_uniqueness_of :damper_id
   validates :building_abbrev, :presence => true
   validates :inspection_date, :presence => true
   validates :floor, :presence => true
