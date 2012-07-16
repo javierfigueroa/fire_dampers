@@ -385,6 +385,13 @@
 					<div class="span10 offset1">
 						<table class="table">
 							<tbody>
+								
+								<tr>
+									<td><strong>Damper Tag:</strong></td>
+									<td><%= inspection.tag %></td>
+									<td><strong>Inspector:</strong></td>
+									<td><%= inspection.technician.first_name %> <%= inspection.technician.last_name %></td>
+								</tr>
 								<tr>
 									<td><strong>Building:</strong></td>
 									<td><%= inspection.building_abbrev %></td>
@@ -394,34 +401,65 @@
 								<tr>
 									<td><strong>Floor:</strong></td>
 									<td><%= inspection.floor %></td>
-									<td><strong>Inspector:</strong></td>
-									<td><%= inspection.technician.first_name %> <%= inspection.technician.last_name %></td>
+									<td><strong>Unit:</strong></td>
+									<td><%= inspection.unit %></td>
 								</tr>
 								<tr>
 									<td><strong>Location:</strong></td>
 									<td><%= inspection.location %></td>
 									<td><strong>Damper Status:</strong></td>
-									<td><%= inspection.damper_status.abbrev %></td>
+									<td><%= inspection.damper_status.abbrev %> - <%= inspection.damper_status.description %></td>
 								</tr>
 								<tr>
 									<td><strong>Damper Id:</strong></td>
 									<td><%= inspection.damper_id %></td>
 									<td><strong>Damper Type:</strong></td>
-									<td><%= inspection.damper_type.abbrev %></td>
+									<td><%= inspection.damper_type.abbrev %> - <%= inspection.damper_type.description %></td>
+								</tr>
+								<tr>
+									<td><strong>Damper Airstream:</strong></td>
+									<td><%= inspection.damper_airstream.abbrev %></td>
+									<td><strong>Damper Height and Length:</strong></td>
+									<td><%= inspection.height %> x <%= inspection.length %></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="span10 offset1">
+						<table class="table">
+							<tbody>
+								<tr>
+									<% if inspection.damper_image != nil %>
+									<td>
+										<div class="span5 ">
+						<h4> Damper Photo 1:</h4>
+					</div>
+					<div class="span5">
+						<a href="#" class="thumbnail"> <img src="<%= inspection.damper_image %>" alt=""  width="400px" height="500px" /> </a>
+
+					</div>
+									</td>
+									
+					<% end %>
+					
+					<% if inspection.damper_image_second != nil %>
+									<td>
+										<div class="span5 ">
+						<h4> Damper Photo 2:</h4>
+					</div>
+					<div class="span5">
+						<a href="#" class="thumbnail"> <img src="<%= inspection.damper_image_second %>" alt=""  width="400px" height="500px" /> </a>
+
+					</div>
+									</td>
+									
+					<% end %>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 					
-				<% if inspection.damper_image != nil %>
-					<div class="span12 ">
-						<h4> Damper Photo</h4>
-					</div>
-					<div class="span12">
-						<a href="#" class="thumbnail"> <img src="<%= inspection.damper_image %>" alt=""  width="500px" height="500px" /> </a>
-
-					</div>
-					<% end %>
+					
 					<div class="span12 ">
 						<h4> Description</h4>
 					</div>
@@ -433,6 +471,35 @@
 				</div>
 			</div>
 			<% end %> 
+			<div class="page">
+				<div id="outer">
+					<div id="inner">
+						<h1 class="center">Inspectors Certifications</h1>
+					</div>
+				</div>
+			</div>
+			<% @technicians.each do |technician| %>
+			<div class="page">
+				<div class="container">
+					<div class="page-header offset1">
+						
+				<% if @company.logo_image != nil %>
+						<img src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
+				<% end %>
+						<h1><%= @job.name %></h1>
+						<h2> Inspectors Certifications</h2>
+						<br>
+						<h3>Inspected <%= @job.start_date %> thru <%= @job.finish_date %></h3>
+						<h3>Inspected by <%= @job.inspected_by %></h3>
+					</div>
+					<div class="span10 offset1">
+						<p>
+							<img src="<%= technician.license_image %>" alt=""  width="800px" height="800px" /> 
+						</p>
+					</div>
+				</div>
+			</div>
+			<% end %>	
 		</div> 
 	</body>
 </html>

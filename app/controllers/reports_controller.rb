@@ -17,6 +17,7 @@ class ReportsController < ApplicationController
     @report = Report.find(params[:id])
     @job = Job.find(@report.job)    
     @inspections = Inspection.where(:job_id => @job.id)
+    @technicians = Technician.accessible_by(current_ability, :read)
     user = User.find(@report.user_id)
     @company = Company.find(user.company)
     
