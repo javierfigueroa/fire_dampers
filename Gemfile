@@ -11,6 +11,7 @@ gem 'wicked_pdf'
 gem 'aws-sdk'
 gem "paperclip", "~> 2.7"
 gem 'aws-s3'
+gem 'delayed_job_active_record'
 
 group :production, :test do
   gem "pg"

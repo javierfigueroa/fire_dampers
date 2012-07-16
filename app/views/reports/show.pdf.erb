@@ -105,9 +105,10 @@
 }
 		</style>
 
-		<%= wicked_pdf_stylesheet_link_tag('bootstrap.min') %>
-		<%= wicked_pdf_stylesheet_link_tag('bootstrap-responsive.min') %>
-		<%= csrf_meta_tag %>
+<link type='text/css' rel='stylesheet' src='file://<%= Rails.root.join('public','stylesheets','bootstrap.min.css').to_s %>' />
+<link type='text/css' rel='stylesheet' src='file://<%= Rails.root.join('public','stylesheets','bootstrap-responsive.min.css').to_s %>' />
+<link type='text/css' rel='stylesheet' src='file://<%= Rails.root.join('public','stylesheets','DT_bootstrap.css').to_s %>' />
+<link type='text/css' rel='stylesheet' src='file://<%= Rails.root.join('public','stylesheets','site.css').to_s %>' />
 	</head>
 	<body>
 		<div class="container">

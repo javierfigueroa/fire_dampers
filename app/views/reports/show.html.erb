@@ -42,7 +42,11 @@
 				</legend>
 				<p>
 					<b>Report:</b>
+					<% if @report.pdf_report_file_name != nil %>		
 					<a href="<%= url_for(@report) %>.pdf"><%= @report.job.name %> (Download)</a>
+					<% else %>
+					<%= @report.job.name %> (Generating...)
+					<% end %>
 				</p>
 			</div>
 		</div>
