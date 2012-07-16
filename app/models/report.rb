@@ -114,6 +114,7 @@ class Report < ActiveRecord::Base
       @report.save
     end #file gets closed automatically here
     
+    # sleep(10.seconds)
     File.delete(outfile_path.join("#{@report.id}.pdf"))
   end
 end
