@@ -92,7 +92,7 @@ class Report < ActiveRecord::Base
     end
     
      # setup paths
-     outfile_path ="/tmp/cache"# "Rails.root.join('public','pdfs')
+     outfile_path = Rails.root.join('tmp')# "Rails.root.join('public','pdfs')
      view_path   = Rails.root.join('app','views','reports')
 
      # parse erb templates
