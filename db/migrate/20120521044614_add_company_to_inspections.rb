@@ -6,5 +6,5 @@ class AddCompanyToInspections < ActiveRecord::Migration
     end
   end
 
-  add_index :inspections, :company_id
+  # add_index :inspections, :company_id
 end
