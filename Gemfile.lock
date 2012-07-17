@@ -116,6 +116,7 @@ GEM
     warden (1.1.1)
       rack (>= 1.0)
     wicked_pdf (0.7.7)
+    wkhtmltopdf-heroku (1.0.0)
     xml-simple (1.1.1)
 
 PLATFORMS
@@ -132,3 +133,4 @@ DEPENDENCIES
   rails (= 3.2.2)
   sqlite3
   wicked_pdf
+  wkhtmltopdf-heroku

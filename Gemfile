@@ -7,11 +7,13 @@ gem 'rails', '3.2.2'
 
 gem 'devise'
 gem 'cancan'
+gem "wkhtmltopdf-heroku"
 gem 'wicked_pdf'
 gem 'aws-sdk'
 gem "paperclip", "~> 2.7"
 gem 'aws-s3'
 gem 'delayed_job_active_record'
+
 
 group :production, :test do
   gem "pg"
