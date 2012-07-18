@@ -22,10 +22,10 @@ class Report < ActiveRecord::Base
   belongs_to :job
   
   def renderPDF
-  
-    puts "##### About to create report #####"
-  
     @report = self
+    
+    puts "##### About to create report #{@report.id}"
+    
     @job = Job.find(@report.job)    
     @inspections = Inspection.where(:job_id => @job.id)
     @technicians = Technician.where(:user_id => @report.user_id)
@@ -94,27 +94,23 @@ class Report < ActiveRecord::Base
       @floor_percentages.push(percentages)
     end
     
-    puts "##### Collected all data for report #####"
+    puts "##### Collected all data for report #{@report.id}"
     
      # setup paths
-     # outfile_path = Rails.root.join('public','pdfs')
      view_path   = Rails.root.join('app','views','reports')
 
      # parse erb templates
      body = File.read(view_path.join('show.pdf.erb'))
      body_render = ERB.new(body).result(binding)
 
-
-    puts "##### About to render PDF #####"
+    puts "##### About to render PDF #{@report.id}"
      # run through wicked_pdf
      pdf = WickedPdf.new.pdf_from_string(body_render,
-        # :pdf => "breakfast", 
         :layout => false, 
         :margin => { :left => 20, :right => 5 }
      )
 
-
-    puts "##### Saving temp PDF report #####"
+    puts "##### Saving temp PDF report #{@report.id}"
     # then save to a file
     file = StringIO.new(pdf) #mimic a real upload file
     file.class.class_eval { attr_accessor :original_filename, :content_type } #add attr's that paperclip needs
@@ -123,21 +119,6 @@ class Report < ActiveRecord::Base
     
     @report.pdf_report = file
     @report.save
-    
-    # File.open(outfile_path.join("#{@report.id}.pdf"), 'w') {|f| f << pdf }
-
-    # puts "##### Saving report with paperclip #####"
-    # File.open(outfile_path.join("#{@report.id}.pdf")) do |f|
-      # @report.pdf_report = f # just assign the logo attribute to a file
-      # @report.save
-    # end #file gets closed automatically here
-    
-    
-    # puts "##### Deleting temp PDF report #####"
-    # sleep(10.seconds)
-    # File.delete(outfile_path.join("#{@report.id}.pdf"))
-    
-    
-    puts "##### Done! #####"
+    puts "##### Done! #{@report.id}"
   end
 end
