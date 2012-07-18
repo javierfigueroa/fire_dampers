@@ -22,6 +22,9 @@ class Report < ActiveRecord::Base
   belongs_to :job
   
   def renderPDF
+  
+    puts "##### About to create report #####"
+  
     @report = self
     @job = Job.find(@report.job)    
     @inspections = Inspection.where(:job_id => @job.id)
@@ -91,6 +94,8 @@ class Report < ActiveRecord::Base
       @floor_percentages.push(percentages)
     end
     
+    puts "##### Collected all data for report #####"
+    
      # setup paths
      outfile_path = '/tmp'# "Rails.root.join('public','pdfs')
      view_path   = Rails.root.join('app','views','reports')
@@ -99,6 +104,8 @@ class Report < ActiveRecord::Base
      body = File.read(view_path.join('show.pdf.erb'))
      body_render = ERB.new(body).result(binding)
 
+
+    puts "##### About to render PDF #####"
      # run through wicked_pdf
      pdf = WickedPdf.new.pdf_from_string(body_render,
         # :pdf => "breakfast", 
@@ -106,15 +113,23 @@ class Report < ActiveRecord::Base
         :margin => { :left => 20, :right => 5 }
      )
 
+
+    puts "##### Saving temp PDF report #####"
     # then save to a file
     File.open(outfile_path.join("#{@report.id}.pdf"), 'w') {|f| f << pdf }
 
+    puts "##### Saving report with paperclip #####"
     File.open(outfile_path.join("#{@report.id}.pdf")) do |f|
       @report.pdf_report = f # just assign the logo attribute to a file
       @report.save
     end #file gets closed automatically here
     
+    
+    puts "##### Deleting temp PDF report #####"
     # sleep(10.seconds)
     File.delete(outfile_path.join("#{@report.id}.pdf"))
+    
+    
+    puts "##### Done! #####"
   end
 end
