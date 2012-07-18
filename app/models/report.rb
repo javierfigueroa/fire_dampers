@@ -116,10 +116,10 @@ class Report < ActiveRecord::Base
 
     puts "##### Saving temp PDF report #####"
     # then save to a file
-    File.open("./tmp/#{@report.id}.pdf", 'w') {|f| f << pdf }
+    File.open("./tmp/myfile_#{Process.pid}", 'w') {|f| f << pdf }
 
     puts "##### Saving report with paperclip #####"
-    File.open("./tmp/#{@report.id}.pdf") do |f|
+    File.open("./tmp/myfile_#{Process.pid}") do |f|
       @report.pdf_report = f # just assign the logo attribute to a file
       @report.save
     end #file gets closed automatically here
@@ -127,7 +127,7 @@ class Report < ActiveRecord::Base
     
     puts "##### Deleting temp PDF report #####"
     # sleep(10.seconds)
-    File.delete("./tmp/#{@report.id}.pdf")
+    # File.delete("./tmp/#{@report.id}.pdf")
     
     
     puts "##### Done! #####"
