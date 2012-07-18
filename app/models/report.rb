@@ -97,7 +97,7 @@ class Report < ActiveRecord::Base
     puts "##### Collected all data for report #####"
     
      # setup paths
-     outfile_path = '/tmp'# "Rails.root.join('public','pdfs')
+     outfile_path = "#{Rails.root}/tmp/#{Process.pid}_files/" #Rails.root.join('tmp')
      view_path   = Rails.root.join('app','views','reports')
 
      # parse erb templates
