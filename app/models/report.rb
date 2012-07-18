@@ -97,7 +97,7 @@ class Report < ActiveRecord::Base
     puts "##### Collected all data for report #####"
     
      # setup paths
-     outfile_path = "./tmp"#Rails.root.join('tmp')
+     # outfile_path = Rails.root.join('public','pdfs')
      view_path   = Rails.root.join('app','views','reports')
 
      # parse erb templates
@@ -116,18 +116,26 @@ class Report < ActiveRecord::Base
 
     puts "##### Saving temp PDF report #####"
     # then save to a file
-    File.open("./tmp/myfile_#{Process.pid}", 'w') {|f| f << pdf }
+    file = StringIO.new(pdf) #mimic a real upload file
+    file.class.class_eval { attr_accessor :original_filename, :content_type } #add attr's that paperclip needs
+    file.original_filename = "#{@report.id}.pdf" #assign filename in way that paperclip likes
+    file.content_type = 'application/pdf'
+    
+    @report.pdf_report = file
+    @report.save
+    
+    # File.open(outfile_path.join("#{@report.id}.pdf"), 'w') {|f| f << pdf }
 
-    puts "##### Saving report with paperclip #####"
-    File.open("./tmp/myfile_#{Process.pid}") do |f|
-      @report.pdf_report = f # just assign the logo attribute to a file
-      @report.save
-    end #file gets closed automatically here
+    # puts "##### Saving report with paperclip #####"
+    # File.open(outfile_path.join("#{@report.id}.pdf")) do |f|
+      # @report.pdf_report = f # just assign the logo attribute to a file
+      # @report.save
+    # end #file gets closed automatically here
     
     
-    puts "##### Deleting temp PDF report #####"
+    # puts "##### Deleting temp PDF report #####"
     # sleep(10.seconds)
-    # File.delete("./tmp/#{@report.id}.pdf")
+    # File.delete(outfile_path.join("#{@report.id}.pdf"))
     
     
     puts "##### Done! #####"
