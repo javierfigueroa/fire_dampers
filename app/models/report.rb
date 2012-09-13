@@ -94,7 +94,7 @@ class Report < ActiveRecord::Base
       @floor_percentages.push(percentages)
     end
         
-    @inspections = Inspection.where(:job_id => @job.id)    
+    @inspections = Inspection.where(:job_id => @job.id).order("damper_id ASC")    
     puts "##### Collected all data for report #{@report.id}"
     
      # setup paths
