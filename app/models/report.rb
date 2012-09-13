@@ -27,7 +27,7 @@ class Report < ActiveRecord::Base
     puts "##### About to create report #{@report.id}"
     
     @job = Job.find(@report.job)    
-    @inspections = Inspection.where(:job_id => @job.id)
+    @inspections = Inspection.where(:job_id => @job.id).order("damper_id ASC")
     @technicians = Technician.where(:user_id => @report.user_id)
     user = User.find(@report.user_id)
     @company = Company.find(user.company)
