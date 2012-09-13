@@ -27,7 +27,7 @@ class Report < ActiveRecord::Base
     puts "##### About to create report #{@report.id}"
     
     @job = Job.find(@report.job)    
-    @inspections = Inspection.where(:job_id => @job.id).order("damper_id ASC")
+    @inspections = Inspection.where(:job_id => @job.id)
     @technicians = Technician.where(:user_id => @report.user_id)
     user = User.find(@report.user_id)
     @company = Company.find(user.company)
@@ -93,7 +93,8 @@ class Report < ActiveRecord::Base
       @floor_summaries.push(summary)
       @floor_percentages.push(percentages)
     end
-    
+        
+    @inspections = Inspection.where(:job_id => @job.id)    
     puts "##### Collected all data for report #{@report.id}"
     
      # setup paths
