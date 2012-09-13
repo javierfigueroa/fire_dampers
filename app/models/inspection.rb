@@ -21,6 +21,8 @@ class Inspection < ActiveRecord::Base
   belongs_to :job
   belongs_to :company
   
+  default_scope :order => ["floor ASC", "damper_id ASC"]
+  
   attr_accessible :damper_image, 
                   :damper_image_content_type, 
                   :damper_image_file_size,    

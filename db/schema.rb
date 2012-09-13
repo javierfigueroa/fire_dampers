@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120716181610) do
+ActiveRecord::Schema.define(:version => 20120913222309) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -92,19 +92,19 @@ ActiveRecord::Schema.define(:version => 20120716181610) do
     t.integer  "floor"
     t.integer  "technician_id"
     t.string   "location"
-    t.string   "damper_id"
+    t.integer  "damper_id",                        :limit => 255
     t.integer  "damper_status_id"
     t.integer  "damper_type_id"
     t.string   "description"
     t.integer  "job_id"
     t.integer  "user_id"
-    t.datetime "created_at",                                      :null => false
-    t.datetime "updated_at",                                      :null => false
+    t.datetime "created_at",                                                     :null => false
+    t.datetime "updated_at",                                                     :null => false
     t.integer  "damper_image_file_size"
     t.string   "damper_image_content_type"
     t.string   "damper_image_file_name"
     t.datetime "damper_image_updated_at"
-    t.integer  "company_id",                       :default => 0, :null => false
+    t.integer  "company_id",                                      :default => 0, :null => false
     t.string   "damper_image_second_content_type"
     t.datetime "damper_image_second_updated_at"
     t.integer  "damper_image_second_file_size"
