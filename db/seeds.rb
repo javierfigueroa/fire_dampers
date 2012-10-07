@@ -52,7 +52,7 @@ DamperType.find_or_create_by_abbrev(:abbrev => "ATF", :description => "Access th
 DamperType.find_or_create_by_abbrev(:abbrev => "ATR", :description => "Access thru Floor")
 DamperType.find_or_create_by_abbrev(:abbrev => "DID", :description => "Damper in Diffuser")
 DamperType.find_or_create_by_abbrev(:abbrev => "DTF", :description => "Down thru Floor")
-DamperType.find_or_create_by_abbrev(:abbrev => "ECD", :description => "Electric Combination Damper EFD = Electric Fire Damper")
+DamperType.find_or_create_by_abbrev(:abbrev => "ECD", :description => "Electric Combination Damper")
 DamperType.find_or_create_by_abbrev(:abbrev => "ESD", :description => "Electric Smoke Damper")
 DamperType.find_or_create_by_abbrev(:abbrev => "FD", :description => "Fire Damper")
 DamperType.find_or_create_by_abbrev(:abbrev => "VINE", :description => "Visually Identified Not Exercised DNR = Disabled - Not Required")
