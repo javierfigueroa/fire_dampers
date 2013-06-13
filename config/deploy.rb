@@ -11,6 +11,8 @@ set :default_environment, {'BASH_ENV' =>"~/.bashrc", 'SSH_ASKPASS' =>'/Users/adm
 set :stages, ["production"]
 set :default_stage, "production"
 
+load 'deploy/assets'
+
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
