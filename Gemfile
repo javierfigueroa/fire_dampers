@@ -4,8 +4,9 @@ gem 'rails', '3.2.2'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+#Bundler.setup
 gem 'devise'
+gem 'devise-encryptable'
 gem 'cancan'
 gem "wkhtmltopdf-heroku"
 gem 'wicked_pdf'
@@ -13,14 +14,16 @@ gem 'aws-sdk'
 gem "paperclip", "~> 2.7"
 gem 'aws-s3'
 gem 'delayed_job_active_record'
+gem 'rake', '~>10.0.4':
+gem 'builder', '~>3.0.4'
+gem 'thin'
 
-
-group :production, :test do
-  gem "pg"
+group :production do
+  gem "mysql", "~>2.8.1"
 end
 
-group :development do
-  gem 'sqlite3'
+group :development, :test do
+  gem 'sqlite3-ruby', :require => 'sqlite3'
 end
 
 # Use unicorn as the web server

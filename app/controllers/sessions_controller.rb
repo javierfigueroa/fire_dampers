@@ -10,7 +10,7 @@ class SessionsController < Devise::SessionsController
 
     respond_to do |format|
       format.html do
-        respond_with resource, :location => redirect_location(resource_name, resource)
+        respond_with resource, :location => after_sign_in_path_for(resource_name)
       end
       format.json do
         render :json => {
