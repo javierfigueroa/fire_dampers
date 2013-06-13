@@ -56,25 +56,26 @@
     </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="/javascripts/jquery.dataTables.min.js"></script>
-    <script src="/javascripts/bootstrap-alert.js"></script>
-    <script src="/javascripts/bootstrap-modal.js"></script>
-    <script src="/javascripts/bootstrap-dropdown.js"></script>
-    <script src="/javascripts/bootstrap-scrollspy.js"></script>
-    <script src="/javascripts/bootstrap-tab.js"></script>
-    <script src="/javascripts/bootstrap-tooltip.js"></script>
-    <script src="/javascripts/bootstrap-popover.js"></script>
-    <script src="/javascripts/bootstrap-button.js"></script>
-    <script src="/javascripts/bootstrap-collapse.js"></script>
-    <script src="/javascripts/bootstrap-carousel.js"></script>
-    <script src="/javascripts/bootstrap-typeahead.js"></script>
-	<script src="/javascripts/application.js"></script>
-	<script src="/javascripts/DT_bootstrap.js"></script><!-- 
+    <%= javascript_include_tag "/javascripts/jquery.dataTables.min", "main" %> 
+    <%= javascript_include_tag "/javascripts/jquery.dataTables.min.js", "main" %>
+    <%= javascript_include_tag "/javascripts/bootstrap-alert.js", "main" %>
+    <%= javascript_include_tag "/javascripts/bootstrap-modal.js", "main" %>
+    <%= javascript_include_tag "/javascripts/bootstrap-dropdown.js", "main" %>
+    <%= javascript_include_tag "/javascripts/bootstrap-scrollspy.js", "main" %>
+    <%= javascript_include_tag "/javascripts/bootstrap-tab.js", "main" %>
+    <%= javascript_include_tag "/javascripts/bootstrap-tooltip.js", "main" %>
+    <%= javascript_include_tag "/javascripts/bootstrap-popover.js", "main" %>
+    <%= javascript_include_tag "/javascripts/bootstrap-button.js", "main" %>
+    <%= javascript_include_tag "/javascripts/bootstrap-collapse.js", "main" %>
+    <%= javascript_include_tag "/javascripts/bootstrap-carousel.js", "main" %>
+    <%= javascript_include_tag "/javascripts/bootstrap-typeahead.js", "main" %>
+	<%= javascript_include_tag "/javascripts/application.js", "main" %>
+	<%= javascript_include_tag "/javascripts/DT_bootstrap.js", "main" %><!-- 
 	<script src="/javascripts/prototype.js"></script>
 	<script src="/javascripts/controls.js"></script>
 	<script src="/javascripts/dragdrop.js"></script>
 	<script src="/javascripts/effects.js"></script> -->
-	<script src="/javascripts/rails.js"></script>
+	<%= javascript_include_tag "/javascripts/rails.js", "main" %>
   </body>
   
 </html>
