@@ -4,9 +4,10 @@ set :application, "fire_dampers"
 set :scm, :git
 # set :scm_command, "/opt/local/bin/git" 
 set :repository, "git@bitbucket.org:javierfigueroa/fire_dampers.git"
+set :deploy_via, :remote_cache
 set :scm_passphrase, "thegrassisgreen"
 set :user, "admin"
-set :default_environment, {'PATH' =>"/opt/local/bin:/opt/local/sbin:/usr/local/sbin:/usr/local/bin:/usr/local/opt/ruby/bin:/usr/local/mysql/bin:/opt/local/lib/postgresql83/bin:/bin:/sbin:/usr/bin:/usr/sbin"}
+set :default_environment, {'BASH_ENV' =>"~/.bashrc", 'SSH_ASKPASS' =>'/Users/admin/pwd.sh'}
 set :stages, ["production"]
 set :default_stage, "production"
 

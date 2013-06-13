@@ -14,7 +14,7 @@ gem 'aws-sdk'
 gem "paperclip", "~> 2.7"
 gem 'aws-s3'
 gem 'delayed_job_active_record'
-gem 'rake', '~>10.0.4':
+gem 'rake', '~>10.0.4'
 gem 'builder', '~>3.0.4'
 gem 'thin'
 
