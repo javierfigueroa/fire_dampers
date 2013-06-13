@@ -159,6 +159,7 @@ DEPENDENCIES
   paperclip (~> 2.7)
   rails (= 3.2.2)
   rake (~> 10.0.4)
+  sprockets
   sqlite3
   thin
   wicked_pdf

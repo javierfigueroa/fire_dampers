@@ -17,6 +17,7 @@ gem 'delayed_job_active_record'
 gem 'rake', '~>10.0.4'
 gem 'builder', '~>3.0.4'
 gem 'thin'
+gem 'sprockets'
 
 group :production do
   gem "mysql", "~>2.8.1"
