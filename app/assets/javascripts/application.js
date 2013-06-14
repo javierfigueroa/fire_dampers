@@ -1,3 +1,5 @@
+//= require prototype
+//= require rails
 //= require jquery.dataTables.min
 //= require bootstrap-alert
 //= require bootstrap-modal
@@ -10,5 +12,3 @@
 //= require bootstrap-collapse
 //= require bootstrap-carousel
 //= require bootstrap-typeahead
-//= require prototype
-//= require rails
