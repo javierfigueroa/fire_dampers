@@ -14,13 +14,12 @@ set :default_stage, "production"
 namespace :deploy do
   task :restart, :roles => :web do
     sudo "cd #{ current_path }"
-    sudo "chmod 777 logs/production.log"
     sudo "rm -f tmp/pids/thin.pid"
     sudo "thin start -d -p 8080 -e production"
   end
   
   task :restart_daemons, :roles => :app do
-    sudo "rake db:migrate"
+    sudo "cd #{ current_path }"
     sudo "chmod a+rx bin/wkhtmltopdf-OS-X.ppc"
     sudo "RAILS_ENV=production script/delayed_job start"
   end
