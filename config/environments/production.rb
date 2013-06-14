@@ -56,3 +56,4 @@ FireDampers::Application.configure do
       :exe_path =>  Rails.root.join('bin', 'wkhtmltopdf-OS-X.ppc').to_s
     }
   end
+end

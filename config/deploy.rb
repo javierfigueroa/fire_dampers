@@ -19,9 +19,9 @@ namespace :deploy do
   end
   
   task :restart_daemons, :roles => :app do
-    sudo "cd #{ current_path }"
-    sudo "chmod a+rx bin/wkhtmltopdf-OS-X.ppc"
-    sudo "RAILS_ENV=production script/delayed_job start"
+    # sudo "cd #{ current_path }"
+    # sudo "chmod a+rx bin/wkhtmltopdf-OS-X.ppc"
+    # sudo "script/delayed_job start"
   end
 end
 
