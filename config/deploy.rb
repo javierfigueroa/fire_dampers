@@ -12,10 +12,17 @@ set :stages, ["production"]
 set :default_stage, "production"
 
 namespace :deploy do
+  task :start, :roles => :web do
+    sudo "cd #{ current_path }"
+    sudo "thin start -d -p 8080 -e production"
+  end
+  task :stop, :roles => :web do
+    sudo "cd #{ current_path }"
+    sudo "thin stop"
+  end
   task :restart, :roles => :web do
     sudo "cd #{ current_path }"
-    sudo "rm -f tmp/pids/thin.pid"
-    sudo "thin start -d -p 8080 -e production"
+    sudo "thin restart -d -p 8080 -e production"
   end
   
   task :restart_daemons, :roles => :app do
@@ -24,6 +31,9 @@ namespace :deploy do
     # sudo "script/delayed_job start"
   end
 end
+
+#To run the delayed job in development run
+#development: rake jobs:work
 
 after "deploy", "deploy:restart_daemons" 
 
