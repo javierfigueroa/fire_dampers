@@ -10,3 +10,5 @@
 //= require bootstrap-collapse
 //= require bootstrap-carousel
 //= require bootstrap-typeahead
+//= require prototype
+//= require rails

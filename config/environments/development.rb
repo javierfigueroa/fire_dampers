@@ -32,10 +32,10 @@ FireDampers::Application.configure do
   
   config.after_initialize do
     WickedPdf.config = {
-  #:wkhtmltopdf => '/usr/local/bin/wkhtmltopdf',
-  #:layout => "pdf.html",
-  :exe_path => "/usr/local/bin/wkhtmltopdf"
-}
+      #:wkhtmltopdf => '/usr/local/bin/wkhtmltopdf',
+      #:layout => "pdf.html",
+      :exe_path => "/usr/local/bin/wkhtmltopdf"
+    }
     # WickedPdf[:exe_path] = "/usr/local/bin/wkhtmltopdf"
   end
 end
