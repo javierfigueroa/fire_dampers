@@ -7,3 +7,7 @@ background-image: url("glyphicons-halflings.png");
 .icon-white {
 background-image: url("glyphicons-halflings-white.png");
 }
+
+.container.data_table {
+   width: 100%;
+}

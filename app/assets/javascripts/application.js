@@ -10,8 +10,3 @@
 //= require bootstrap-collapse
 //= require bootstrap-carousel
 //= require bootstrap-typeahead
-//= require prototype
-//= require controls
-//= require dragdrop
-//= require effects
-//= require rails

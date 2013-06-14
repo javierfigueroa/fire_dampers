@@ -21,6 +21,7 @@ FireDampers::Application.configure do
   config.active_support.deprecation = :log
   config.serve_static_assets = true
   config.assets.compile = true
+  config.assets.debug = true
 
   # config.assets.debug = false
   # Only use best-standards-support built into browsers
