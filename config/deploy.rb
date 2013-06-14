@@ -11,6 +11,14 @@ set :default_environment, {'BASH_ENV' =>"~/.bashrc", 'SSH_ASKPASS' =>'/Users/adm
 set :stages, ["production"]
 set :default_stage, "production"
 
+namespace :deploy do
+  task :restart, :roles => :web do
+    sudo "cd #{ current_path }"
+    sudo "rm -f tmp/pids/thin.pid"
+    sudo "thin start -d -p 8080 -e production"
+  end
+end
+
 #load 'deploy/assets'
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
