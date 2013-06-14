@@ -4,7 +4,7 @@ class SessionsController < Devise::SessionsController
     set_flash_message(:notice, :signed_in) if is_navigational_format?
     sign_in(resource_name, resource)
 
-    # current_user.reset_authentication_token!
+    #current_user.reset_authentication_token!
     current_user.ensure_authentication_token
     current_user.save!
 
