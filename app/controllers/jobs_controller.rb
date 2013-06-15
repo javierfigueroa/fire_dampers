@@ -46,7 +46,7 @@ class JobsController < ApplicationController
   # POST /jobs.xml
   def create
     @job = Job.new(params[:job])
-    @job.user_id = current_user.id;
+    @job.user_id = params.has_key?("user") ? params[:user][:user_id] : current_user.id;
 
     respond_to do |format|
       if @job.save
@@ -65,6 +65,7 @@ class JobsController < ApplicationController
   # PUT /jobs/1.xml
   def update
     @job = Job.find(params[:id])
+    @job.user_id = params.has_key?("user") ? params[:user][:user_id] : current_user.id;
 
     respond_to do |format|
       if @job.update_attributes(params[:job])

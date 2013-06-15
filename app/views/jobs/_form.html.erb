@@ -49,6 +49,12 @@
 			<%= f.text_field :contact_phone %>
 		</div>
 	</div>
+	 <% if current_user.role? :admin %>
+	  <div class="control-group">
+	    <%= f.label :user , :class => 'control-label' %><div class="controls">
+	    <%=	select("user", "user_id", User.where(:role => 'regular').collect {|p| [p.email , p.id] }) %>
+	  </div></div>
+  	 <% end %>
 	<div class="form-actions">
 		<%= f.submit nil, :class => 'btn btn-primary' %>
 	</div>

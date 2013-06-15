@@ -152,6 +152,7 @@ DEPENDENCIES
   cancan
   capistrano
   capistrano-ext
+  daemons
   delayed_job_active_record
   devise
   devise-encryptable
