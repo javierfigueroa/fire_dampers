@@ -12,29 +12,33 @@ set :stages, ["production"]
 set :default_stage, "production"
 
 namespace :deploy do
-  task :start, :roles => :web do
-    sudo "cd #{ current_path }"
-    sudo "thin start -d -p 8080 -e production"
-  end
-  task :stop, :roles => :web do
-    sudo "cd #{ current_path }"
-    sudo "thin stop"
-  end
-  task :restart, :roles => :web do
-    sudo "cd #{ current_path }"
-    sudo "thin restart -d -p 8080 -e production"
+  # task :start, :roles => :web do
+    # sudo "cd #{ current_path }"
+    # sudo "thin start -d -p 8080 -e production"
+  # end
+  # task :stop, :roles => :web do
+    # sudo "cd #{ current_path }"
+    # sudo "thin stop"
+  # end
+  task :restart, :roles => :app do
+    # sudo "cd #{ current_path }"
+    run "cd #{current_path}; sudo thin restart -d -p 8080 -e production"
   end
   
   task :restart_daemons, :roles => :app do
     # sudo "cd #{ current_path }"
     # sudo "chmod a+rx bin/wkhtmltopdf-OS-X.ppc"
     # sudo "script/delayed_job start"
+     run "cd #{current_path}; RAILS_ENV=#{rails_env} script/delayed_job start"
+
+    # sudo "cd #{ current_path }"
+    # sudo "cd #{ current_path } ; sudo thin restart -d -p 8080 -e production"
   end
 end
 
 #To run the delayed job in development run
 #development: rake jobs:work
-
+# after "deploy", "deploy:cleanup"
 after "deploy", "deploy:restart_daemons" 
 
 #load 'deploy/assets'
