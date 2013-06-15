@@ -1,6 +1,8 @@
 require 'capistrano/ext/multistage'
+# require "delayed/recipes"  
 
 set :application, "fire_dampers"
+set :rails_env, "production" #added for delayed job  
 set :scm, :git
 # set :scm_command, "/opt/local/bin/git" 
 set :repository, "git@bitbucket.org:javierfigueroa/fire_dampers.git"
@@ -10,6 +12,8 @@ set :user, "admin"
 set :default_environment, {'BASH_ENV' =>"~/.bashrc", 'SSH_ASKPASS' =>'/Users/admin/pwd.sh'}
 set :stages, ["production"]
 set :default_stage, "production"
+
+# set :delayed_job_server_role, :worker
 
 namespace :deploy do
   # task :start, :roles => :web do
@@ -21,25 +25,23 @@ namespace :deploy do
     # sudo "thin stop"
   # end
   task :restart, :roles => :app do
-    # sudo "cd #{ current_path }"
     run "cd #{current_path}; sudo thin restart -d -p 8080 -e production"
   end
   
   task :restart_daemons, :roles => :app do
-    # sudo "cd #{ current_path }"
-    # sudo "chmod a+rx bin/wkhtmltopdf-OS-X.ppc"
-    # sudo "script/delayed_job start"
-     run "cd #{current_path}; RAILS_ENV=#{rails_env} script/delayed_job start"
-
-    # sudo "cd #{ current_path }"
-    # sudo "cd #{ current_path } ; sudo thin restart -d -p 8080 -e production"
+     run "cd #{current_path}; chmod a+rwx bin/wkhtmltopdf-OS-X.ppc"
+     run "cd #{current_path}; RAILS_ENV=#{rails_env} sudo script/delayed_job -n 2 restart"
   end
+  
 end
 
 #To run the delayed job in development run
 #development: rake jobs:work
 # after "deploy", "deploy:cleanup"
 after "deploy", "deploy:restart_daemons" 
+# after "deploy:stop",    "delayed_job:stop"
+# after "deploy:start",   "delayed_job:start"
+# after "deploy:restart", "delayed_job:restart"
 
 #load 'deploy/assets'
 

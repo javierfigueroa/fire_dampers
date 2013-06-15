@@ -18,6 +18,7 @@ gem 'rake', '~>10.0.4'
 gem 'builder', '~>3.0.4'
 gem 'thin'
 gem 'sprockets'
+gem 'daemons'
 
 group :production do
   gem "mysql", "~>2.8.1"
