@@ -105,10 +105,13 @@ class TechniciansController < ApplicationController
   # DELETE /technicians/1.json
   def destroy
     @technician = Technician.find(params[:id])
-    user = User.where(@technician.email).first
     
-    @technician.destroy
-    user.destroy    
+    user = User.find_by_email(@technician.email)
+    if user
+      user.destroy 
+    end
+    
+    @technician.destroy   
 
     respond_to do |format|
       format.html { redirect_to technicians_url }
