@@ -12,13 +12,14 @@ set :stages, ["production"]
 set :default_stage, "production"
 
 namespace :deploy do
-  task :restart, :roles => :app do
-    run "cd #{current_path}; sudo thin restart -d -p 8080 -e production"
+  task :restart, :roles => :web do
+    run "cd #{current_path}; sudo thin stop"
+    run "cd #{current_path}; sudo thin start -d -p 8080 -e production"
   end
   
   task :restart_daemons, :roles => :app do
      run "cd #{current_path}; chmod a+rwx bin/wkhtmltopdf-OS-X.ppc"
-     # run "cd #{current_path}; RAILS_ENV=#{rails_env} sudo script/delayed_job -n 2 restart"
+     run "cd #{current_path}; RAILS_ENV=#{rails_env} sudo script/delayed_job restart"
   end
   
 end
@@ -27,3 +28,4 @@ end
 #development: rake jobs:work
 
 after "deploy", "deploy:restart_daemons" 
+# load 'deploy/assets'
