@@ -77,7 +77,7 @@ class InspectionsController < ApplicationController
     @inspection = Inspection.new(params[:inspection])
     @inspection.user_id = current_user.id;
     @inspection.company_id = current_user.company_id;
-    @inspection.tag = @inspection.floor.to_s << "-" << @inspection.damper_type.abbrev << "-" << @inspection.damper_airstream.abbrev << "-" << @inspection.unit.to_s << "-" << @inspection.damper_id
+    @inspection.tag = @inspection.floor.to_s << "-" << @inspection.damper_type.abbrev << "-" << @inspection.damper_airstream.abbrev << "-" << @inspection.unit.to_s << "-" << @inspection.damper_id.to_s
     
     respond_to do |format|
       if @inspection.save
@@ -98,7 +98,7 @@ class InspectionsController < ApplicationController
     @inspection = Inspection.find(params[:id])    
     respond_to do |format|
       if @inspection.update_attributes(params[:inspection])
-        @inspection.tag = @inspection.floor.to_s << "-" << @inspection.damper_type.abbrev << "-" << @inspection.damper_airstream.abbrev << "-" << @inspection.unit.to_s << "-" << @inspection.damper_id
+        @inspection.tag = @inspection.floor.to_s << "-" << @inspection.damper_type.abbrev << "-" << @inspection.damper_airstream.abbrev << "-" << @inspection.unit.to_s << "-" << @inspection.damper_id.to_s
         @inspection.save
         
         format.html { redirect_to(@inspection, :notice => 'Inspection was successfully updated.') }

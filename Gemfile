@@ -19,14 +19,15 @@ gem 'builder', '~>3.0.4'
 gem 'thin'
 gem 'sprockets'
 gem 'daemons'
-
-group :production do
-  gem "mysql", "~>2.8.1"
-end
-
-group :development, :test do
-  gem 'sqlite3', :require => 'sqlite3'
-end
+gem "mysql2"#, "~>2.8.1"
+# group :production do
+# end
+# 
+# group :development, :test do
+  # gem 'sqlite3', :require => 'sqlite3'
+  # gem "activerecord-mysql-adapter"
+  # gem "mysql"
+# end
 
 # Use unicorn as the web server
 # gem 'unicorn'
