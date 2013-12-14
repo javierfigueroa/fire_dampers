@@ -8,6 +8,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in DeviseMailer.
   config.mailer_sender = "please-change-me@config-initializers-devise.com"
 
+  config.secret_key = '1a8ffa4f46e111f3599df7e3f5fea0d82b7abe40c7d09806230ac030f5527cbd9128cf2bbcaa52de09f812433246f1c63510939988371d5d9eb4261353a9d579'
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating an user. By default is
   # just :email. You can configure it to use [:username, :subdomain], so for
@@ -83,7 +84,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :token_authenticatable
   # Defines name of the authentication token params key
-  config.token_authentication_key = :auth_token
+  # config.token_authentication_key = :auth_token
 
   # ==> General configuration
   # Load and configure the ORM. Supports :active_record (default), :mongoid

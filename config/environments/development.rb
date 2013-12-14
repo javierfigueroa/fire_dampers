@@ -19,9 +19,6 @@ FireDampers::Application.configure do
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
-  config.serve_static_assets = true
-  config.assets.compile = true
-  config.assets.debug = false
 
   # config.assets.debug = false
   # Only use best-standards-support built into browsers
@@ -38,5 +35,11 @@ FireDampers::Application.configure do
     }
     # WickedPdf[:exe_path] = "/usr/local/bin/wkhtmltopdf"
   end
+  
+  # Do not compress assets
+  config.assets.compress = false
+
+  # Expands the lines which load the assets
+  config.assets.debug = true
 end
 

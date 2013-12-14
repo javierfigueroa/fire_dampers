@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.2'
+gem 'rails', '3.2.14'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -19,16 +19,20 @@ gem 'builder', '~>3.0.4'
 gem 'thin'
 gem 'sprockets'
 gem 'daemons'
-gem "mysql2"#, "~>2.8.1"
-# group :production do
-# end
-# 
-# group :development, :test do
-  # gem 'sqlite3', :require => 'sqlite3'
-  # gem "activerecord-mysql-adapter"
-  # gem "mysql"
-# end
+gem 'jquery-rails', "~> 2.3.0"
 
+group :production do
+  gem "mysql", "~>2.8.1"
+end
+ 
+group :development, :test do
+  gem "mysql2"
+end
+
+group :assets do
+  gem 'sass-rails'
+  gem 'uglifier'
+end
 # Use unicorn as the web server
 # gem 'unicorn'
 
