@@ -55,7 +55,7 @@ class Report < ActiveRecord::Base
       
       summary["floor"] = floor
       percentages["floor"] = floor
-      summary["fire"] = @inspections.count(:all, :conditions => ["floor = ? and damper_type_id = ?", floor, DamperType.where(:abbrev => "FD")])
+      summary["fire"] = @inspections.count(:all, :conditions => ["floor = ? and damper_type_id = ?", floor, DamperType.where(:abbrev => "ECD")])
       @floor_totals["fire"] += summary["fire"]      
       percentages["fire"] = (summary["fire"].to_f / total_inspections.to_f) * 100.0
       @floor_percentage_totals["fire"] += percentages["fire"]
@@ -108,7 +108,7 @@ class Report < ActiveRecord::Base
      # run through wicked_pdf
      pdf = WickedPdf.new.pdf_from_string(body_render,
         :layout => false, 
-        :margin => { :left => 20, :right => 5 }
+        :margin => { :left => 10, :right => 10 }
      )
 
     puts "##### Saving temp PDF report #{@report.id}"

@@ -27,10 +27,11 @@ class ReportsController < ApplicationController
       # format.xml  { render :xml => @report }
       # format.pdf { 
       # render( :pdf => "breakfast", 
-              # :layout => false, 
-              # :save_to_file => Rails.root.join('pdfs','report.pdf'),
-              # :show_as_html => params[:debug].present?,
-              # :margin => { :left => 20, :right => 5 } ) }
+              # # :layout => false, 
+              # # :save_to_file => Rails.root.join('pdfs','report.pdf'),
+              # :show_as_html => params[:debug]
+              # # :margin => { :left => 20, :right => 5 } ) 
+              # )}
     # end
   end
 
