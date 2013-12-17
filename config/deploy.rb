@@ -19,7 +19,7 @@ namespace :deploy do
   
   task :restart_daemons, :roles => :app do
      run "cd #{current_path}; chmod a+rwx bin/wkhtmltopdf-OS-X.ppc"
-     run "cd #{current_path}; RAILS_ENV=#{rails_env} sudo script/delayed_job restart"
+     run "cd #{current_path}; RAILS_ENV=#{rails_env} sudo script/delayed_job -n 2 restart"
   end
   
 end
