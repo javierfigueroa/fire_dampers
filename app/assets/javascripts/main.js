@@ -3,7 +3,7 @@
 $(function() {
 	$('#example').dataTable( {
 		"aaSorting": [[ 1, "asc" ]],
-		"sDom": "<'row'<'span3'l><'offset1 span4'f>r>t<'row'<'span3'i><'offset1 span4'p>>",
+		"sDom": "<'row'<'span5'l><'offset1 span4'f>r>t<'row'<'span5'i><'span5'p>>",
 		"sPaginationType": "bootstrap",
 		"oLanguage": {
 			"sLengthMenu": "_MENU_ records per page"
