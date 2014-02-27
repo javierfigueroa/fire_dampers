@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-
+ruby '2.0.0'
 gem 'rails', '3.2.14'
 
 # Bundle edge Rails instead:
@@ -14,20 +14,13 @@ gem 'aws-sdk'
 gem "paperclip", "~> 2.7"
 gem 'aws-s3'
 gem 'delayed_job_active_record'
-gem 'rake', '~>10.0.4'
+gem 'rake', '~>10.1.0'
 gem 'builder', '~>3.0.4'
 gem 'thin'
 gem 'sprockets'
 gem 'daemons'
 gem 'jquery-rails', "~> 2.3.0"
-
-group :production do
-  gem "mysql", "~>2.8.1"
-end
- 
-group :development, :test do
-  gem "mysql2"
-end
+gem "mysql2"
 
 group :assets do
   gem 'sass-rails'

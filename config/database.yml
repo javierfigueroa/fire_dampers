@@ -20,11 +20,12 @@ test:
   timeout: 5000
   
 production:
-  adapter: mysql
+  adapter: mysql2
   encoding: utf8
   database: dampers
   username: root
-  password: J4v13r1984!
+  password: root
+  #J4v13r1984!
   host: 127.0.0.1
   port: 3306
 
