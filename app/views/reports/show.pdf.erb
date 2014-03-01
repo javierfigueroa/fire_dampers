@@ -354,7 +354,7 @@
 								<td><%= inspection.location %></td>
 								<td><%= inspection.damper_status.abbrev %></td>
 								<td><%= inspection.damper_status.abbrev %></td>
-								<td><%= inspection.description %></td>
+								<td><%= inspection.description %> <%= inspection.notes %></td>
 
 							</tr>
 							<% end %>
@@ -433,7 +433,7 @@
 									<% if inspection.damper_image != nil %>
 									<td>
 										<div class="span5 ">
-						<h4> Damper Photo 1:</h4>
+						<h4> Damper Open:</h4>
 					</div>
 					<div class="span5">
 						<a href="#" class="thumbnail"> <img src="<%= inspection.damper_image %>" alt=""  width="400px" height="500px" /> </a>
@@ -446,7 +446,7 @@
 					<% if inspection.damper_image_second != nil %>
 									<td>
 										<div class="span5 ">
-						<h4> Damper Photo 2:</h4>
+						<h4> Damper Closed:</h4>
 					</div>
 					<div class="span5">
 						<a href="#" class="thumbnail"> <img src="<%= inspection.damper_image_second %>" alt=""  width="400px" height="500px" /> </a>
@@ -466,7 +466,7 @@
 					</div>
 					<div class="span12 well">
 						<p>
-							<%= inspection.description %>
+							<%= inspection.description %> <%= inspection.notes %>
 						</p>
 					</div>
 				</div>
