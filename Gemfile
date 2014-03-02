@@ -20,7 +20,7 @@ gem 'thin'
 gem 'sprockets'
 gem 'daemons'
 gem 'jquery-rails', "~> 2.3.0"
-gem "mysql2"
+gem "mysql2", "~> 0.3.15"
 
 group :assets do
   gem 'sass-rails'

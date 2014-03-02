@@ -83,6 +83,14 @@
 					<b>Damper Airstream</b>
 					<%= @inspection.damper_airstream.abbrev %>
 				</p>
+                <p>
+                    <b>Damper Is Non Accessible</b>
+                    <%= @inspection.nonaccessible %>
+                </p>
+                <p>
+                    <b>Damper Needs Replacement</b>
+                    <%= @inspection.replace %>
+                </p>
 				<p>
 					<b>Description:</b>
 					<%= @inspection.description %>

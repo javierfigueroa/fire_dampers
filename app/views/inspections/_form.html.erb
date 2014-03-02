@@ -50,6 +50,18 @@
     <%= f.text_field :height %>
   </div></div>
   <div class="control-group">
+    <%= f.label "Is Non Accessible?" , :class => 'control-label' %>
+    <div class="controls">
+        <%= f.check_box :nonaccessible %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label "Needs replacement?" , :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :replace %>
+    </div>
+  </div>
+  <div class="control-group">
 		<%= f.label "Damper Image Open" , :class => 'control-label' %>
 		<div class="controls">
 			<%= f.file_field :damper_image %>

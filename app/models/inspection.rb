@@ -46,7 +46,9 @@ class Inspection < ActiveRecord::Base
                   :notes,
                   :tag,
                   :company_id,
-                  :unit
+                  :unit,
+                  :replace,
+                  :nonaccessible
                   
   has_attached_file :damper_image,
     :storage => :s3,
