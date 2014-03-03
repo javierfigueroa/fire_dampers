@@ -11,7 +11,7 @@ gem 'cancan'
 gem "wkhtmltopdf-heroku"
 gem 'wicked_pdf'
 gem 'aws-sdk'
-gem "paperclip", "~> 2.7"
+gem "paperclip"
 gem 'aws-s3'
 gem 'delayed_job_active_record'
 gem 'rake', '~>10.1.0'

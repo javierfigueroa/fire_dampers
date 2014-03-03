@@ -61,6 +61,9 @@ class Inspection < ActiveRecord::Base
     :default_url => "http://placehold.it/300x300.jpg&text=No%20Image",
     :s3_credentials => Rails.root.join('config', 's3_inspections.yml').to_s,  
     :path => '/:id/closed'
+
+  validates_attachment_content_type :damper_image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
+  validates_attachment_content_type :damper_image_second, :content_type => ["image/jpg", "image/jpeg", "image/png"]
     
     def damper_image_url_open
         damper_image.url(:medium)
