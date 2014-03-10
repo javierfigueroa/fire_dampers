@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120913222309) do
+ActiveRecord::Schema.define(:version => 20140302050906) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -44,9 +44,9 @@ ActiveRecord::Schema.define(:version => 20120913222309) do
     t.string   "fax"
     t.datetime "created_at",              :null => false
     t.datetime "updated_at",              :null => false
-    t.integer  "logo_image_file_size"
-    t.string   "logo_image_content_type"
     t.string   "logo_image_file_name"
+    t.string   "logo_image_content_type"
+    t.integer  "logo_image_file_size"
     t.datetime "logo_image_updated_at"
   end
 
@@ -93,32 +93,33 @@ ActiveRecord::Schema.define(:version => 20120913222309) do
     t.integer  "floor"
     t.integer  "technician_id"
     t.string   "location"
-    t.integer  "damper_id",                        :limit => 255
     t.integer  "damper_status_id"
     t.integer  "damper_type_id"
     t.string   "description"
     t.integer  "job_id"
     t.integer  "user_id"
-    t.datetime "created_at",                                                     :null => false
-    t.datetime "updated_at",                                                     :null => false
-    t.integer  "damper_image_file_size"
-    t.string   "damper_image_content_type"
+    t.datetime "created_at",                                          :null => false
+    t.datetime "updated_at",                                          :null => false
     t.string   "damper_image_file_name"
+    t.string   "damper_image_content_type"
+    t.integer  "damper_image_file_size"
     t.datetime "damper_image_updated_at"
-    t.integer  "company_id",                                      :default => 0, :null => false
-    t.string   "damper_image_second_content_type"
-    t.datetime "damper_image_second_updated_at"
-    t.integer  "damper_image_second_file_size"
+    t.integer  "company_id",                       :default => 0,     :null => false
     t.string   "damper_image_second_file_name"
+    t.string   "damper_image_second_content_type"
+    t.integer  "damper_image_second_file_size"
+    t.datetime "damper_image_second_updated_at"
     t.integer  "damper_airstream_id"
     t.string   "length"
     t.string   "height"
     t.string   "notes"
     t.string   "tag"
     t.integer  "unit"
+    t.integer  "damper_id"
+    t.boolean  "nonaccessible",                    :default => false, :null => false
+    t.boolean  "replace",                          :default => false, :null => false
   end
 
-  add_index "inspections", ["company_id"], :name => "index_inspections_on_company_id"
   add_index "inspections", ["damper_airstream_id"], :name => "index_inspections_on_damper_airstream_id"
   add_index "inspections", ["damper_status_id"], :name => "index_inspections_on_damper_status_id"
   add_index "inspections", ["damper_type_id"], :name => "index_inspections_on_damper_type_id"
@@ -148,14 +149,14 @@ ActiveRecord::Schema.define(:version => 20120913222309) do
     t.integer  "user_id"
     t.datetime "created_at",               :null => false
     t.datetime "updated_at",               :null => false
-    t.integer  "cover_image_file_size"
-    t.string   "cover_image_content_type"
     t.string   "cover_image_file_name"
+    t.string   "cover_image_content_type"
+    t.integer  "cover_image_file_size"
     t.datetime "cover_image_updated_at"
-    t.string   "pdf_report_content_type"
-    t.datetime "pdf_report_updated_at"
-    t.integer  "pdf_report_file_size"
     t.string   "pdf_report_file_name"
+    t.string   "pdf_report_content_type"
+    t.integer  "pdf_report_file_size"
+    t.datetime "pdf_report_updated_at"
   end
 
   add_index "reports", ["job_id"], :name => "index_reports_on_job_id"
@@ -171,9 +172,9 @@ ActiveRecord::Schema.define(:version => 20120913222309) do
     t.integer  "user_id"
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
-    t.integer  "license_image_file_size"
-    t.string   "license_image_content_type"
     t.string   "license_image_file_name"
+    t.string   "license_image_content_type"
+    t.integer  "license_image_file_size"
     t.datetime "license_image_updated_at"
   end
 

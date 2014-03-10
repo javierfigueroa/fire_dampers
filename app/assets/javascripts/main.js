@@ -2,6 +2,7 @@
 /* Table initialisation */
 $(function() {
 	$('#example').dataTable( {
+        "bDestroy": true,
 		"aaSorting": [[ 1, "asc" ]],
 		"sDom": "<'row'<'span5'l><'offset1 span4'f>r>t<'row'<'span5'i><'span5'p>>",
 		"sPaginationType": "bootstrap",
