@@ -34,7 +34,7 @@ GEM
       builder
       mime-types
       xml-simple
-    aws-sdk (1.34.1)
+    aws-sdk (1.35.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
       uuidtools (~> 2.1)
