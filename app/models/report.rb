@@ -18,7 +18,10 @@ class Report < ActiveRecord::Base
     :storage => :s3,
     :s3_credentials => Rails.root.join('config', 's3_reports.yml').to_s,  
     :path => '/:id/reports/:filename'
-                  
+
+  validates_attachment_content_type :cover_image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
+  do_not_validate_attachment_file_type :pdf_report
+
   belongs_to :job
   
   def renderPDF
