@@ -73,6 +73,10 @@ class TechniciansController < ApplicationController
       user.phone = @technician.phone
       user.company_id = current_user.company_id
       
+      if (current_user.role? :admin)
+        user.company_id = params[:company][:company_id]
+      end
+      
       respond_to do |format|
         if @technician.save && user.save
           format.html { redirect_to @technician, :notice => 'Technician was successfully created.' }

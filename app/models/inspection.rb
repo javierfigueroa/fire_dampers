@@ -13,6 +13,7 @@ class Inspection < ActiveRecord::Base
   validates :length, :presence => true
   validates :height, :presence => true
   validates :unit, :presence => true
+  validates :company, :presence => true
   
   belongs_to :technician
   belongs_to :damper_status
@@ -53,14 +54,14 @@ class Inspection < ActiveRecord::Base
   has_attached_file :damper_image,
     :storage => :s3,
     :default_url => "http://placehold.it/300x300.jpg&text=No%20Image",
-    :s3_credentials => Rails.root.join('config', 's3_inspections.yml').to_s,  
-    :path => '/:id/open'
+    :s3_credentials => Rails.root.join('config', 's3_config.yml').to_s,  
+    :path => '/inspections/:id/open.png'
   
   has_attached_file :damper_image_second,
     :storage => :s3,
     :default_url => "http://placehold.it/300x300.jpg&text=No%20Image",
-    :s3_credentials => Rails.root.join('config', 's3_inspections.yml').to_s,  
-    :path => '/:id/closed'
+    :s3_credentials => Rails.root.join('config', 's3_config.yml').to_s,  
+    :path => '/inspections/:id/closed.png'
 
   validates_attachment_content_type :damper_image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
   validates_attachment_content_type :damper_image_second, :content_type => ["image/jpg", "image/jpeg", "image/png"]

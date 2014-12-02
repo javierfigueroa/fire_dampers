@@ -45,12 +45,13 @@
 			<%= f.file_field :license_image %>
 		</div>
 	</div>
-	 <% if current_user.role? :admin %>
-  <div class="control-group">
-    <%= f.label :user , :class => 'control-label' %><div class="controls">
-    <%=	select("technician", "user_id", User.where(:role => 'regular').collect {|p| [p.email , p.id] }) %>
-  </div></div>
-  <% end %>
+    <% if current_user.role? :admin %>
+    <div class="control-group">
+        <%= f.label :user , :class => 'control-label' %><div class="controls">
+        <%=	select("technician", "user_id", User.where(:role => 'regular').collect {|p| [p.email , p.id] }) %>
+        <%=	select("company", "company_id", Company.all.collect {|p| [p.name , p.id] }) %>
+    </div></div>
+    <% end %>
 	<div class="form-actions">
 		<%= f.submit nil, :class => 'btn btn-primary' %>
 	</div>

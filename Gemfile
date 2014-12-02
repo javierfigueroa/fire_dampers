@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.5'
 gem 'rails', '3.2.14'
 
 # Bundle edge Rails instead:
@@ -11,7 +11,7 @@ gem 'cancan'
 gem "wkhtmltopdf-heroku"
 gem 'wicked_pdf'
 gem 'aws-sdk'
-gem "paperclip"
+gem 'paperclip', '~> 4.2'
 gem 'aws-s3'
 gem 'delayed_job_active_record'
 gem 'rake', '~>10.1.0'
@@ -20,7 +20,7 @@ gem 'thin'
 gem 'sprockets'
 gem 'daemons'
 gem 'jquery-rails', "~> 2.3.0"
-gem "mysql2", "~> 0.3.15"
+gem 'pg'
 
 group :assets do
   gem 'sass-rails'

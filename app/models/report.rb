@@ -11,13 +11,13 @@ class Report < ActiveRecord::Base
                   :job_id
   has_attached_file :cover_image,
     :storage => :s3,
-    :s3_credentials => Rails.root.join('config', 's3_reports.yml').to_s,  
-    :path => '/:id/images/:filename'
+    :s3_credentials => Rails.root.join('config', 's3_config.yml').to_s,  
+    :path => '/reports/:id/images/:filename'
     
   has_attached_file :pdf_report,
     :storage => :s3,
-    :s3_credentials => Rails.root.join('config', 's3_reports.yml').to_s,  
-    :path => '/:id/reports/:filename'
+    :s3_credentials => Rails.root.join('config', 's3_config.yml').to_s,  
+    :path => '/reports/:id/pdfs/:filename'
 
   validates_attachment_content_type :cover_image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
   do_not_validate_attachment_file_type :pdf_report
