@@ -57,7 +57,8 @@
 										<a href="<%= url_for(report) %>" rel="nofollow" data-method="delete" 
 											data-confirm="Are you sure?"><i class="icon-trash"></i></a></td>
 									<% else %>
-									<td><i class="icon-time"></i></td>		
+									<td><i class="icon-time"></i><a href="<%= url_for(report) %>" rel="nofollow" data-method="delete" 
+											data-confirm="Are you sure?"><i class="icon-trash"></i></a></td>		
 									<% end %>
 									<% if report.pdf_report_file_name != nil %>		
 									<td><a href="<%= url_for(report) %>.pdf"><%= report.job.name %> (Download)</a></td>

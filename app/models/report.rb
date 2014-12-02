@@ -78,12 +78,12 @@ class Report < ActiveRecord::Base
       percentages["fail"] = (summary["fail"].to_f / total_inspections.to_f) * 100.0
       @floor_percentage_totals["fail"] += percentages["fail"]
       
-      summary["vine"] = @inspections.count(:all, :conditions => ["floor = ? and `nonaccessible` = '1'", floor])
+      summary["vine"] = @inspections.count(:all, :conditions => ["floor = ? and nonaccessible = 'TRUE'", floor])
       @floor_totals["vine"] += summary["vine"]
       percentages["vine"] = (summary["vine"].to_f / total_inspections.to_f) * 100.0
       @floor_percentage_totals["vine"] += percentages["vine"]
       
-      summary["repair"] = @inspections.count(:all, :conditions => ["floor = ? and `replace` = '1'", floor])
+      summary["repair"] = @inspections.count(:all, :conditions => ["floor = ? and replace = 'TRUE'", floor])
       @floor_totals["repair"] += summary["repair"]
       percentages["repair"] = (summary["repair"].to_f / total_inspections.to_f) * 100.0
       @floor_percentage_totals["repair"] += percentages["repair"]
