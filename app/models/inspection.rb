@@ -63,8 +63,8 @@ class Inspection < ActiveRecord::Base
     :s3_credentials => Rails.root.join('config', 's3_config.yml').to_s,  
     :path => '/inspections/:id/closed.jpg'
 
-  validates_attachment_content_type :damper_image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
-  validates_attachment_content_type :damper_image_second, :content_type => ["image/jpg", "image/jpeg", "image/png"]
+  validates_attachment_content_type :damper_image, :content_type => ["image/jpg", "image/jpeg"]
+  validates_attachment_content_type :damper_image_second, :content_type => ["image/jpg", "image/jpeg"]
     
     def damper_image_url_open
         damper_image.url(:medium)

@@ -5,7 +5,7 @@ development:
   database: fire_dampers_dev
   schema_search_path: 'public'
   pool: 5
-  username: javier
+  username: postgres
 
 test:
   host: localhost
@@ -14,7 +14,7 @@ test:
   database: fire_dampers_test
   schema_search_path: 'public'
   pool: 5
-  username: javier
+  username: postgres
 
 
 production:
@@ -24,4 +24,4 @@ production:
   database: fire_dampers_prod
   schema_search_path: 'public'
   pool: 5
-  username: javier
+  username: postgres
