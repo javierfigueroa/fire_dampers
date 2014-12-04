@@ -14,4 +14,6 @@ class Company < ActiveRecord::Base
     :default_url => "http://placehold.it/350x150.jpg&text=Missing%20Company%20Logo",
     :s3_credentials => Rails.root.join('config', 's3_config.yml').to_s,  
     :path => '/companies/:id/:filename'
+    
+  validates_attachment_content_type :logo_image, :content_type => ["image/jpg", "image/jpeg"]
 end
