@@ -11,6 +11,7 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery	
+//= require rails
 //= require jquery.dataTables
 //= require bootstrap-alert
 //= require bootstrap-modal
