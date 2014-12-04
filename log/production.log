@@ -3464,3 +3464,2020 @@ Processing by ReportsController#index as HTML
   Rendered reports/index.html.erb within layouts/application (4.8ms)
 Completed 200 OK in 14ms (Views: 9.7ms | ActiveRecord: 1.5ms)
 2014-12-04T04:49:38+0000: [Worker(host:dampers pid:34613)] Exiting...
+Started GET "/user/" for 62.210.93.52 at 2014-12-04 10:28:53 +0000
+
+ActionController::RoutingError (No route matches [GET] "/user"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/user/soapCaller.bs" for 65.207.23.201 at 2014-12-04 10:33:48 +0000
+
+ActionController::RoutingError (No route matches [GET] "/user/soapCaller.bs"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/" for 180.153.196.112 at 2014-12-04 12:05:38 +0000
+Processing by JobsController#index as HTML
+Completed 401 Unauthorized in 1ms
+Started GET "/inspections" for 66.165.176.62 at 2014-12-04 17:06:52 +0000
+Processing by InspectionsController#index as HTML
+Completed 401 Unauthorized in 0ms
+Started GET "/reports" for 66.165.176.62 at 2014-12-04 17:06:52 +0000
+Processing by ReportsController#index as HTML
+Completed 401 Unauthorized in 0ms
+Started GET "/login" for 66.165.176.62 at 2014-12-04 17:06:52 +0000
+Processing by SessionsController#new as HTML
+  Rendered devise/_links.erb (6.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 35ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+Started GET "/login" for 66.165.176.62 at 2014-12-04 17:06:52 +0000
+Processing by SessionsController#new as HTML
+  Rendered devise/_links.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 18ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+Started GET "/inspections" for 66.165.176.62 at 2014-12-04 17:07:05 +0000
+Processing by InspectionsController#index as HTML
+Completed 401 Unauthorized in 1ms
+Started GET "/login" for 66.165.176.62 at 2014-12-04 17:07:06 +0000
+Processing by SessionsController#new as HTML
+  Rendered devise/_links.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+Started GET "/inspections" for 66.165.176.62 at 2014-12-04 17:07:06 +0000
+Processing by InspectionsController#index as HTML
+Completed 401 Unauthorized in 1ms
+Started GET "/login" for 66.165.176.62 at 2014-12-04 17:07:07 +0000
+Processing by SessionsController#new as HTML
+  Rendered devise/_links.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+Started GET "/inspections" for 66.165.176.62 at 2014-12-04 17:07:08 +0000
+Processing by InspectionsController#index as HTML
+Completed 401 Unauthorized in 0ms
+Started GET "/login" for 66.165.176.62 at 2014-12-04 17:07:09 +0000
+Processing by SessionsController#new as HTML
+  Rendered devise/_links.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+Started GET "/inspections" for 66.165.176.62 at 2014-12-04 17:07:10 +0000
+Processing by InspectionsController#index as HTML
+Completed 401 Unauthorized in 0ms
+Started GET "/login" for 66.165.176.62 at 2014-12-04 17:07:10 +0000
+Processing by SessionsController#new as HTML
+  Rendered devise/_links.erb (4.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+Started GET "/inspections" for 66.165.176.62 at 2014-12-04 17:07:10 +0000
+Processing by InspectionsController#index as HTML
+Completed 401 Unauthorized in 0ms
+Started GET "/login" for 66.165.176.62 at 2014-12-04 17:07:11 +0000
+Processing by SessionsController#new as HTML
+  Rendered devise/_links.erb (4.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+Started GET "/w00tw00t.at.blackhats.romanian.anti-sec:)" for 66.199.253.90 at 2014-12-04 18:27:31 +0000
+
+ActionController::RoutingError (No route matches [GET] "/w00tw00t.at.blackhats.romanian.anti-sec:)"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/phpMyAdmin/scripts/setup.php" for 66.199.253.90 at 2014-12-04 18:27:31 +0000
+
+ActionController::RoutingError (No route matches [GET] "/phpMyAdmin/scripts/setup.php"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/phpmyadmin/scripts/setup.php" for 66.199.253.90 at 2014-12-04 18:27:31 +0000
+
+ActionController::RoutingError (No route matches [GET] "/phpmyadmin/scripts/setup.php"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/pma/scripts/setup.php" for 66.199.253.90 at 2014-12-04 18:27:31 +0000
+
+ActionController::RoutingError (No route matches [GET] "/pma/scripts/setup.php"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/myadmin/scripts/setup.php" for 66.199.253.90 at 2014-12-04 18:27:31 +0000
+
+ActionController::RoutingError (No route matches [GET] "/myadmin/scripts/setup.php"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/MyAdmin/scripts/setup.php" for 66.199.253.90 at 2014-12-04 18:27:31 +0000
+
+ActionController::RoutingError (No route matches [GET] "/MyAdmin/scripts/setup.php"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/" for 62.210.206.219 at 2014-12-04 19:29:22 +0000
+Processing by JobsController#index as HTML
+Completed 401 Unauthorized in 0ms
+Started GET "/reports" for 66.165.176.62 at 2014-12-04 20:01:49 +0000
+Processing by ReportsController#index as HTML
+  Rendered reports/_navlist.html.erb (0.3ms)
+  Rendered reports/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 15ms (Views: 10.7ms | ActiveRecord: 1.6ms)
+Started GET "/img/sort_both.png" for 66.165.176.62 at 2014-12-04 20:01:50 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_both.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/img/sort_asc.png" for 66.165.176.62 at 2014-12-04 20:01:50 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_asc.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Connecting to database specified by database.yml
+2014-12-04T20:27:27+0000: [Worker(host:dampers pid:43411)] Starting job worker
+2014-12-04T20:27:27+0000: [Worker(host:dampers pid:43411)] Job Report#renderPDF (id=8) RUNNING
+Command :: file -b --mime '/tmp/c9f0f895fb98ab9159f51fd0297e236d20141204-43411-7gyj8e.pdf'
+Command :: file -b --mime '/tmp/c9f0f895fb98ab9159f51fd0297e236d20141204-43411-3icjm0.pdf'
+Command :: file -b --mime '/tmp/c9f0f895fb98ab9159f51fd0297e236d20141204-43411-dznw3k.pdf'
+[paperclip] saving /reports/8/pdfs/8.pdf
+[AWS S3 200 0.425914 0 retries] put_object(:acl=>:public_read,:bucket_name=>"dampers01122014",:content_length=>50841,:content_type=>"application/pdf",:data=>Paperclip::StringioAdapter: 8.pdf,:key=>"reports/8/pdfs/8.pdf")  
+
+2014-12-04T20:27:39+0000: [Worker(host:dampers pid:43411)] Job Report#renderPDF (id=8) COMPLETED after 12.5284
+2014-12-04T20:27:39+0000: [Worker(host:dampers pid:43411)] 1 jobs processed at 0.0788 j/s, 0 failed
+2014-12-04T20:31:23+0000: [Worker(host:dampers pid:43411)] Exiting...
+Started GET "/reports" for 66.165.176.62 at 2014-12-04 20:31:28 +0000
+Processing by ReportsController#index as HTML
+  Rendered reports/_navlist.html.erb (0.3ms)
+  Rendered reports/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 19ms (Views: 14.7ms | ActiveRecord: 1.7ms)
+Started GET "/reports/8.pdf" for 66.165.176.62 at 2014-12-04 20:31:29 +0000
+Processing by ReportsController#show as PDF
+  Parameters: {"id"=>"8"}
+Redirected to http://s3.amazonaws.com/dampers01122014/reports/8/pdfs/8.pdf?1417724858
+Completed 302 Found in 10ms (ActiveRecord: 1.0ms)
+Started DELETE "/reports/8" for 66.165.176.62 at 2014-12-04 20:31:40 +0000
+Processing by ReportsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BKNqmERLAqq8dhOhXciSXs3omsIc8iVLsTI+VRs/FjI=", "id"=>"8"}
+[AWS S3 200 0.337422 0 retries] head_object(:bucket_name=>"dampers01122014",:key=>"reports/8/pdfs/8.pdf")  
+
+[paperclip] deleting /reports/8/pdfs/8.pdf
+[AWS S3 204 0.032654 0 retries] delete_object(:bucket_name=>"dampers01122014",:key=>"reports/8/pdfs/8.pdf")  
+
+Redirected to http://dampers.cloudapp.net/reports
+Completed 302 Found in 404ms (ActiveRecord: 20.6ms)
+Started GET "/reports" for 66.165.176.62 at 2014-12-04 20:31:40 +0000
+Processing by ReportsController#index as HTML
+  Rendered reports/_navlist.html.erb (0.2ms)
+  Rendered reports/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 1.0ms)
+Started GET "/img/sort_asc.png" for 66.165.176.62 at 2014-12-04 20:31:41 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_asc.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/img/sort_both.png" for 66.165.176.62 at 2014-12-04 20:31:41 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_both.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Connecting to database specified by database.yml
+Started GET "/inspections" for 66.165.176.62 at 2014-12-04 20:32:42 +0000
+Processing by InspectionsController#index as HTML
+  Rendered inspections/_navlist.html.erb (1.6ms)
+  Rendered inspections/index.html.erb within layouts/application (284.7ms)
+Completed 200 OK in 443ms (Views: 290.6ms | ActiveRecord: 38.3ms)
+Started DELETE "/inspections/2" for 66.165.176.62 at 2014-12-04 20:32:47 +0000
+Processing by InspectionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BKNqmERLAqq8dhOhXciSXs3omsIc8iVLsTI+VRs/FjI=", "id"=>"2"}
+[AWS S3 404 0.233406 0 retries] head_object(:bucket_name=>"dampers01122014",:key=>"inspections/2/open.jpg") AWS::S3::Errors::NoSuchKey No Such Key
+
+[AWS S3 404 0.015428 0 retries] head_object(:bucket_name=>"dampers01122014",:key=>"inspections/2/closed.jpg") AWS::S3::Errors::NoSuchKey No Such Key
+
+Redirected to http://dampers.cloudapp.net/inspections
+Completed 302 Found in 797ms (ActiveRecord: 26.9ms)
+Started GET "/inspections" for 66.165.176.62 at 2014-12-04 20:32:48 +0000
+Processing by InspectionsController#index as HTML
+  Rendered inspections/_navlist.html.erb (0.4ms)
+  Rendered inspections/index.html.erb within layouts/application (71.6ms)
+Completed 200 OK in 83ms (Views: 68.7ms | ActiveRecord: 10.6ms)
+Started GET "/img/sort_asc.png" for 66.165.176.62 at 2014-12-04 20:32:49 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_asc.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/img/sort_both.png" for 66.165.176.62 at 2014-12-04 20:32:49 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_both.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started DELETE "/inspections/11" for 66.165.176.62 at 2014-12-04 20:32:51 +0000
+Processing by InspectionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BKNqmERLAqq8dhOhXciSXs3omsIc8iVLsTI+VRs/FjI=", "id"=>"11"}
+[AWS S3 404 0.194097 0 retries] head_object(:bucket_name=>"dampers01122014",:key=>"inspections/11/open.jpg") AWS::S3::Errors::NoSuchKey No Such Key
+
+[AWS S3 404 0.011604 0 retries] head_object(:bucket_name=>"dampers01122014",:key=>"inspections/11/closed.jpg") AWS::S3::Errors::NoSuchKey No Such Key
+
+Redirected to http://dampers.cloudapp.net/inspections
+Completed 302 Found in 240ms (ActiveRecord: 19.2ms)
+Started GET "/inspections" for 66.165.176.62 at 2014-12-04 20:32:51 +0000
+Processing by InspectionsController#index as HTML
+  Rendered inspections/_navlist.html.erb (0.3ms)
+  Rendered inspections/index.html.erb within layouts/application (51.2ms)
+Completed 200 OK in 65ms (Views: 52.3ms | ActiveRecord: 10.0ms)
+Started GET "/img/sort_asc.png" for 66.165.176.62 at 2014-12-04 20:32:52 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_asc.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/img/sort_both.png" for 66.165.176.62 at 2014-12-04 20:32:52 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_both.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started DELETE "/inspections/12" for 66.165.176.62 at 2014-12-04 20:32:54 +0000
+Processing by InspectionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BKNqmERLAqq8dhOhXciSXs3omsIc8iVLsTI+VRs/FjI=", "id"=>"12"}
+[AWS S3 404 0.066411 0 retries] head_object(:bucket_name=>"dampers01122014",:key=>"inspections/12/open.jpg") AWS::S3::Errors::NoSuchKey No Such Key
+
+[AWS S3 404 0.013116 0 retries] head_object(:bucket_name=>"dampers01122014",:key=>"inspections/12/closed.jpg") AWS::S3::Errors::NoSuchKey No Such Key
+
+Redirected to http://dampers.cloudapp.net/inspections
+Completed 302 Found in 119ms (ActiveRecord: 24.1ms)
+Started GET "/inspections" for 66.165.176.62 at 2014-12-04 20:32:54 +0000
+Processing by InspectionsController#index as HTML
+  Rendered inspections/_navlist.html.erb (0.3ms)
+  Rendered inspections/index.html.erb within layouts/application (51.7ms)
+Completed 200 OK in 62ms (Views: 50.6ms | ActiveRecord: 8.7ms)
+Started GET "/img/sort_asc.png" for 66.165.176.62 at 2014-12-04 20:32:55 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_asc.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/img/sort_both.png" for 66.165.176.62 at 2014-12-04 20:32:55 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_both.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started DELETE "/inspections/13" for 66.165.176.62 at 2014-12-04 20:32:56 +0000
+Processing by InspectionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BKNqmERLAqq8dhOhXciSXs3omsIc8iVLsTI+VRs/FjI=", "id"=>"13"}
+[AWS S3 404 0.059633 0 retries] head_object(:bucket_name=>"dampers01122014",:key=>"inspections/13/open.jpg") AWS::S3::Errors::NoSuchKey No Such Key
+
+[AWS S3 404 0.012006 0 retries] head_object(:bucket_name=>"dampers01122014",:key=>"inspections/13/closed.jpg") AWS::S3::Errors::NoSuchKey No Such Key
+
+Redirected to http://dampers.cloudapp.net/inspections
+Completed 302 Found in 119ms (ActiveRecord: 30.9ms)
+Started GET "/inspections" for 66.165.176.62 at 2014-12-04 20:32:56 +0000
+Processing by InspectionsController#index as HTML
+  Rendered inspections/_navlist.html.erb (0.3ms)
+  Rendered inspections/index.html.erb within layouts/application (38.9ms)
+Completed 200 OK in 49ms (Views: 38.3ms | ActiveRecord: 7.9ms)
+Started GET "/img/sort_asc.png" for 66.165.176.62 at 2014-12-04 20:32:57 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_asc.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/img/sort_both.png" for 66.165.176.62 at 2014-12-04 20:32:57 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_both.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started DELETE "/inspections/8" for 66.165.176.62 at 2014-12-04 20:32:59 +0000
+Processing by InspectionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BKNqmERLAqq8dhOhXciSXs3omsIc8iVLsTI+VRs/FjI=", "id"=>"8"}
+[AWS S3 404 0.060023 0 retries] head_object(:bucket_name=>"dampers01122014",:key=>"inspections/8/open.jpg") AWS::S3::Errors::NoSuchKey No Such Key
+
+[AWS S3 404 0.068612 0 retries] head_object(:bucket_name=>"dampers01122014",:key=>"inspections/8/closed.jpg") AWS::S3::Errors::NoSuchKey No Such Key
+
+Redirected to http://dampers.cloudapp.net/inspections
+Completed 302 Found in 188ms (ActiveRecord: 19.9ms)
+Started GET "/inspections" for 66.165.176.62 at 2014-12-04 20:32:59 +0000
+Processing by InspectionsController#index as HTML
+  Rendered inspections/_navlist.html.erb (0.3ms)
+  Rendered inspections/index.html.erb within layouts/application (29.5ms)
+Completed 200 OK in 39ms (Views: 29.0ms | ActiveRecord: 7.4ms)
+Started GET "/img/sort_asc.png" for 66.165.176.62 at 2014-12-04 20:33:00 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_asc.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/img/sort_both.png" for 66.165.176.62 at 2014-12-04 20:33:00 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_both.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started DELETE "/inspections/9" for 66.165.176.62 at 2014-12-04 20:33:02 +0000
+Processing by InspectionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BKNqmERLAqq8dhOhXciSXs3omsIc8iVLsTI+VRs/FjI=", "id"=>"9"}
+[AWS S3 404 0.044902 0 retries] head_object(:bucket_name=>"dampers01122014",:key=>"inspections/9/open.jpg") AWS::S3::Errors::NoSuchKey No Such Key
+
+[AWS S3 404 0.012279 0 retries] head_object(:bucket_name=>"dampers01122014",:key=>"inspections/9/closed.jpg") AWS::S3::Errors::NoSuchKey No Such Key
+
+Redirected to http://dampers.cloudapp.net/inspections
+Completed 302 Found in 99ms (ActiveRecord: 23.9ms)
+Started GET "/inspections" for 66.165.176.62 at 2014-12-04 20:33:03 +0000
+Processing by InspectionsController#index as HTML
+  Rendered inspections/_navlist.html.erb (0.3ms)
+  Rendered inspections/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 26ms (Views: 20.8ms | ActiveRecord: 3.1ms)
+Started GET "/img/sort_asc.png" for 66.165.176.62 at 2014-12-04 20:33:03 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_asc.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/img/sort_both.png" for 66.165.176.62 at 2014-12-04 20:33:03 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_both.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started DELETE "/inspections/1" for 66.165.176.62 at 2014-12-04 20:33:05 +0000
+Processing by InspectionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BKNqmERLAqq8dhOhXciSXs3omsIc8iVLsTI+VRs/FjI=", "id"=>"1"}
+[AWS S3 404 0.052885 0 retries] head_object(:bucket_name=>"dampers01122014",:key=>"inspections/1/open.jpg") AWS::S3::Errors::NoSuchKey No Such Key
+
+[AWS S3 404 0.012894 0 retries] head_object(:bucket_name=>"dampers01122014",:key=>"inspections/1/closed.jpg") AWS::S3::Errors::NoSuchKey No Such Key
+
+Redirected to http://dampers.cloudapp.net/inspections
+Completed 302 Found in 95ms (ActiveRecord: 14.2ms)
+Started GET "/inspections" for 66.165.176.62 at 2014-12-04 20:33:05 +0000
+Processing by InspectionsController#index as HTML
+  Rendered inspections/_navlist.html.erb (0.3ms)
+  Rendered inspections/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 22ms (Views: 16.8ms | ActiveRecord: 2.4ms)
+Started GET "/img/sort_asc.png" for 66.165.176.62 at 2014-12-04 20:33:05 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_asc.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/img/sort_both.png" for 66.165.176.62 at 2014-12-04 20:33:05 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_both.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started DELETE "/inspections/10" for 66.165.176.62 at 2014-12-04 20:33:07 +0000
+Processing by InspectionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BKNqmERLAqq8dhOhXciSXs3omsIc8iVLsTI+VRs/FjI=", "id"=>"10"}
+[AWS S3 404 0.081764 0 retries] head_object(:bucket_name=>"dampers01122014",:key=>"inspections/10/open.jpg") AWS::S3::Errors::NoSuchKey No Such Key
+
+[AWS S3 404 0.013699 0 retries] head_object(:bucket_name=>"dampers01122014",:key=>"inspections/10/closed.jpg") AWS::S3::Errors::NoSuchKey No Such Key
+
+Redirected to http://dampers.cloudapp.net/inspections
+Completed 302 Found in 125ms (ActiveRecord: 15.6ms)
+Started GET "/inspections" for 66.165.176.62 at 2014-12-04 20:33:07 +0000
+Processing by InspectionsController#index as HTML
+  Rendered inspections/_navlist.html.erb (0.6ms)
+  Rendered inspections/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 17ms (Views: 4.9ms | ActiveRecord: 1.6ms)
+Started GET "/img/sort_asc.png" for 66.165.176.62 at 2014-12-04 20:33:08 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_asc.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/img/sort_both.png" for 66.165.176.62 at 2014-12-04 20:33:08 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_both.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/inspections/new" for 66.165.176.62 at 2014-12-04 20:33:08 +0000
+Processing by InspectionsController#new as HTML
+  Rendered inspections/_navlist.html.erb (0.5ms)
+  Rendered inspections/_form.html.erb (108.6ms)
+  Rendered inspections/new.html.erb within layouts/application (116.5ms)
+Completed 200 OK in 174ms (Views: 117.1ms | ActiveRecord: 12.6ms)
+Started POST "/inspections" for 66.165.176.62 at 2014-12-04 20:33:50 +0000
+Processing by InspectionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BKNqmERLAqq8dhOhXciSXs3omsIc8iVLsTI+VRs/FjI=", "inspection"=>{"building_abbrev"=>"wer", "inspection_date(1i)"=>"2014", "inspection_date(2i)"=>"12", "inspection_date(3i)"=>"4", "floor"=>"3", "unit"=>"4", "technician_id"=>"1", "location"=>"red", "damper_id"=>"123", "damper_status_id"=>"1", "damper_type_id"=>"1", "damper_airstream_id"=>"1", "length"=>"3", "height"=>"3", "nonaccessible"=>"1", "replace"=>"0", "damper_image"=>#<ActionDispatch::Http::UploadedFile:0x007fb9d0e164c8 @original_filename="IMG_3789.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"inspection[damper_image]\"; filename=\"IMG_3789.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<Tempfile:/tmp/RackMultipart20141204-43575-1fhmutd>>, "damper_image_second"=>#<ActionDispatch::Http::UploadedFile:0x007fb9d0e16450 @original_filename="features1a.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"inspection[damper_image_second]\"; filename=\"features1a.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<Tempfile:/tmp/RackMultipart20141204-43575-1f6snd8>>, "description"=>"desc", "notes"=>"mynotes", "job_id"=>"1"}, "commit"=>"Create Inspection"}
+Command :: file -b --mime '/tmp/6161973e0bcf5d9469accd8b2f40d66a20141204-43575-143hqs7.png'
+Command :: file -b --mime '/tmp/b56bcce3a68d2414a4b4cfccb7bd491d20141204-43575-1asz4jh.png'
+Command :: file -b --mime '/tmp/6161973e0bcf5d9469accd8b2f40d66a20141204-43575-1cnp8in.png'
+Command :: file -b --mime '/tmp/b56bcce3a68d2414a4b4cfccb7bd491d20141204-43575-12guxla.png'
+[paperclip] saving /inspections/14/open.jpg
+[AWS S3 200 0.106315 0 retries] put_object(:acl=>:public_read,:bucket_name=>"dampers01122014",:content_length=>53248,:content_type=>"image/png",:data=>Paperclip::UploadedFileAdapter: IMG_3789.png,:key=>"inspections/14/open.jpg")  
+
+[paperclip] saving /inspections/14/closed.jpg
+[AWS S3 200 0.0428 0 retries] put_object(:acl=>:public_read,:bucket_name=>"dampers01122014",:content_length=>58173,:content_type=>"image/png",:data=>Paperclip::UploadedFileAdapter: features1a.png,:key=>"inspections/14/closed.jpg")  
+
+Redirected to http://dampers.cloudapp.net/inspections/14
+Completed 302 Found in 652ms (ActiveRecord: 46.5ms)
+Started GET "/inspections/14" for 66.165.176.62 at 2014-12-04 20:33:50 +0000
+Processing by InspectionsController#show as HTML
+  Parameters: {"id"=>"14"}
+  Rendered inspections/_navlist.html.erb (0.7ms)
+  Rendered inspections/show.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 41ms (Views: 34.9ms | ActiveRecord: 3.1ms)
+Started GET "/inspections" for 66.165.176.62 at 2014-12-04 20:33:55 +0000
+Processing by InspectionsController#index as HTML
+  Rendered inspections/_navlist.html.erb (0.3ms)
+  Rendered inspections/index.html.erb within layouts/application (39.6ms)
+Completed 200 OK in 49ms (Views: 35.7ms | ActiveRecord: 7.0ms)
+Started GET "/img/sort_asc.png" for 66.165.176.62 at 2014-12-04 20:33:55 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_asc.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/img/sort_both.png" for 66.165.176.62 at 2014-12-04 20:33:55 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_both.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/reports" for 66.165.176.62 at 2014-12-04 20:33:56 +0000
+Processing by ReportsController#index as HTML
+  Rendered reports/_navlist.html.erb (1.0ms)
+  Rendered reports/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 31ms (Views: 19.7ms | ActiveRecord: 8.0ms)
+Started GET "/reports/new" for 66.165.176.62 at 2014-12-04 20:33:57 +0000
+Processing by ReportsController#new as HTML
+  Rendered reports/_navlist.html.erb (0.4ms)
+  Rendered reports/_form.html.erb (16.2ms)
+  Rendered reports/new.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 82ms (Views: 23.8ms | ActiveRecord: 6.9ms)
+Started POST "/reports" for 66.165.176.62 at 2014-12-04 20:33:59 +0000
+Processing by ReportsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BKNqmERLAqq8dhOhXciSXs3omsIc8iVLsTI+VRs/FjI=", "report"=>{"job_id"=>"1"}, "commit"=>"Create Report"}
+Redirected to http://dampers.cloudapp.net/reports
+Completed 302 Found in 119ms (ActiveRecord: 52.6ms)
+Started GET "/reports" for 66.165.176.62 at 2014-12-04 20:33:59 +0000
+Processing by ReportsController#index as HTML
+  Rendered reports/_navlist.html.erb (0.2ms)
+  Rendered reports/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 19ms (Views: 7.3ms | ActiveRecord: 5.3ms)
+Started GET "/img/sort_both.png" for 66.165.176.62 at 2014-12-04 20:33:59 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_both.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/img/sort_asc.png" for 66.165.176.62 at 2014-12-04 20:33:59 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_asc.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Connecting to database specified by database.yml
+2014-12-04T20:34:25+0000: [Worker(host:dampers pid:43614)] Starting job worker
+2014-12-04T20:34:25+0000: [Worker(host:dampers pid:43614)] Job Report#renderPDF (id=12) RUNNING
+Command :: file -b --mime '/tmp/c20ad4d76fe97759aa27a0c99bff671020141204-43614-94h2kb.pdf'
+Command :: file -b --mime '/tmp/c20ad4d76fe97759aa27a0c99bff671020141204-43614-1a58ohv.pdf'
+Command :: file -b --mime '/tmp/c20ad4d76fe97759aa27a0c99bff671020141204-43614-1jxdird.pdf'
+[paperclip] saving /reports/12/pdfs/12.pdf
+[AWS S3 200 0.111438 0 retries] put_object(:acl=>:public_read,:bucket_name=>"dampers01122014",:content_length=>159650,:content_type=>"application/pdf",:data=>Paperclip::StringioAdapter: 12.pdf,:key=>"reports/12/pdfs/12.pdf")  
+
+2014-12-04T20:34:30+0000: [Worker(host:dampers pid:43614)] Job Report#renderPDF (id=12) COMPLETED after 4.7729
+2014-12-04T20:34:30+0000: [Worker(host:dampers pid:43614)] 1 jobs processed at 0.2031 j/s, 0 failed
+Started GET "/reports" for 66.165.176.62 at 2014-12-04 20:34:42 +0000
+Processing by ReportsController#index as HTML
+  Rendered reports/_navlist.html.erb (0.2ms)
+  Rendered reports/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 15ms (Views: 10.9ms | ActiveRecord: 1.7ms)
+Started GET "/reports/12.pdf" for 66.165.176.62 at 2014-12-04 20:34:44 +0000
+Processing by ReportsController#show as PDF
+  Parameters: {"id"=>"12"}
+Redirected to http://s3.amazonaws.com/dampers01122014/reports/12/pdfs/12.pdf?1417725269
+Completed 302 Found in 12ms (ActiveRecord: 5.5ms)
+Started GET "/reports/new" for 66.165.176.62 at 2014-12-04 20:42:18 +0000
+Processing by ReportsController#new as HTML
+  Rendered reports/_navlist.html.erb (0.2ms)
+  Rendered reports/_form.html.erb (8.7ms)
+  Rendered reports/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 23ms (Views: 12.2ms | ActiveRecord: 2.2ms)
+Started POST "/reports" for 66.165.176.62 at 2014-12-04 20:42:28 +0000
+Processing by ReportsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BKNqmERLAqq8dhOhXciSXs3omsIc8iVLsTI+VRs/FjI=", "report"=>{"job_id"=>"1", "cover_image"=>#<ActionDispatch::Http::UploadedFile:0x007fb9d147c1f0 @original_filename="IMG_00000013.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"report[cover_image]\"; filename=\"IMG_00000013.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<Tempfile:/tmp/RackMultipart20141204-43575-16w7p9j>>}, "commit"=>"Create Report"}
+Command :: file -b --mime '/tmp/0a814a8ffe89291df4cfb191c5a8843920141204-43575-dlqtw4.jpg'
+Command :: file -b --mime '/tmp/0a814a8ffe89291df4cfb191c5a8843920141204-43575-qzq5qo.jpg'
+[paperclip] saving /reports/13/images/IMG_00000013.jpg
+[AWS S3 200 0.123377 0 retries] put_object(:acl=>:public_read,:bucket_name=>"dampers01122014",:content_length=>45837,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: IMG_00000013.jpg,:key=>"reports/13/images/IMG_00000013.jpg")  
+
+Redirected to http://dampers.cloudapp.net/reports
+Completed 302 Found in 380ms (ActiveRecord: 57.6ms)
+Started GET "/reports" for 66.165.176.62 at 2014-12-04 20:42:29 +0000
+Processing by ReportsController#index as HTML
+  Rendered reports/_navlist.html.erb (0.2ms)
+  Rendered reports/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 18ms (Views: 13.8ms | ActiveRecord: 1.7ms)
+Started GET "/img/sort_asc.png" for 66.165.176.62 at 2014-12-04 20:42:30 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_asc.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/img/sort_both.png" for 66.165.176.62 at 2014-12-04 20:42:30 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_both.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+2014-12-04T20:42:31+0000: [Worker(host:dampers pid:43614)] Job Report#renderPDF (id=13) RUNNING
+Command :: file -b --mime '/tmp/c51ce410c124a10e0db5e4b97fc2af3920141204-43614-1dmqk0b.pdf'
+Command :: file -b --mime '/tmp/c51ce410c124a10e0db5e4b97fc2af3920141204-43614-1ahfbx3.pdf'
+Command :: file -b --mime '/tmp/c51ce410c124a10e0db5e4b97fc2af3920141204-43614-xrh6ti.pdf'
+[paperclip] saving /reports/13/pdfs/13.pdf
+[AWS S3 200 0.109946 0 retries] put_object(:acl=>:public_read,:bucket_name=>"dampers01122014",:content_length=>158463,:content_type=>"application/pdf",:data=>Paperclip::StringioAdapter: 13.pdf,:key=>"reports/13/pdfs/13.pdf")  
+
+2014-12-04T20:42:34+0000: [Worker(host:dampers pid:43614)] Job Report#renderPDF (id=13) COMPLETED after 3.3395
+2014-12-04T20:42:34+0000: [Worker(host:dampers pid:43614)] 1 jobs processed at 0.2974 j/s, 0 failed
+Started GET "/reports" for 66.165.176.62 at 2014-12-04 20:42:47 +0000
+Processing by ReportsController#index as HTML
+  Rendered reports/_navlist.html.erb (0.2ms)
+  Rendered reports/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 16ms (Views: 12.8ms | ActiveRecord: 1.5ms)
+Started GET "/reports/13.pdf" for 66.165.176.62 at 2014-12-04 20:42:52 +0000
+Processing by ReportsController#show as PDF
+  Parameters: {"id"=>"13"}
+Redirected to http://s3.amazonaws.com/dampers01122014/reports/13/pdfs/13.pdf?1417725754
+Completed 302 Found in 6ms (ActiveRecord: 1.1ms)
+Started GET "/" for 66.165.176.62 at 2014-12-04 20:43:51 +0000
+Processing by JobsController#index as HTML
+  Rendered jobs/_navlist.html.erb (1.4ms)
+  Rendered jobs/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 59ms (Views: 32.8ms | ActiveRecord: 0.6ms)
+Started GET "/img/sort_asc.png" for 66.165.176.62 at 2014-12-04 20:43:52 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_asc.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/img/sort_both.png" for 66.165.176.62 at 2014-12-04 20:43:52 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_both.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/reports" for 66.165.176.62 at 2014-12-04 20:43:54 +0000
+Processing by ReportsController#index as HTML
+  Rendered reports/_navlist.html.erb (0.3ms)
+  Rendered reports/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 17ms (Views: 13.3ms | ActiveRecord: 1.6ms)
+Started GET "/reports/12.pdf" for 66.165.176.62 at 2014-12-04 20:43:57 +0000
+Processing by ReportsController#show as PDF
+  Parameters: {"id"=>"12"}
+Redirected to http://s3.amazonaws.com/dampers01122014/reports/12/pdfs/12.pdf?1417725269
+Completed 302 Found in 6ms (ActiveRecord: 1.1ms)
+Started GET "/reports/13.pdf" for 66.165.176.62 at 2014-12-04 20:44:08 +0000
+Processing by ReportsController#show as PDF
+  Parameters: {"id"=>"13"}
+Redirected to http://s3.amazonaws.com/dampers01122014/reports/13/pdfs/13.pdf?1417725754
+Completed 302 Found in 10ms (ActiveRecord: 1.3ms)
+Started GET "/reports/new" for 66.165.176.62 at 2014-12-04 20:49:57 +0000
+Processing by ReportsController#new as HTML
+  Rendered reports/_navlist.html.erb (0.2ms)
+  Rendered reports/_form.html.erb (9.0ms)
+  Rendered reports/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 30ms (Views: 18.3ms | ActiveRecord: 2.4ms)
+Started POST "/reports" for 66.165.176.62 at 2014-12-04 20:50:21 +0000
+Processing by ReportsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BKNqmERLAqq8dhOhXciSXs3omsIc8iVLsTI+VRs/FjI=", "report"=>{"job_id"=>"1", "cover_image"=>#<ActionDispatch::Http::UploadedFile:0x007fb9d0ff71c0 @original_filename="features1a.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"report[cover_image]\"; filename=\"features1a.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<Tempfile:/tmp/RackMultipart20141204-43575-159xuh9>>}, "commit"=>"Create Report"}
+Command :: file -b --mime '/tmp/b56bcce3a68d2414a4b4cfccb7bd491d20141204-43575-xy34oy.png'
+Command :: file -b --mime '/tmp/b56bcce3a68d2414a4b4cfccb7bd491d20141204-43575-e95tmh.png'
+[paperclip] saving /reports/14/images/features1a.png
+[AWS S3 200 0.249798 0 retries] put_object(:acl=>:public_read,:bucket_name=>"dampers01122014",:content_length=>58173,:content_type=>"image/png",:data=>Paperclip::UploadedFileAdapter: features1a.png,:key=>"reports/14/images/features1a.png")  
+
+Redirected to http://dampers.cloudapp.net/reports
+Completed 302 Found in 491ms (ActiveRecord: 45.6ms)
+Started GET "/reports" for 66.165.176.62 at 2014-12-04 20:50:22 +0000
+Processing by ReportsController#index as HTML
+  Rendered reports/_navlist.html.erb (0.2ms)
+  Rendered reports/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 23ms (Views: 18.8ms | ActiveRecord: 1.6ms)
+Started GET "/img/sort_both.png" for 66.165.176.62 at 2014-12-04 20:50:23 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_both.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/img/sort_asc.png" for 66.165.176.62 at 2014-12-04 20:50:23 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_asc.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+2014-12-04T20:50:25+0000: [Worker(host:dampers pid:43614)] Job Report#renderPDF (id=14) RUNNING
+Command :: file -b --mime '/tmp/aab3238922bcc25a6f606eb525ffdc5620141204-43614-1qxgijy.pdf'
+Command :: file -b --mime '/tmp/aab3238922bcc25a6f606eb525ffdc5620141204-43614-1wwh1ye.pdf'
+Command :: file -b --mime '/tmp/aab3238922bcc25a6f606eb525ffdc5620141204-43614-bam9h4.pdf'
+[paperclip] saving /reports/14/pdfs/14.pdf
+[AWS S3 200 0.372436 0 retries] put_object(:acl=>:public_read,:bucket_name=>"dampers01122014",:content_length=>196566,:content_type=>"application/pdf",:data=>Paperclip::StringioAdapter: 14.pdf,:key=>"reports/14/pdfs/14.pdf")  
+
+2014-12-04T20:50:29+0000: [Worker(host:dampers pid:43614)] Job Report#renderPDF (id=14) COMPLETED after 4.4109
+2014-12-04T20:50:29+0000: [Worker(host:dampers pid:43614)] 1 jobs processed at 0.2247 j/s, 0 failed
+Started GET "/reports" for 66.165.176.62 at 2014-12-04 20:50:46 +0000
+Processing by ReportsController#index as HTML
+  Rendered reports/_navlist.html.erb (0.2ms)
+  Rendered reports/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 23ms (Views: 19.0ms | ActiveRecord: 1.7ms)
+Started GET "/reports/14.pdf" for 66.165.176.62 at 2014-12-04 20:50:48 +0000
+Processing by ReportsController#show as PDF
+  Parameters: {"id"=>"14"}
+Redirected to http://s3.amazonaws.com/dampers01122014/reports/14/pdfs/14.pdf?1417726229
+Completed 302 Found in 133ms (ActiveRecord: 1.1ms)
+Started GET "/" for 66.165.176.62 at 2014-12-04 20:57:35 +0000
+Processing by JobsController#index as HTML
+  Rendered jobs/_navlist.html.erb (0.2ms)
+  Rendered jobs/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 38ms (Views: 9.9ms | ActiveRecord: 1.5ms)
+Started GET "/img/sort_asc.png" for 66.165.176.62 at 2014-12-04 20:57:35 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_asc.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/img/sort_both.png" for 66.165.176.62 at 2014-12-04 20:57:35 +0000
+
+ActionController::RoutingError (No route matches [GET] "/img/sort_both.png"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  thin (1.6.3) lib/thin/controllers/controller.rb:87:in `start'
+  thin (1.6.3) lib/thin/runner.rb:200:in `run_command'
+  thin (1.6.3) lib/thin/runner.rb:156:in `run!'
+  thin (1.6.3) bin/thin:6:in `<top (required)>'
+  /opt/bitnami/ruby/bin/thin:23:in `load'
+  /opt/bitnami/ruby/bin/thin:23:in `<main>'
+
+
+Started GET "/inspections" for 66.165.176.62 at 2014-12-04 20:57:38 +0000
+Processing by InspectionsController#index as HTML
+  Rendered inspections/_navlist.html.erb (0.4ms)
+  Rendered inspections/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 23ms (Views: 18.0ms | ActiveRecord: 2.6ms)
+Started GET "/reports" for 66.165.176.62 at 2014-12-04 20:57:39 +0000
+Processing by ReportsController#index as HTML
+  Rendered reports/_navlist.html.erb (0.2ms)
+  Rendered reports/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 23ms (Views: 15.6ms | ActiveRecord: 5.6ms)
+Started GET "/technicians" for 66.165.176.62 at 2014-12-04 20:57:42 +0000
+Processing by TechniciansController#index as HTML
+  Rendered technicians/_navlist.html.erb (3.0ms)
+  Rendered technicians/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 36ms (Views: 28.1ms | ActiveRecord: 1.2ms)
+Connecting to database specified by database.yml

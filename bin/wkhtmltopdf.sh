@@ -1,1 +1,1 @@
-xvfb-run -a -s "-screen 0, 1024x768x24 -ac +extension GLX +render" wkhtmltopdf "$@"
+xvfb-run -a -s "-screen 0, 1024x768x24" wkhtmltopdf "$@"

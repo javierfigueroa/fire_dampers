@@ -19,7 +19,7 @@ class Report < ActiveRecord::Base
     :s3_credentials => Rails.root.join('config', 's3_config.yml').to_s,  
     :path => '/reports/:id/pdfs/:filename'
 
-  validates_attachment_content_type :cover_image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
+  validates_attachment_content_type :cover_image, :content_type => ["image/jpg", "image/jpeg"]
   do_not_validate_attachment_file_type :pdf_report
 
   belongs_to :job
