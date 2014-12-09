@@ -5,7 +5,7 @@ development:
   database: fire_dampers_dev
   schema_search_path: 'public'
   pool: 5
-  username: postgres
+  username: javier
 
 test:
   host: localhost

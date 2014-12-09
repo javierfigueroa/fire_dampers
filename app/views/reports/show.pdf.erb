@@ -5,11 +5,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<meta name="author" content="">
-
 		<!-- Le styles -->
 		<style>
 			body {
 				padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+                font-family: 'Open Sans', sans-serif;
 			}
 			.page {
 				page-break-after: always !important;
@@ -63,7 +63,15 @@
 			width: 600px;
 			padding: 20px;
 		}
+        
+        .page-footer {
+            padding-top:20px;
+        }
 		
+        td {
+            padding-top: 10px;
+        }
+        
 .hor-minimalist-b
 {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
@@ -116,14 +124,14 @@
 				<div class="page-header">
 					
 				<% if @company.logo_image != nil %>
-				<img class="center" src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
+				<img class="center" src="<%= @company.logo_image %>" width="150" height="150" alt="logo"> 
 				<% end %>
 				</div>
 				<div class="row">
 					<div class="span4 ">
 						<h1 class="center"><%= @job.name %></h1>
 						<p>
-							<h2 class="center">Fire and Smoke Damper Inspection Report</h2>
+							<h2 class="center">Fire and Smoke Damper<br/>Inspection Report</h2>
 						</p>
 						<p class="center">
 							<strong><%= @job.address %></strong>
@@ -144,7 +152,7 @@
 		 	<div class="page">
 				<div class="page-header">
 					<% if @company.logo_image != nil %>
-					<img src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
+					<img src="<%= @company.logo_image %>" width="150" height="150" alt="logo"> 
 					<% end %>
 					<p>
 						<%= @company.name %>
@@ -155,8 +163,10 @@
 						<br />
 						Tel: <%= @company.phone %>
 						<br />
+
+    					<% if @company.fax != nil %>
 						Fax: <%= @company.fax %>
-						<br />
+                        <% end %>
 					</p>
 				</div>
 				<h3>Fire and Fire/Smoke Damper Inspection Summary</h3>
@@ -208,13 +218,10 @@
 				<div class="page-header offset1">
 					
 					<% if @company.logo_image != nil %>
-					<img src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
+					<img src="<%= @company.logo_image %>" width="150" height="150"  alt="logo"> 
 					<% end %>
 					<h1><%= @job.name %></h1>
 					<h2> Fire and Smoke Damper Inspection Summary Data</h2>
-					<br>
-					<h3>Inspected <%= @job.start_date %> thru <%= @job.finish_date %></h3>
-					<h3>Inspected by <%= @job.inspected_by %></h3>
 				</div>
 				<div>
 					<table class="hor-minimalist-b" width="900" cellspacing="2" cellpadding="3">
@@ -258,18 +265,19 @@
 						</tfoot>
 					</table>
 				</div>
+				<div class="page-footer offset1">
+					<p>Inspected <%= @job.start_date %> thru <%= @job.finish_date %></br>
+					Inspected by <%= @job.inspected_by %></p>
+				</div>
 			</div>	
 			<div class="page">
 				<div class="page-header offset1">
 					
 				<% if @company.logo_image != nil %>
-					<img src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
+					<img src="<%= @company.logo_image %>" width="150" height="150" alt="logo"> 
 				<% end %>
 					<h1><%= @job.name %></h1>
 					<h2> Fire and Smoke Damper Statistical Summary Data</h2>
-					<br>
-					<h3>Inspected <%= @job.start_date %> thru <%= @job.finish_date %></h3>
-					<h3>Inspected by <%= @job.inspected_by %></h3>
 				</div>
 				<div>
 					<h2>Percent of Total</h2>
@@ -312,6 +320,10 @@
 						</tfoot>
 					</table>
 				</div>
+				<div class="page-footer offset1">
+					<p>Inspected <%= @job.start_date %> thru <%= @job.finish_date %></br>
+					Inspected by <%= @job.inspected_by %></p>
+				</div>
 			</div>
 			
 			<div class="page">
@@ -325,14 +337,11 @@
 				<div class="page-header offset1">
 					
 				<% if @company.logo_image != nil %>
-					<img  src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
+					<img  src="<%= @company.logo_image %>" width="150" height="150" alt="logo"> 
 				<% end %>
 				
 					<h1><%= @job.name %></h1>
 					<h2> Fire and Smoke Damper Detail Summary</h2>
-					<br>
-					<h3>Inspected <%= @job.start_date %> thru <%= @job.finish_date %></h3>
-					<h3>Inspected by <%= @job.inspected_by %></h3>
 				</div>
 				<div>
 					<table class="hor-minimalist-b" cellspacing="2" cellpadding="3">
@@ -361,6 +370,10 @@
 						</tbody>
 					</table>
 				</div>
+				<div class="page-footer offset1">
+					<p>Inspected <%= @job.start_date %> thru <%= @job.finish_date %></br>
+					Inspected by <%= @job.inspected_by %></p>
+				</div>
 			</div>			
 			<div class="page">
 				<div id="outer">
@@ -375,57 +388,70 @@
 					<div class="page-header offset1">
 						
 				<% if @company.logo_image != nil %>
-						<img src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
+						<img src="<%= @company.logo_image %>" width="150" height="150" alt="logo"> 
 				<% end %>
 						<h1><%= @job.name %></h1>
 						<h2> Fire and Smoke Damper Detail Data</h2>
-						<br>
-						<h3>Inspected <%= @job.start_date %> thru <%= @job.finish_date %></h3>
-						<h3>Inspected by <%= @job.inspected_by %></h3>
 					</div>
 					<div class="span10 offset1">
 						<table class="table">
 							<tbody>
-								
 								<tr>
 									<td><strong>Damper Tag:</strong></td>
 									<td><%= inspection.tag %></td>
+                                </tr>
+                                <tr>
 									<td><strong>Inspector:</strong></td>
 									<td><%= inspection.technician.first_name %> <%= inspection.technician.last_name %></td>
 								</tr>
 								<tr>
 									<td><strong>Building:</strong></td>
 									<td><%= inspection.building_abbrev %></td>
+                                </tr>
+                                <tr>
 									<td><strong>Date:</strong></td>
 									<td><%= inspection.inspection_date %></td>
 								</tr>
 								<tr>
 									<td><strong>Floor:</strong></td>
 									<td><%= inspection.floor %></td>
+                                </tr>
+                                <tr>
 									<td><strong>Unit:</strong></td>
 									<td><%= inspection.unit %></td>
 								</tr>
 								<tr>
 									<td><strong>Location:</strong></td>
 									<td><%= inspection.location %></td>
+                                </tr>
+                                <tr>
 									<td><strong>Damper Status:</strong></td>
 									<td><%= inspection.damper_status.abbrev %> - <%= inspection.damper_status.description %></td>
 								</tr>
 								<tr>
 									<td><strong>Damper Id:</strong></td>
 									<td><%= inspection.damper_id %></td>
+                                </tr>
+                                <tr>
 									<td><strong>Damper Type:</strong></td>
 									<td><%= inspection.damper_type.abbrev %> - <%= inspection.damper_type.description %></td>
 								</tr>
 								<tr>
 									<td><strong>Damper Airstream:</strong></td>
 									<td><%= inspection.damper_airstream.abbrev %></td>
+                                </tr>
+                                <tr>
 									<td><strong>Damper Height and Length:</strong></td>
 									<td><%= inspection.height %> x <%= inspection.length %></td>
+								</tr>
+                                <tr>
+									<td><strong>Description:</strong></td>
+									<td><%= inspection.description %> <%= inspection.notes %></td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
+                    <br/>
 					<div class="span10 offset1">
 						<table class="table">
 							<tbody>
@@ -436,7 +462,7 @@
 						<h4> Damper Open:</h4>
 					</div>
 					<div class="span5">
-						<a href="#" class="thumbnail"> <img src="<%= inspection.damper_image %>" alt=""  width="400px" height="500px" /> </a>
+						<a href="#" class="thumbnail"> <img src="<%= inspection.damper_image %>" alt=""  width="200px" height="300px" /> </a>
 
 					</div>
 									</td>
@@ -449,7 +475,7 @@
 						<h4> Damper Closed:</h4>
 					</div>
 					<div class="span5">
-						<a href="#" class="thumbnail"> <img src="<%= inspection.damper_image_second %>" alt=""  width="400px" height="500px" /> </a>
+						<a href="#" class="thumbnail"> <img src="<%= inspection.damper_image_second %>" alt=""  width="200px" height="300px" /> </a>
 
 					</div>
 									</td>
@@ -459,16 +485,10 @@
 							</tbody>
 						</table>
 					</div>
-					
-					
-					<div class="span12 ">
-						<h4> Description</h4>
-					</div>
-					<div class="span12 well">
-						<p>
-							<%= inspection.description %> <%= inspection.notes %>
-						</p>
-					</div>
+    				<div class="page-footer offset1">
+    					<p>Inspected <%= @job.start_date %> thru <%= @job.finish_date %></br>
+    					Inspected by <%= @job.inspected_by %></p>
+    				</div>
 				</div>
 			</div>
 			<% end %> 
@@ -485,19 +505,20 @@
 					<div class="page-header offset1">
 						
 				<% if @company.logo_image != nil %>
-						<img src="<%= @company.logo_image %>" width="250" height="100" alt="logo"> 
+						<img src="<%= @company.logo_image %>" width="150" height="150" alt="logo"> 
 				<% end %>
 						<h1><%= @job.name %></h1>
 						<h2> Inspectors Certifications</h2>
-						<br>
-						<h3>Inspected <%= @job.start_date %> thru <%= @job.finish_date %></h3>
-						<h3>Inspected by <%= @job.inspected_by %></h3>
 					</div>
-					<div class="span10 offset1">
-						<p>
+					<div class="span10">
+						<p style="padding-left: 60px">
 							<img src="<%= technician.license_image %>" alt=""  width="800px" height="800px" /> 
 						</p>
 					</div>
+    				<div class="page-footer offset1">
+    					<p>Inspected <%= @job.start_date %> thru <%= @job.finish_date %></br>
+    					Inspected by <%= @job.inspected_by %></p>
+    				</div>
 				</div>
 			</div>
 			<% end %>	
