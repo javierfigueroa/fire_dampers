@@ -65,7 +65,7 @@ class Inspection < ActiveRecord::Base
 
   validates_attachment_content_type :damper_image, :content_type => ["image/jpg", "image/jpeg"]
   validates_attachment_content_type :damper_image_second, :content_type => ["image/jpg", "image/jpeg"]
-    
+
     def damper_image_url_open
         damper_image.url(:medium)
     end

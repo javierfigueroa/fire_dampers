@@ -14,7 +14,7 @@ class Technician < ActiveRecord::Base
     :s3_credentials => Rails.root.join('config', 's3_config.yml').to_s,  
     :path => '/technicians/:id/:filename'
   
-  validates_attachment_content_type :license_image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
+  validates_attachment_content_type :license_image, :content_type => ["image/jpg", "image/jpeg"]
   
   validates :first_name, :presence => true
   validates :last_name, :presence => true
