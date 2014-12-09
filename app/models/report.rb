@@ -99,21 +99,21 @@ class Report < ActiveRecord::Base
         
     @inspections = Inspection.where(:job_id => @job.id).order("damper_id ASC")    
     puts "##### Collected all data for report #{@report.id}"
-    
-     # setup paths
-     view_path   = Rails.root.join('app','views','reports')
 
-     # parse erb templates
-     body = File.read(view_path.join('show.pdf.erb'))
-     body_render = ERB.new(body).result(binding)
+    # setup paths
+    view_path   = Rails.root.join('app','views','reports')
+
+    # parse erb templates
+    body = File.read(view_path.join('show.pdf.erb'))
+    body_render = ERB.new(body).result(binding)
 
     puts "##### About to render PDF #{@report.id}"
-     # run through wicked_pdf
-     pdf = WickedPdf.new.pdf_from_string(body_render,
+    # run through wicked_pdf
+    pdf = WickedPdf.new.pdf_from_string(body_render,
         :layout => false, 
         :margin => { :left => 10, :right => 10 },
-      	:page_height => '11in', :page_width => '8in'
-     )
+    	  :page_height => '11in', :page_width => '8in'
+    )
 
     puts "##### Saving temp PDF report #{@report.id}"
     # then save to a file
