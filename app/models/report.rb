@@ -112,7 +112,8 @@ class Report < ActiveRecord::Base
      pdf = WickedPdf.new.pdf_from_string(body_render,
         :layout => false, 
         :margin => { :left => 10, :right => 10 },
-      	:page_height => '11in', :page_width => '8in'
+#      	:page_height => '11in', :page_width => '8in',
+	:show_as_html => 1
      )
 
     puts "##### Saving temp PDF report #{@report.id}"
