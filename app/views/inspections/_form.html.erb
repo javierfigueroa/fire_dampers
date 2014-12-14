@@ -27,7 +27,7 @@
   </div></div>
   <div class="control-group">
     <%= f.label :damper_id , :class => 'control-label' %><div class="controls">
-    <%= f.text_field :damper_id %>
+    <%= number_field_tag 'inspection[damper_id]', @inspection.damper_id, :in => 0...1000 %>
   </div></div>
   <div class="control-group">
     <%= f.label :damper_status , :class => 'control-label' %><div class="controls">
