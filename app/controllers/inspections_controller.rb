@@ -40,7 +40,7 @@ class InspectionsController < ApplicationController
   # GET /inspections/new.xml
   def new
     @jobs = Job.where(:active => true) 
-    @technicians = Technician.all
+    @technicians = User.where(:role => 'technician')
     
     if @jobs.count == 0
       respond_to do |format|
@@ -75,7 +75,6 @@ class InspectionsController < ApplicationController
   # POST /inspections.xml
   def create
     @inspection = Inspection.new(params[:inspection])
-    @inspection.user_id = current_user.id;
     @inspection.company_id = current_user.company_id;
     @inspection.tag = @inspection.floor.to_s << "-" << @inspection.damper_type.abbrev << "-" << @inspection.damper_airstream.abbrev << "-" << @inspection.unit.to_s << "-" << @inspection.damper_id.to_s
     

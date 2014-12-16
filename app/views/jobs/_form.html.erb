@@ -1,6 +1,17 @@
 <%= form_for @job, :html => { :class => 'form-horizontal' } do |f| %>
 <fieldset>
 	<legend><%= controller.action_name.capitalize %> Job <small><%= controller.action_name.capitalize %> information about a job</small></legend>
+
+     <div class="control-group">
+
+    <%= f.label :company , :class => 'control-label' %><div class="controls">
+       <% if current_user.role? :admin %>
+           <%=	select("job", "company_id", Company.all.collect {|p| [p.name , p.id] }) %>
+        <%else%>
+           <%=	select("job", "company_id", Company.where(:id => current_user.company_id).collect {|p| [p.name , p.id] }) %>
+
+       <%end%>
+      </div></div>
 	<div class="control-group">
 		<%= f.label :name, :class => 'control-label' %>
 		<div class="controls">
@@ -54,6 +65,12 @@
 	    <%= f.label :user , :class => 'control-label' %><div class="controls">
 	    <%=	select("user", "user_id", User.where(:role => 'regular').collect {|p| [p.email , p.id] }) %>
 	  </div></div>
+     <%else%>
+
+  <div class="control-group">
+    <%= f.label :user , :class => 'control-label' %><div class="controls">
+    <%=	select("user", "user_id", User.where(:id => current_user.id).collect {|p| [p.email , p.id] }) %>
+  </div></div>
   	 <% end %>
 	<div class="form-actions">
 		<%= f.submit nil, :class => 'btn btn-primary' %>

@@ -31,7 +31,7 @@ class Report < ActiveRecord::Base
     
     @job = Job.find(@report.job)    
     @inspections = Inspection.where(:job_id => @job.id)
-    @technicians = Technician.where(:user_id => @report.user_id)
+    @technicians = User.where("company_id = ? and role = 'technician'", @job.company_id)
     user = User.find(@report.user_id)
     @company = Company.find(user.company)
     

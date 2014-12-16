@@ -78,12 +78,6 @@ class UsersController < ApplicationController
   # DELETE /users/1.xml
   def destroy
     @user = User.find(params[:id])
-    if (@user.role? :technician)
-      tech = Technician.where(:email => @user.email).first
-      if tech
-        tech.destroy        
-      end
-    end
     @user.destroy
 
     respond_to do |format|

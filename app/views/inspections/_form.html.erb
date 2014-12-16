@@ -18,8 +18,8 @@
     <%= number_field_tag 'inspection[unit]', @inspection.unit, :in => 0...1000 %>
   </div></div>
   <div class="control-group">
-    <%= f.label :technician , :class => 'control-label' %><div class="controls">
-    <%=	select("inspection", "technician_id", Technician.all.collect {|p| [p.first_name + " " + p.last_name , p.id] }) %>
+    <%= f.label :user , :class => 'control-label' %><div class="controls">
+    <%=	select("inspection", "user_id", User.where(:role => 'technician').collect {|p| [p.first_name + " " + p.last_name , p.id] }) %>
   </div></div>
   <div class="control-group">
     <%= f.label :location , :class => 'control-label' %><div class="controls">

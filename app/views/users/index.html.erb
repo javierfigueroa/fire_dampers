@@ -1,5 +1,4 @@
-<div class="row-fluid">
-	<%= render 'navlist' %>
+
 	<div class="span10">
 		<div class="row">
 			<div class="span10">
@@ -50,14 +49,15 @@
 							</thead>
 							<tbody role="alert" aria-live="polite" aria-relevant="all">
 								<% @users.each do |user| %>
+                                <% if user.company_id == current_user.company_id %>
 								<tr>
 									<td><a href="<%= url_for(user) %>"><i class="icon-eye-open"></i></a><a href="<%= edit_user_path(user) %>"><i class="icon-cog"></i></a><a href="<%= url_for(user) %>" rel="nofollow" data-method="delete"
 									data-confirm="Are you sure?"><i class="icon-trash"></i></a></td>
 									<td><% if user.active? %>
-					ACTIVE
-					<% else %>
-					DISABLED
-					<%end%></td>
+                					ACTIVE
+                					<% else %>
+                					DISABLED
+                					<%end%></td>
 									<td><%= user.first_name %></td>
 									<td><%= user.last_name %></td>
 									<td><%= user.role %></td>
@@ -65,6 +65,7 @@
 									<td><%= user.created_at %></td>
 									<td><%= user.last_sign_in_at %></td>
 								</tr>
+                                <%end%>
 								<% end %>
 							</tbody>
 						</table>
@@ -73,5 +74,4 @@
 			</div>
 		</div>
 	</div>
-</div>
 </div> 

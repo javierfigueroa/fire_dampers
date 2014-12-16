@@ -1,5 +1,4 @@
-<div class="row-fluid">
-	<%= render 'navlist' %>
+
 	<div class="span8">
 		<div class="row">
 			<div class="span8">
@@ -61,7 +60,7 @@
 				</p>
 				<p>
 					<b>Technician</b>
-					<%= @inspection.technician.first_name %> <%= @inspection.technician.last_name %>
+					<%= @inspection.user.first_name %> <%= @inspection.user.last_name %>
 				</p>
 				<p>
 					<b>Location:</b>
@@ -115,5 +114,4 @@
 			</div>
 		</div>
 	</div>
-</div>
 </div> 

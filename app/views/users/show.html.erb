@@ -1,5 +1,4 @@
-<div class="row-fluid">
-	<%= render 'navlist' %>
+
 	<div class="span8">
 		<div class="row">
 			<div class="span8">
@@ -83,8 +82,12 @@
 					<b>Role:</b>
 					<%= @user.role %>
 				</p>
+				<%if !@user.license_image.nil? %>
+                <p>
+                  <img src="<%= @user.license_image %>" />
+                </p>
+                <%end%>
 			</div>
 		</div>
 	</div>
-</div>
 </div> 

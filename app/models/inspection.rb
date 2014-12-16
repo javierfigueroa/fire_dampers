@@ -3,7 +3,7 @@ class Inspection < ActiveRecord::Base
   validates :building_abbrev, :presence => true
   validates :inspection_date, :presence => true
   validates :floor, :presence => true
-  validates :technician, :presence => true
+  validates :user, :presence => true
   validates :location, :presence => true
   validates :damper_id, :presence => true
   validates :damper_status, :presence => true
@@ -15,7 +15,7 @@ class Inspection < ActiveRecord::Base
   validates :unit, :presence => true
   validates :company, :presence => true
   
-  belongs_to :technician
+  belongs_to :user
   belongs_to :damper_status
   belongs_to :damper_type
   belongs_to :damper_airstream
@@ -36,7 +36,7 @@ class Inspection < ActiveRecord::Base
                   :damper_id,
                   :damper_status,
                   :job_id,
-                  :technician_id, 
+                  :user_id, 
                   :damper_status_id, 
                   :floor, 
                   :damper_type_id, 
