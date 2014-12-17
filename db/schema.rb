@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141216042609) do
+ActiveRecord::Schema.define(:version => 20141217012047) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -91,7 +91,6 @@ ActiveRecord::Schema.define(:version => 20141216042609) do
     t.string   "building_abbrev"
     t.date     "inspection_date"
     t.integer  "floor"
-    t.integer  "technician_id"
     t.string   "location"
     t.integer  "damper_status_id"
     t.integer  "damper_type_id"
@@ -124,7 +123,6 @@ ActiveRecord::Schema.define(:version => 20141216042609) do
   add_index "inspections", ["damper_status_id"], :name => "index_inspections_on_damper_status_id"
   add_index "inspections", ["damper_type_id"], :name => "index_inspections_on_damper_type_id"
   add_index "inspections", ["job_id"], :name => "index_inspections_on_job_id"
-  add_index "inspections", ["technician_id"], :name => "index_inspections_on_technician_id"
   add_index "inspections", ["user_id"], :name => "index_inspections_on_user_id"
 
   create_table "jobs", :force => true do |t|
