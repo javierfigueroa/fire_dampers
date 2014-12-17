@@ -83,7 +83,7 @@
   </div></div>
   <div class="control-group">
   	<%= f.label :job , :class => 'control-label' %><div class="controls">
-    <%=	select("inspection", "job_id", Job.where(:active => true).all.collect {|p| [ p.name, p.id ] }) %>
+    <%=	select("inspection", "job_id",  @jobs.all.collect {|p| [p.name , p.id] })  %>
   </div></div>
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>

@@ -6,24 +6,24 @@
 			<li class="nav-header">
 				Navigation
 			</li>
-			<li class="active">
+			<li class="<%= 'active' if params[:controller] == 'jobs' %>">
 				<a href="/jobs"><i class="icon-black icon-home"></i> Jobs</a>
 			</li>
-			<li>
+			<li class="<%= 'active' if params[:controller] == 'inspections' %>">
 				<a href="/inspections"><i class="icon-list-alt"></i> Inspections</a>
 			</li>
 			<% if can? :read, Report %>
-			<li>
+			<li class="<%= 'active' if params[:controller] == 'reports' %>">
 				<a href="/reports"><i class="icon-folder-open"></i> Reports</a>
 			</li>
 			<% end %>
 			<% if can? :manage, User%>
-			<li>
+			<li class="<%= 'active' if params[:controller] == 'users' %>">
 				<a href="/users"><i class="icon-user"></i> Users</a>
 			</li>
             <%end%>
 			<% if current_user.role? :admin %>
-			<li>
+			<li class="<%= 'active' if params[:controller] == 'companies' %>">
 				<a href="/companies"><i class="icon-leaf"></i> Companies</a>
 			</li>
 			<% end %>

@@ -39,7 +39,7 @@ class InspectionsController < ApplicationController
   # GET /inspections/new
   # GET /inspections/new.xml
   def new
-    @jobs = Job.where(:active => true) 
+    @jobs = Job.accessible_by(current_ability, :read)
     @technicians = User.where(:role => 'technician')
     
     if @jobs.count == 0
