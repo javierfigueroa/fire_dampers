@@ -18,7 +18,8 @@ class SessionsController < Devise::SessionsController
           :id => current_user.id,
           :first_name => current_user.first_name,
           :last_name => current_user.last_name,
-          :email => current_user.email }, :status => :ok
+          :email => current_user.email,
+          :company_id => current_user.company_id }, :status => :ok
       end
     end
   end
