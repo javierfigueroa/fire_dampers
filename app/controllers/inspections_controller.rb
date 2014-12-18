@@ -68,6 +68,7 @@ class InspectionsController < ApplicationController
 
   # GET /inspections/1/edit
   def edit
+    @jobs = Job.accessible_by(current_ability, :read)
     @inspection = Inspection.find(params[:id])
   end
 
@@ -76,7 +77,7 @@ class InspectionsController < ApplicationController
   def create
     @inspection = Inspection.new(params[:inspection])
     @inspection.company_id = current_user.company_id;
-    @inspection.tag = @inspection.floor.to_s << "-" << @inspection.damper_type.abbrev << "-" << @inspection.damper_airstream.abbrev << "-" << @inspection.unit.to_s << "-" << @inspection.damper_id.to_s
+    @inspection.tag = @inspection.floor.to_s << "-" << @inspection.damper_type.abbrev << "-" << @inspection.damper_airstream.abbrev << "-" << @inspection.damper_id.to_s
     
     respond_to do |format|
       if @inspection.save
@@ -96,10 +97,7 @@ class InspectionsController < ApplicationController
   def update
     @inspection = Inspection.find(params[:id])    
     respond_to do |format|
-      if @inspection.update_attributes(params[:inspection])
-        @inspection.tag = @inspection.floor.to_s << "-" << @inspection.damper_type.abbrev << "-" << @inspection.damper_airstream.abbrev << "-" << @inspection.unit.to_s << "-" << @inspection.damper_id.to_s
-        @inspection.save
-        
+      if @inspection.update_attributes(params[:inspection])        
         format.html { redirect_to(@inspection, :notice => 'Inspection was successfully updated.') }
         format.xml  { head :ok }
         format.json  {  render :json => @inspection, :status => :created }

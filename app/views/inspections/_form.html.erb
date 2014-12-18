@@ -2,6 +2,10 @@
 <fieldset>
 <legend><%= controller.action_name.capitalize %> Inspection <small><%= controller.action_name.capitalize %> information about an inspection</small></legend>
   <div class="control-group">
+    <%= f.label :tag , :class => 'control-label' %><div class="controls">
+    <%= f.text_field :tag, :placeholder => "(optional)" %>
+  </div></div>
+  <div class="control-group">
     <%= f.label :building_abbrev , :class => 'control-label' %><div class="controls">
     <%= f.text_field :building_abbrev %>
   </div></div>
