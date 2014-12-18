@@ -1,5 +1,4 @@
 class Inspection < ActiveRecord::Base 
-  validates_uniqueness_of :damper_id
   validates :building_abbrev, :presence => true
   validates :inspection_date, :presence => true
   validates :floor, :presence => true
@@ -12,7 +11,6 @@ class Inspection < ActiveRecord::Base
   validates :damper_airstream_id, :presence => true
   validates :length, :presence => true
   validates :height, :presence => true
-  validates :unit, :presence => true
   validates :company, :presence => true
   
   belongs_to :user

@@ -27,6 +27,7 @@ class Ability
     # if user.role? :tech
       # can :manage, Inspection, :user_id => user.id
     # end
+
     if user.role? :admin
       can :manage, :all
     elsif user.role? :regular
