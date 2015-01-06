@@ -77,7 +77,9 @@ class InspectionsController < ApplicationController
   def create
     @inspection = Inspection.new(params[:inspection])
     @inspection.company_id = current_user.company_id;
-    @inspection.tag = @inspection.floor.to_s << "-" << @inspection.damper_type.abbrev << "-" << @inspection.damper_airstream.abbrev << "-" << @inspection.damper_id.to_s
+    if @inspection.tag.nil? || @inspection.tag.length == 0
+      @inspection.tag = @inspection.floor.to_s << "-" << @inspection.damper_type.abbrev << "-" << @inspection.damper_airstream.abbrev << "-" << @inspection.damper_id.to_s
+    end
     
     respond_to do |format|
       if @inspection.save

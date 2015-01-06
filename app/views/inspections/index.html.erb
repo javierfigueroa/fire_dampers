@@ -45,6 +45,7 @@
 									-->
 									<th class="actions">Actions</th>
 									<th>Damper Id</th>
+									<th>Floor</th>
 									<th>Inspection date</th>
 									<th>Damper status</th>
 									<th>Damper type</th>
@@ -59,6 +60,7 @@
 										<a href="<%= url_for(inspection) %>" rel="nofollow" data-method="delete" 
 											data-confirm="Are you sure?"><i class="icon-trash"></i></a></td>
 									<td><%= inspection.damper_id %></td>
+									<td><%= inspection.floor %></td>
 									<td><%= inspection.inspection_date %></td>
 									<td><%= inspection.damper_status.abbrev %></td>
 									<td><%= inspection.damper_type.abbrev %></td>
