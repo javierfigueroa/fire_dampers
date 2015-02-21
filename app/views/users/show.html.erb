@@ -51,8 +51,10 @@
 					<%end%>
 				</p>
 				<p>
+					<% if @user.company != nil %>
 					<b>Company name:</b>
 					<%= @user.company.name %>
+                    <% end %>
 				</p>
 				<p>
 					<b>First name:</b>

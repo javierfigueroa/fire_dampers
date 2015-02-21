@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
     @users = User.accessible_by(current_ability, :manage) 
     
-    # @users = User.all
+    @users = User.all
 
     respond_to do |format|
       format.html # index.html.erb
