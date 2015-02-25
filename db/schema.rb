@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141217012047) do
+ActiveRecord::Schema.define(:version => 20150225040544) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -146,8 +146,8 @@ ActiveRecord::Schema.define(:version => 20141217012047) do
   create_table "reports", :force => true do |t|
     t.integer  "job_id"
     t.integer  "user_id"
-    t.datetime "created_at",               :null => false
-    t.datetime "updated_at",               :null => false
+    t.datetime "created_at",                              :null => false
+    t.datetime "updated_at",                              :null => false
     t.string   "cover_image_file_name"
     t.string   "cover_image_content_type"
     t.integer  "cover_image_file_size"
@@ -156,6 +156,7 @@ ActiveRecord::Schema.define(:version => 20141217012047) do
     t.string   "pdf_report_content_type"
     t.integer  "pdf_report_file_size"
     t.datetime "pdf_report_updated_at"
+    t.integer  "company_id",               :default => 0, :null => false
   end
 
   add_index "reports", ["job_id"], :name => "index_reports_on_job_id"

@@ -146,6 +146,9 @@ class ReportsController < ApplicationController
     if (!params[:report][:user_id])
       @report.user_id = current_user.id;
     end
+    if (!params[:report][:company_id])
+      @report.company_id = current_user.company_id;
+    end
     
     reportSaved = @report.save
     @report.delay.renderPDF

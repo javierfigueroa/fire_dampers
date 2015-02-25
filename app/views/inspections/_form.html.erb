@@ -23,7 +23,12 @@
   </div></div>
   <div class="control-group">
     <%= f.label :user , :class => 'control-label' %><div class="controls">
-    <%=	select("inspection", "user_id", User.where(:role => 'technician').collect {|p| [p.first_name + " " + p.last_name , p.id] }) %>
+    
+    <% if current_user.role? :admin %>
+        <%=	select("inspection", "user_id", User.where(:role => 'technician').collect {|p| [p.first_name + " " + p.last_name , p.id] }) %>
+     <%else%>
+        <%=	select("inspection", "user_id", User.where(:company_id => current_user.company_id).where(:role => 'technician').collect {|p| [p.first_name + " " + p.last_name , p.id] }) %>
+    <%end%>
   </div></div>
   <div class="control-group">
     <%= f.label :location , :class => 'control-label' %><div class="controls">

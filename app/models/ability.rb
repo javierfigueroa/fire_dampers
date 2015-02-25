@@ -37,7 +37,8 @@ class Ability
       can :manage, Inspection, :user_id => user.id
       can :manage, Inspection, :company_id => user.company_id
       can :read, Job, :company_id => user.company_id
-      cannot :read, Report
+      can [:create, :read, :update], Report, :company_id => user.company_id
+      cannot :destroy, Report
       cannot :read, User
     end
   end
