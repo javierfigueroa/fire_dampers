@@ -31,7 +31,7 @@ class Ability
     if user.role? :admin
       can :manage, :all
     elsif user.role? :regular
-      can :manage, [Job, Inspection, Report, User], :user_id => user.id
+      can :manage, [Job, Inspection, Report, User], :company_id => user.company_id
       can :manage, Inspection, :company_id => user.company_id
     elsif user.role? :technician
       can :manage, Inspection, :user_id => user.id
