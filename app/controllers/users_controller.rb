@@ -3,9 +3,7 @@ class UsersController < ApplicationController
   # GET /users.xml
   def index
 
-    @users = User.accessible_by(current_ability, :manage) 
-    
-    @users = User.all
+    @users = User.accessible_by(current_ability, :manage)
 
     respond_to do |format|
       format.html # index.html.erb
